@@ -1,0 +1,8 @@
+*.rpyc
+/images
+/saves
+/gui
+/cache
+/audio
+.DS_STORE
+*.bak
