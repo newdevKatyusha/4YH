@@ -1,6 +1,7 @@
 label home_ec_route_jinus(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 1/Naomi_Month1_"
     $ clubmember1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Member 1/Naomi Month 1/ClubMember1_Naomi_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 1/" + player_voice_prefix + "_Naomi_Month1_"
 
     call screen calendar(month, date, "Jinus", 6)
     scene bg home_ec_room_door_afternoon with fade
@@ -39,6 +40,7 @@ label home_ec_route_jinus(month, date):
         vl naomi_vl_prefix 3B
     n "[a]! Glad you made it. Want to give it a try?"
 
+    vl alexis_vl_prefix 1
     a "Sure. Though, fair warning, I've never made anything more complicated than toast."
 
     show naomi thinking apron at center
@@ -59,6 +61,7 @@ label home_ec_route_jinus(month, date):
     "She pours the eggs into a pan, tilts it, and lets the omelet set before rolling it up with a pair of chopsticks. It looks easy when she does it."
     "When she lets me try, my first attempt comes out lumpy and a little burnt."
 
+    vl alexis_vl_prefix 2
     a "Uh... is it supposed to look like that?"
 
     show naomi happy apron at center
@@ -87,6 +90,7 @@ label home_ec_route_jinus(month, date):
     show bg home_ec_room_door_afternoon with dissolve
     "The meeting winds down. Plates are cleared, and people start drifting out, waving goodbye to Naomi as they go. I hang back, stacking dishes by the sink."
 
+    vl alexis_vl_prefix 3
     a "Need a hand?"
 
     show naomi neutral apron at center with dissolve
@@ -108,6 +112,7 @@ label home_ec_route_jinus(month, date):
     vl naomi_vl_prefix 12
     n "Or is that too hard a question?"
 
+    vl alexis_vl_prefix 4
     a "Honestly? I think it's just anything warm. My mom used to make this soup when I was sick. I haven't had it in years, but I still remember how it smelled."
 
     show naomi happy apron at center
@@ -121,6 +126,7 @@ label home_ec_route_jinus(month, date):
     vl naomi_vl_prefix 14
     n "My family's far away, but I keep them close in small ways."
 
+    vl alexis_vl_prefix 5
     a "Oh? You're not from around here?"
     show naomi neutral apron at center
     "Naomi shakes her head and smiles, but it doesn't reach her eyes."
@@ -128,6 +134,7 @@ label home_ec_route_jinus(month, date):
     vl naomi_vl_prefix 15
     n "I'm from Tokuen, but I moved here because of my father's job."
 
+    vl alexis_vl_prefix 6
     a "Tokuen? I don't think I've heard of that."
 
     show naomi thinking apron at center
@@ -140,10 +147,12 @@ label home_ec_route_jinus(month, date):
     vl naomi_vl_prefix 17
     n "Next week, I'll show you how to make miso soup. It's easier than it looks, I promise."
 
+    vl alexis_vl_prefix 7
     a "Looking forward to it."
     
     "I pause, thinking over it."
     
+    vl alexis_vl_prefix 8
     a "You're a good teacher, you know."
 
     show naomi embarrassed apron at center
@@ -169,6 +178,7 @@ label home_ec_route_jinus(month, date):
         vl naomi_vl_prefix 20B
     n "Thanks for the help, [a]. You didn't have to stay, you know."
 
+    vl alexis_vl_prefix 9
     a "Old habits, I guess. I don't like leaving things half-done."
 
     show naomi happy apron at center
@@ -177,6 +187,7 @@ label home_ec_route_jinus(month, date):
     vl naomi_vl_prefix 21
     n "I hope you'll come back."
 
+    vl alexis_vl_prefix 10
     a "Yeah. I think I will."
 
     hide naomi with dissolve
@@ -191,6 +202,7 @@ label home_ec_route_dallinus(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Naomi/Lucas_Naomi_M2_"
     $ clubmember1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Member 1/Naomi Month 2/ClubMember1_Naomi_Month2_"
     $ clubmember2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Member 2/Naomi Month 2/ClubMember2_Naomi_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 2/" + player_voice_prefix + "_Naomi_Month2_"
     
     call screen calendar(month, date, "Dallinus", 16)
     scene bg home_ec_room_door_noon with fade
@@ -239,6 +251,7 @@ label home_ec_route_dallinus(month, date):
 
     "I dry my hands and walk over."
 
+    vl alexis_vl_prefix 1
     a "You know, I think this is the quietest I've seen this room since I got here."
     show naomi neutral apron at center
     "She smiles, not looking up from her crane."
@@ -256,6 +269,7 @@ label home_ec_route_dallinus(month, date):
     vl naomi_vl_prefix 5
     n "These are for luck. I make them when I need to keep my hands busy."
 
+    vl alexis_vl_prefix 2
     a "You must have a lot of luck saved up by now."
     
     "She laughs softly, like twinkling bells ringing across the room."
@@ -265,18 +279,22 @@ label home_ec_route_dallinus(month, date):
     
     "I turn the crane over in my hands. The paper is soft, edges crisp."
 
+    vl alexis_vl_prefix 3
     a "It's funny. Back home, I always thought I'd do anything for a little peace and quiet."
+    voice sustain
     a "But now, I'd give anything to hear my siblings fighting over the last piece of cake."
 
     vl naomi_vl_prefix 7
     n "You get it, then. It's not just the place you miss. It's the mess, the noise, the people."
 
+    vl alexis_vl_prefix 4
     a "Yeah. The mess is the best part, sometimes."
     
     "We share a quiet laugh, the kind that comes from knowing you're not alone in missing something you can't get back."
 
     "I pause, wondering if I should ask this. But curiosity eventually wins out."
 
+    vl alexis_vl_prefix 5
     a "Do you ever get tired of being in charge of all this?"
     
     show naomi thinking apron at center
@@ -308,6 +326,7 @@ label home_ec_route_dallinus(month, date):
     n "Here, try these. They're for the festival, but I won't tell if you have one early."
     "I take a bite. It's soft, sweet, and a little floral."
 
+    vl alexis_vl_prefix 6
     a "This is incredible. Did you make these?"
     
     show naomi neutral apron at center
@@ -316,6 +335,7 @@ label home_ec_route_dallinus(month, date):
 
     "We sit in companionable silence for a while, sharing sweets and watching the moonlight spill through the window."
 
+    vl alexis_vl_prefix 7
     a "Thanks for letting me help tonight."
     
     show naomi happy apron at center
@@ -337,6 +357,7 @@ label home_ec_route_dallinus(month, date):
     "I spot Naomi curled in a window seat, a thick cookbook open on her knees and a stack of battered Estarese folk tales beside her."
     "Lucas is shelving books nearby, humming softly to himself."
 
+    vl alexis_vl_prefix 8
     a "Didn’t expect to find you here after hours."
 
     show naomi happy at center with dissolve
@@ -374,6 +395,7 @@ label home_ec_route_dallinus(month, date):
     vl naomi_vl_prefix 18
     n "I wish my disasters were that poetic."
 
+    vl alexis_vl_prefix 9
     a "What about you, Lucas? Any culinary disasters?"
     
     show lucas sad
@@ -392,6 +414,7 @@ label home_ec_route_dallinus(month, date):
 
     "I think for a moment, surprised by how easily the question brings back old memories."
 
+    vl alexis_vl_prefix 10
     a "My grandmother used to tell me a story about a fox who outsmarted a merchant. I always liked that the fox won in the end."
 
     "Lucas grins."
@@ -406,11 +429,13 @@ label home_ec_route_dallinus(month, date):
 
     "I grin."
 
+    vl alexis_vl_prefix 11
     a "And they don’t argue with you about curfew or whose turn it is to do dishes."
 
     vl naomi_vl_prefix 21
     n "Exactly. They’re easier than siblings."
 
+    vl alexis_vl_prefix 12
     a "But not as much fun."
 
     "Our laughter echoes softly in the quiet library, and for a moment, the world feels a little less lonely."
@@ -420,6 +445,7 @@ label home_ec_route_dallinus(month, date):
 
 label home_ec_route_vanus(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 3/Naomi_Month3_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 3/" + player_voice_prefix + "_Naomi_Month3_"
 
     call screen calendar(month, date, "Vanus", 12)
     scene bg home_ec_room_door_night with fade
@@ -435,6 +461,7 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 1
     n "I think we survived. Barely."
     
+    vl alexis_vl_prefix 1
     a "If you call this surviving, I'm not sure I could handle a real emergency."
     
     show naomi happy apron
@@ -450,6 +477,7 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 3
     n "You know... it's still early by festival standards. Want to bake something? Just for us."
     
+    vl alexis_vl_prefix 2
     a "I would never say no to cookies."
     
     show naomi neutral apron
@@ -460,6 +488,7 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 4
     n "Have you ever made cookies from scratch before?"
     
+    vl alexis_vl_prefix 3
     a "Not unless you count the kind that come out of a tube."
     
     show naomi happy apron
@@ -471,6 +500,7 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 6
     n "We had a running competition for 'worst kitchen disaster.' He once made a cake so hard, we used it as a doorstop for a week."
     
+    vl alexis_vl_prefix 4
     a "That's impressive. I think my worst was burning instant noodles. Twice. In one night."
     
     show naomi happy apron
@@ -480,6 +510,7 @@ label home_ec_route_vanus(month, date):
     show naomi neutral apron
     "We shape the dough into little rounds, pressing them flat. Naomi's hands are quick and sure, but she lets me take my time."
     
+    vl alexis_vl_prefix 5
     a "You always seem so... together. Even when things are falling apart."
     
     show naomi thinking apron
@@ -491,6 +522,7 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 9
     n "Sometimes I wonder what it'd be like to just... let someone else handle things for once."
     
+    vl alexis_vl_prefix 6
     a "Do you ever wish you could?"
     
     show naomi neutral apron
@@ -509,18 +541,21 @@ label home_ec_route_vanus(month, date):
     vl naomi_vl_prefix 12
     n "But here I am, hiding in the kitchen at midnight, hoping the rain will drown out my singing."
     
+    vl alexis_vl_prefix 7
     a "I won't tell if you sing. I might even join in."
     
     show naomi embarrassed apron
     vl naomi_vl_prefix 13
     n "Deal. But only if you promise not to judge my taste in lullabies."
     
+    vl alexis_vl_prefix 8
     a "You know, I think I get it. At home, I was always the one making sure everyone else had what they needed. Sometimes I forget how to just... let someone else take care of things."
     
     show naomi thinking apron
     vl naomi_vl_prefix 14
     n "Maybe we're both overdue for a break."
     
+    vl alexis_vl_prefix 9
     a "Or at least a cookie."
     
     show naomi happy apron
@@ -530,6 +565,7 @@ label home_ec_route_vanus(month, date):
     show naomi neutral apron
     "We settle by the window, legs tucked up, sharing the first warm bites while the rain paints streaks down the glass."
     
+    vl alexis_vl_prefix 10
     a "These are perfect."
     
     show naomi happy apron
@@ -539,6 +575,7 @@ label home_ec_route_vanus(month, date):
     show naomi neutral apron
     "We sit in comfortable silence, the only sounds the rain and the occasional crunch of a cookie."
     
+    vl alexis_vl_prefix 11
     a "Thanks for inviting me to stay. I didn't realize how much I needed a night like this."
     
     show naomi happy apron
@@ -558,6 +595,7 @@ label home_ec_route_vanus(month, date):
 
 label home_ec_route_dyalt(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 4/Naomi_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 4/" + player_voice_prefix + "_Naomi_Month4_"
 
     call screen calendar(month, date, "Dyalt", 23)
     scene bg home_ec_room_door_afternoon with fade
@@ -573,6 +611,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 1
     n "Could you hand me the ginger? The fresh one, not the powder."
 
+    vl alexis_vl_prefix 1
     a "You got it."
 
     show naomi happy apron
@@ -582,6 +621,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 2
     n "Thanks. Sorry if I'm a little... all over the place tonight."
 
+    vl alexis_vl_prefix 2
     a "You're fine. I think everyone's a little on edge."
 
     show naomi thinking apron
@@ -598,6 +638,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 4
     n "I hope it tastes right... Sometimes I wonder if I remember it the way it really was, or just the way I want to."
 
+    vl alexis_vl_prefix 3
     a "I think that's how it goes with family recipes. They're half memory, half magic."
 
     show naomi happy apron
@@ -606,6 +647,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 5
     n "If it flops, we'll just say it's... 'experimental fusion cuisine.' That's trendy, right?"
 
+    vl alexis_vl_prefix 4
     a "If anyone can sell it, it's you."
 
     show killian happy at right with moveinright
@@ -627,6 +669,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 7
     n "I think he's more nervous than I am."
 
+    vl alexis_vl_prefix 5
     a "He's not the one cooking for half the school."
 
     show naomi happy apron
@@ -638,6 +681,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 9
     n "Thanks for sticking around for all these late nights. I know you could've bailed."
 
+    vl alexis_vl_prefix 6
     a "I like it. It's nice, seeing how everyone comes together."
 
     show naomi neutral apron
@@ -652,6 +696,7 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 11
     n "He'd say, 'If it's good now, it'll be even better later.'"
 
+    vl alexis_vl_prefix 7
     a "Did you ever let him?"
 
     show naomi happy apron
@@ -664,11 +709,13 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 13
     n "I miss that. The noise, the mess. Cooking here helps, though. It's like... sending a letter home, even if no one reads it."
 
+    vl alexis_vl_prefix 8
     a "I think they'd be proud."
 
     show naomi embarrassed apron
     "She blushes, but doesn't argue."
 
+    vl alexis_vl_prefix 9
     a "You know, I have a similar story. I tried to make my mom's plum cake once. It turned out... well, let's just say even the birds wouldn't eat it."
 
     show naomi happy apron
@@ -677,12 +724,14 @@ label home_ec_route_dyalt(month, date):
     vl naomi_vl_prefix 14
     n "That bad?"
 
+    vl alexis_vl_prefix 10
     a "Worse. But it still made the house smell like home, so I guess it worked."
 
     show naomi happy apron
     vl naomi_vl_prefix 15
     n "That's what matters, isn't it? The trying."
 
+    vl alexis_vl_prefix 11
     a "Maybe you're right."
 
     show naomi neutral apron
@@ -700,6 +749,7 @@ label home_ec_route_dyalt(month, date):
 
 label home_ec_route_dyalt2:
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 4/Naomi_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 4/" + player_voice_prefix + "_Naomi_Month4_"
 
     call screen calendar("Dyalt", 23, "Dyalt", 30)
     scene bg home_ec_room_door_afternoon with fade
@@ -748,10 +798,12 @@ label home_ec_route_dyalt2:
     vl naomi_vl_prefix 20
     n "For luck. Or just... to remember today."
 
+    vl alexis_vl_prefix 12
     a "I'll keep it."
     
     "I turn the crane over, then glance at her."
 
+    vl alexis_vl_prefix 13
     a "You know, you make it look easy. But I saw how much work you put in."
 
     show naomi happy apron
@@ -765,6 +817,7 @@ label home_ec_route_dyalt2:
 label home_ec_route_neralt(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Naomi/Reina_Naomi_Month5_"
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 5/Naomi_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 5/" + player_voice_prefix + "_Naomi_Month5_"
 
     call screen calendar(month, date, "Neralt", 13)
     scene bg home_ec_room_stove_afternoon with fade 
@@ -781,6 +834,7 @@ label home_ec_route_neralt(month, date):
     "It's not mean, exactly, but it's there; curiosity, speculation, the kind of talk that makes you feel like you're under a microscope. I wonder if she's noticed. I wonder if she cares."
     "I finish rinsing the last plate and set it on the rack. Naomi stands by the window, arms folded, watching the rain streak down the glass."
 
+    vl alexis_vl_prefix 1
     a "You want me to take out the trash, or...?"
 
     show naomi thinking apron
@@ -791,6 +845,7 @@ label home_ec_route_neralt(month, date):
 
     "The silence stretches. I dry my hands on a towel, waiting."
 
+    vl alexis_vl_prefix 2
     a "You've been quiet tonight."
 
     "Naomi pauses, her gaze still not meeting mine."
@@ -812,6 +867,7 @@ label home_ec_route_neralt(month, date):
     voice sustain
     n "That if I was useful, I'd be safe from this kind of thing."
 
+    vl alexis_vl_prefix 3
     a "People are always going to talk. Doesn't mean they know anything real."
 
     vl naomi_vl_prefix 5
@@ -833,11 +889,15 @@ label home_ec_route_neralt(month, date):
     "The mom friend, the club president, the one who remembers everyone's favorite snack. I never thought about how heavy that might get, or how lonely it could be."
     "I step closer, lowering my voice."
 
+    vl alexis_vl_prefix 4
     a "I think... the people who matter, they see you. Not just what you do, but who you are when nobody's looking."
 
     "I hesitate, mulling the words over in my head."
 
-    a "And I like being here with you, Naomi. In this club. I like how you care about people, and I also like who you are when you're too tired to try."
+    vl alexis_vl_prefix 5
+    a "And I like being here with you, Naomi. In this club."
+    vl alexis_vl_prefix 6
+    a "I like how you care about people, and I also like who you are when you're too tired to try."
 
     show naomi embarrassed apron
     "She blinks, surprised, and for a moment she looks so young, like she's just a kid, trying to figure out how to fit in."
@@ -858,6 +918,7 @@ label home_ec_route_neralt(month, date):
     vl naomi_vl_prefix 10
     n "But I'm trying."
 
+    vl alexis_vl_prefix 7
     a "You don't have to do it alone."
 
     show naomi happy apron
@@ -872,6 +933,7 @@ label home_ec_route_neralt(month, date):
     vl naomi_vl_prefix 12
     n "But if I stopped, I don't know who I'd be."
 
+    vl alexis_vl_prefix 8
     a "Maybe you'd just be Naomi. And that'd be enough."
 
     show naomi happy apron
@@ -895,6 +957,7 @@ label home_ec_route_neralt(month, date):
     vl naomi_vl_prefix 16
     n "And for listening. I don't say that enough."
 
+    vl alexis_vl_prefix 9
     a "Anytime. Really."
 
     show naomi happy apron
@@ -908,6 +971,7 @@ label home_ec_route_neralt(month, date):
     vl naomi_vl_prefix 18
     n "But you have to promise not to let me eat all the leftovers by myself."
 
+    vl alexis_vl_prefix 10
     a "Deal."
 
     "For a moment, it feels like the rumors and the whispers can't touch us here. Just the two of us, sharing the quiet, wishing for something simple and true."
@@ -929,6 +993,7 @@ label home_ec_route_neralt(month, date):
     vl naomi_vl_prefix 19
     n "Think they'll mind if we hide out here for a bit?"
 
+    vl alexis_vl_prefix 11
     a "If we're quiet, I doubt they'll even notice."
 
     show naomi happy
@@ -998,6 +1063,7 @@ label home_ec_route_neralt(month, date):
 label home_ec_route_exalt(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 6/Naomi_Month6_"
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Naomi/Lucas_Naomi_M6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 6/" + player_voice_prefix + "_Naomi_Month6_"
 
     call screen calendar(month, date, "Exalt", 24)
     scene bg home_ec_room_door_afternoon with fade
@@ -1021,6 +1087,7 @@ label home_ec_route_exalt(month, date):
     vl naomi_vl_prefix 2
     n "Come sit for a bit? I made too many rice crackers again."
 
+    vl alexis_vl_prefix 1
     a "I mean, if you insist."
 
     show naomi happy apron
@@ -1045,6 +1112,7 @@ label home_ec_route_exalt(month, date):
     vl naomi_vl_prefix 5
     n "I miss that. The noise, the mess. Even the arguments."
 
+    vl alexis_vl_prefix 2
     a "I used to do that too, actually. My brother always cheated, though. He'd tap the glass to make his raindrop win."
 
     show naomi happy apron
@@ -1108,6 +1176,7 @@ label home_ec_route_exalt(month, date):
     vl naomi_vl_prefix 12
     n "Would you like another rice cracker?"
 
+    vl alexis_vl_prefix 3
     a "If you're sure you don't mind sharing."
 
     vl naomi_vl_prefix 13
@@ -1141,6 +1210,7 @@ label home_ec_route_exalt(month, date):
 
 label home_ec_route_elvera(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 7/Naomi_Month7_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 7/" + player_voice_prefix + "_Naomi_Month7_"
 
     call screen calendar(month, date, "Elvera", 19)
     scene bg home_ec_room_door_night with fade
@@ -1163,6 +1233,7 @@ label home_ec_route_elvera(month, date):
     vl naomi_vl_prefix 2
     n "I, um… hope you're hungry. I might have gone overboard."
 
+    vl alexis_vl_prefix 1
     a "If this is overboard, I'm not sure I could survive a regular dinner at your place."
 
     show naomi embarrassed
@@ -1197,6 +1268,7 @@ label home_ec_route_elvera(month, date):
     vl naomi_vl_prefix 6
     n "Sorry, that sounded dramatic."
 
+    vl alexis_vl_prefix 2
     a "No, really, what were you going to say?"
 
     show naomi neutral
@@ -1219,11 +1291,14 @@ label home_ec_route_elvera(month, date):
     vl naomi_vl_prefix 9
     n "Sorry. That probably sounds silly."
 
+    vl alexis_vl_prefix 3
     a "It doesn't."
 
     "I pause, searching for the right words."
 
+    vl alexis_vl_prefix 4
     a "I think… I know what you mean. It's easy for people to see what you do, but not always who you are."
+    voice sustain
     a "I like that you care so much about everyone, but even if you ever stopped, I'd still want to be here with you."
 
     show naomi happy
@@ -1262,6 +1337,7 @@ label home_ec_route_elvera(month, date):
     vl naomi_vl_prefix 15
     n "Ready for dessert? I promise it's not \"experimental\" this time."
 
+    vl alexis_vl_prefix 5
     a "I'll believe it when I taste it."
 
     show naomi happy
@@ -1273,6 +1349,7 @@ label home_ec_route_elvera(month, date):
 
 label home_ec_route_verabris(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Month 8/Naomi_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 8/" + player_voice_prefix + "_Naomi_Month8_"
 
     call screen calendar(month, date, "Verabris", 14)
     scene bg wright_field_afternoon with fade
@@ -1303,6 +1380,7 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 2
     n "But I like it. It makes everything feel clearer, somehow."
 
+    vl alexis_vl_prefix 1
     a "It's like the world's holding its breath."
 
     show naomi neutral
@@ -1344,6 +1422,7 @@ label home_ec_route_verabris(month, date):
     voice sustain
     n "I'm glad you're here."
 
+    vl alexis_vl_prefix 2
     a "Just a little bit of home, huh?"
 
     "I nudge her gently with my shoulder, and she laughs, the sound soft and real."
@@ -1357,7 +1436,9 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 10
     n "Besides, if you ever get tired of my cooking, you're legally required to tell me. I promise, I won't be offended. Probably."
 
+    vl alexis_vl_prefix 3
     a "I'll take my chances. But honestly, I think I'd miss it too much."
+    voice sustain
     a "And not just the food, the way you make everyone feel like they belong. Even me, when I was new and didn't know anyone."
 
     show naomi embarrassed
@@ -1377,11 +1458,14 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 13
     n "Not just after graduation, but… everything?"
 
+    vl alexis_vl_prefix 4
     a "All the time."
 
     "I pause, thinking it over."
 
+    vl alexis_vl_prefix 5
     a "But I think, as long as you have the right people with you, it doesn't matter where you end up."
+    voice sustain
     a "And… I'm glad you're one of mine."
 
     show naomi embarrassed
@@ -1418,10 +1502,12 @@ label home_ec_route_verabris(month, date):
     "The handwriting is a little messy, the ink smudged where she'd pressed too hard."
     "\"Don't forget: the best snacks are in the Home Ec room. If you ever need a friend, you know where to find me. — Naomi\""
 
+    vl alexis_vl_prefix 6
     a "Of course I kept it."
 
     "I take it from her, smoothing the creases."
 
+    vl alexis_vl_prefix 7
     a "It was the first time I felt like maybe I'd made the right choice coming here."
 
     show naomi embarrassed apron
@@ -1436,10 +1522,12 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 17
     n "I was so nervous you'd think I was weird."
 
+    vl alexis_vl_prefix 8
     a "I did."
 
     "I grin."
 
+    vl alexis_vl_prefix 9
     a "But in a good way. The kind of weird that makes everything better."
 
     show naomi happy apron
@@ -1452,12 +1540,14 @@ label home_ec_route_verabris(month, date):
     "We fall into an easy rhythm, packing away club aprons and sorting through a pile of mismatched chopsticks."
     "Naomi finds a crumpled festival ticket from the night we got caught in the rain, and we both start laughing at the memory."
 
+    vl alexis_vl_prefix 10
     a "I still can't believe you convinced me to run across campus in a thunderstorm for fried noodles."
 
     show naomi neutral apron
     vl naomi_vl_prefix 19
     n "Worth it, though. You have to admit, they tasted better after all that effort."
 
+    vl alexis_vl_prefix 11
     a "I'll give you that."
 
     "It's funny, the things that end up mattering most. Not the grades or the big events, but the little notes, the inside jokes, the quiet moments that nobody else saw."
@@ -1474,6 +1564,7 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 21
     n "Just in case you get hungry before you even leave campus."
 
+    vl alexis_vl_prefix 12
     a "I'll save it for when I miss the club. Or, you know, when I burn dinner."
 
     show naomi neutral apron
@@ -1490,6 +1581,7 @@ label home_ec_route_verabris(month, date):
     vl naomi_vl_prefix 23
     n "And I expect updates. Or at least pictures of your next culinary disaster."
 
+    vl alexis_vl_prefix 13
     a "Deal. But only if you promise to send me recipes. And updates on your next adventure."
 
     vl naomi_vl_prefix 24
@@ -1509,6 +1601,7 @@ label home_ec_route_verabris(month, date):
 
 label home_ec_route_overa(month, date):
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Epilogue/Confession/Naomi_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Epilogue/" + player_voice_prefix + "_Naomi_Epilogue_"
 
     call screen calendar(month, date, "Overa", 22)
     scene bg wright_field_afternoon with fade
@@ -1596,19 +1689,25 @@ label home_ec_route_overa_choice:
 
 label home_ec_route_overa_romance_accept: 
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Epilogue/Confession/Accepted/Naomi_Epilogue_Accepted_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 1/" + player_voice_prefix + "_Naomi_Epilogue_"
     
     show naomi neutral
     
+    vl alexis_vl_prefix 2
     a "Naomi…"
 
     "I reach for her hand, warmth blooming between us."
 
     show naomi happy
 
+    vl alexis_vl_prefix 3
     a "I see you. All of you. And I want that future too."
+    voice sustain
     a "I care about all of it, Naomi. The way you look out for everyone, the way you make people feel at home that's part of you."
 
+    vl alexis_vl_prefix 4
     a "But even if you needed to take a break, or let someone else take care of things for once, I'd still want to be here with you."
+    voice sustain
     a "I like you for all of it, for who you are, and for how you care. Not just one or the other."
 
     show naomi embarrassed
@@ -1625,6 +1724,7 @@ label home_ec_route_overa_romance_accept:
     vl naomi_vl_prefix 2
     n "I was so sure I'd mess this up."
 
+    vl alexis_vl_prefix 5
     a "You couldn't, even if you tried."
 
     "We finish the meal slowly, savoring the food and the moment."
@@ -1642,19 +1742,23 @@ label home_ec_route_overa_romance_accept:
 
 label home_ec_route_overa_romance_reject:
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Own Route/Epilogue/Confession/Rejected/Naomi_Epilogue_Rejected_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Naomi/Month 1/" + player_voice_prefix + "_Naomi_Epilogue_"
 
     show naomi neutral
 
+    vl alexis_vl_prefix 6
     a "Naomi…"
 
     "I reach for her hand, holding it gently."
 
     show naomi thinking
 
+    vl <from 2>alexis_vl_prefix 7
     a "You mean so much to me. I hope you know that."
 
     "I pause, searching for the right words."
 
+    vl alexis_vl_prefix 8
     a "But I don't think I can be what you're looking for. Not right now. I'm sorry."
 
     show naomi happy

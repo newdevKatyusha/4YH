@@ -1,16 +1,17 @@
 label phillip_jinus(month, date):
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Own Route/Month 1/Phillip_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Phillip/Month 1/" + player_voice_prefix + "_Phillip_Month1_"
 
     call screen calendar(month, date, "Jinus", 20)
     scene bg maincastle with fade
 
     $ renpy.notify("Phillip - \nUctday, Jinus 20th, 1027 RD")
     
-    a "The gentle warmth of the early autumn sun is exactly what I need after being cooped up in Magis Hall all day. It's been a few weeks since the school year started properly."
-    a "I wasn't expecting the material to be so advanced. Language Arts and Math, I'm doing well enough. Science and History, though..."
-    a "Then there's the fact that I'm in my magic classes with a bunch of first years. Guess that's to be expected when you show up so late."
-    a "I just got out of a meeting with my Fundamentals of Magic Instructor, but a lot of the talk we had about the ethical use of magitechnology in treating terminal illness went over my head."
-    a "Lucas did say I could go to him if I ever needed help in class, and he's been through this before. May as well head to the library and see if I can find him."
+    "The gentle warmth of the early autumn sun is exactly what I need after being cooped up in Magis Hall all day. It's been a few weeks since the school year started properly."
+    "I wasn't expecting the material to be so advanced. Language Arts and Math, I'm doing well enough. Science and History, though..."
+    "Then there's the fact that I'm in my magic classes with a bunch of first years. Guess that's to be expected when you show up so late."
+    "I just got out of a meeting with my Fundamentals of Magic Instructor, but a lot of the talk we had about the ethical use of magitechnology in treating terminal illness went over my head."
+    "Lucas did say I could go to him if I ever needed help in class, and he's been through this before. May as well head to the library and see if I can find him."
     
     scene bg weaver_library_afternoon with fade
     
@@ -20,6 +21,7 @@ label phillip_jinus(month, date):
     
     show phillip contemplative at center with dissolve
     
+    vl alexis_vl_prefix 1
     a "Mind if I join you?"
     
     show phillip neutral at center
@@ -30,6 +32,7 @@ label phillip_jinus(month, date):
         vl phillip_vl_prefix 1B
         p "Not at all. You were... Blakesley, right?"
     
+    #TODO: Missing line
     a "I'm honored that you remember me."
     
     vl phillip_vl_prefix 2
@@ -38,6 +41,7 @@ label phillip_jinus(month, date):
     "He's right about that. Up to three times a week, we see each other there. Though he's usually about as tuned in there as he was when I found him a second ago."
     "Actually, about that..."
     
+    vl alexis_vl_prefix 2
     a "Are you doing alright, Your Highness? You seemed a bit out of it. Need help with some of your work?"
     
     "Sure, I came here to get help, but first year material should be a cakewalk for me."
@@ -46,6 +50,7 @@ label phillip_jinus(month, date):
     vl phillip_vl_prefix 3
     p "Not really, no."
     
+    vl alexis_vl_prefix 3
     a "Then what's up?"
     
     "He takes a moment to weigh whether or not he actually wants to tell me. Then he sighs."
@@ -54,6 +59,7 @@ label phillip_jinus(month, date):
     vl phillip_vl_prefix 4
     p "I don't know if putting me on the Student Council was the right move. I mean, why?"
     
+    vl alexis_vl_prefix 4
     a "You didn't ask? I thought..."
     
     "I trail off. Sue was right about this year being special. The sectors and Headmaster Goude's plan to travel the world with the school have been brought up in most meetings. And usually when they do, eyes drift to the prince."
@@ -63,6 +69,7 @@ label phillip_jinus(month, date):
     
     "But he's in Special Operations, and royalty. 'Leader of the faction that wants to keep the sectors around' was handed to him on a silver platter for those two things alone. All pressure, no privilege."
     
+    vl alexis_vl_prefix 5
     a "Sounds rough."
     
     vl phillip_vl_prefix 6
@@ -71,6 +78,7 @@ label phillip_jinus(month, date):
     "I think about home. Mother, Salem, and Skylar waiting for me, relying on me. Those three are my world, and sometimes thinking about them is overwhelming. Having hundreds of people look to you to fight for them in the Council must be so much worse."
     "And then there's thinking about the entire empire when he takes over some day. How many millions of people are going to have their eyes on him then? Gods, that thought is terrifying."
     
+    vl alexis_vl_prefix 6
     a "I'm no good at politicking, but if you ever feel like you need someone to listen to you rant about things, you can always come to me. I'm plugged in but don't really have a dog in the fight. How does that sound?"
     
     show phillip neutral at center
@@ -79,6 +87,7 @@ label phillip_jinus(month, date):
     
     "I remember why I came to the library in the first place and stand up."
     
+    vl alexis_vl_prefix 7
     a "I've got to run. I was looking for someone. Take care, Your Highness."
     
     if eval(a.name)[0] == "Alexis":
@@ -97,6 +106,7 @@ label phillip_jinus(month, date):
 
 label phillip_vanus(month, date):
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Own Route/Month 3/Phillip_Month3_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Phillip/Month 3/" + player_voice_prefix + "_Phillip_Month3_"
 
     call screen calendar(month, date, "Vanus", 7)
     scene bg mainstreet_afternoon with fade
@@ -113,6 +123,7 @@ label phillip_vanus(month, date):
     "I wait at the edge of a street, waiting for the traffic light to give me the right of way."
     "A few other people join me. It takes several of them whispering for me to realize that the prince is in our little group."
 
+    vl alexis_vl_prefix 1
     a "Your Highness, over here!"
 
     "He turns towards me. Seeing my familiar face, he lights up a bit and makes his way through the crowd over to me."
@@ -121,6 +132,7 @@ label phillip_vanus(month, date):
     vl phillip_vl_prefix 1
     p "We meet again."
 
+    vl alexis_vl_prefix 2
     a "Yeah. What's up?"
 
     show phillip neutral
@@ -137,7 +149,8 @@ label phillip_vanus(month, date):
     "When the crosswalk light turns, we follow the crowd."
     "The pause in the talk reminds me of the meeting Sue had with the presidents last month."
 
-    show phillip neutral    
+    show phillip neutral
+    vl alexis_vl_prefix 3   
     a "Sorry about Ultire, by the way."
     
     "The prince had been thrust into a leadership role in what's become known as the 'Sectorist' faction, but it was Ultire doing most of the legwork."
@@ -147,24 +160,28 @@ label phillip_vanus(month, date):
     vl phillip_vl_prefix 4
     p "It isn't like you voted to kick him out. From what I've heard, no one could've saved him, with how the rules are written."
 
+    vl alexis_vl_prefix 4
     a "On the bright side, it lit a fire under everyone's asses."
 
     show phillip excited
     vl phillip_vl_prefix 5  
     p "Thankfully."
 
+    vl alexis_vl_prefix 5
     a "Where does that leave you, though? The Sectorists are still doing things in the background, aren't they?"
 
     show phillip neutral
     vl phillip_vl_prefix 6  
     p "We'll make due, somehow. Some allies decided it would be best to use this lull to rework our strategy."
 
+    vl alexis_vl_prefix 6
     a "You don't mind being the only real leader now?"
 
     show phillip tired
     vl phillip_vl_prefix 7
     p "Doesn't really matter, does it? They're relying on me, so I have to step up, one way or another."
 
+    vl alexis_vl_prefix 7
     a "I guess so."
     
     "He was probably raised with that sort of mindset. After all, it wasn't a secret to anyone he'd be Emperor someday."
@@ -172,11 +189,13 @@ label phillip_vanus(month, date):
     "Just leaving it at that bothers me, though."
 
     show phillip neutral
+    vl alexis_vl_prefix 8
     a "This is off the record, but I like them both. The sectors and the headmaster's crazy idea of going all over the world."
     
     "The prince seems surprised at that."
 
     show phillip excited
+    vl alexis_vl_prefix 9
     a "I can't make any promises, but I can try talking to Sue."
 
     show phillip contemplative
@@ -187,6 +206,7 @@ label phillip_vanus(month, date):
     "Facilitate the meetings, be generally likable."
     "But with how she plays her cards close to her chest, I can only imagine what would happen if she were to tip the scales."
 
+    vl alexis_vl_prefix 10
     a "Well, it wouldn't hurt to try, would it?"
 
     show phillip excited
@@ -201,7 +221,9 @@ label phillip_vanus(month, date):
 
     "And he's right. Right out in front of House Lychester."
 
+    vl alexis_vl_prefix 11
     a "Then I guess this is goodbye. I'll be in touch if the whole Sue thing works out."
+    voice sustain
     a "And good luck with the rest of your patrol."
 
     show phillip excited
@@ -236,12 +258,15 @@ label route_branch_point2:
 label phillip_neralt(month, date):
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Phillip/Month 5/Isaiah_Phillip_Month5_"
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Own Route/Month 5/Phillip_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Phillip/Month 5/" + player_voice_prefix + "_Phillip_Month5_"
+
 
     call screen calendar(month, date, "Neralt", 10)
     scene bg dorm_common_noon with fade
 
     $ renpy.notify("Phillip - \nLenday, Neralt 10th, 1027 RD")
 
+    vl alexis_vl_prefix 1
     a "Is that…?"
 
     "I've just gotten off the elevator in House Lychester. I'm on my way out to spend some time with friends and barely out of the elevator before I spot the prince saying goodbye to a few other students."
@@ -249,11 +274,13 @@ label phillip_neralt(month, date):
 
     show phillip neutral at center with dissolve
     
+    vl alexis_vl_prefix 2
     a "Wasn't expecting to see you here, Your Highness."
 
     vl phillip_vl_prefix 1
     p "Had a bit of business to attend to. The second Residencies start this weekend, so I was coordinating with some of the Lychesters."
 
+    vl alexis_vl_prefix 3
     a "So you're on the clock even outside of the Student Council room?"
 
     show phillip tired
@@ -261,6 +288,7 @@ label phillip_neralt(month, date):
     p "That's how it ended up."
 
     show phillip neutral at center
+    vl alexis_vl_prefix 4
     a "What are these Residencies like, anyway?"
 
     show phillip excited
@@ -269,12 +297,14 @@ label phillip_neralt(month, date):
     voice sustain
     p "Since we were in a small town, the Spec Ops mainly did odd jobs."
 
+    vl alexis_vl_prefix 5
     a "And in the cities?"
 
     show phillip neutral
     vl phillip_vl_prefix 4
     p "We help local law enforcement, from what I hear. Like our patrols, but more active."
 
+    vl alexis_vl_prefix 6
     a "So like week long internships. And it's not just Magiana?"
 
     vl phillip_vl_prefix 5
@@ -282,7 +312,8 @@ label phillip_neralt(month, date):
 
     "So they're already getting to see the world, huh? And not just to see the sights but help locals. No wonder the headmaster thought this up."
 
-    show phillip excited  
+    show phillip excited
+    vl alexis_vl_prefix 7
     a "Imagine being able to do that in other parts of the world."
 
     vl phillip_vl_prefix 6
@@ -294,7 +325,8 @@ label phillip_neralt(month, date):
     vl phillip_vl_prefix 7
     p "People like me could hop on a flight whenever they want. Most couldn't."
 
-    show phillip neutral  
+    show phillip neutral
+    vl alexis_vl_prefix 8
     a "But even if it's through the school, you run into the same problem stopping them from doing it on their own time."
 
     "He nods."
@@ -303,7 +335,8 @@ label phillip_neralt(month, date):
     vl phillip_vl_prefix 8  
     p "Money. I'll figure something out."
 
-    show phillip excited  
+    show phillip excited
+    vl alexis_vl_prefix 9
     a "Good luck. With that and the Residency."
 
     vl goude_vl_prefix 1
@@ -315,6 +348,7 @@ label phillip_neralt(month, date):
     vl goude_vl_prefix 2
     h "And it's nice to see you too, Blakesley. You're used to the school now?"
 
+    vl alexis_vl_prefix 10
     a "I'd sure as sin hope so after all this time. If anything, I'm surprised to see you here, Headmaster."
 
     vl goude_vl_prefix 3
@@ -327,6 +361,7 @@ label phillip_neralt(month, date):
 
     "The prince briefly summarizes his meeting to the headmaster as I stand and listen. And as I do, a question pops into my head."
 
+    #TODO: Missing line
     a "Why are these even on debate in the council anyway? You've already implemented them."
 
     "The prince crosses his arms and furrows his brow."
@@ -346,6 +381,7 @@ label phillip_neralt(month, date):
     voice sustain
     h "But it isn't the law of the land, so it can't last forever unless Parliament makes it so."
 
+    vl alexis_vl_prefix 11
     a "I think I get it. But why the civics lesson?"
 
     show phillip excited
@@ -358,6 +394,7 @@ label phillip_neralt(month, date):
     h "Without the Council's consent, my little pet project dies after this year."
 
     show phillip contemplative
+    vl alexis_vl_prefix 12
     a "You're the headmaster, but students can overrule you? That sounds… complicated."
 
     vl goude_vl_prefix 8
@@ -401,6 +438,7 @@ label route_branch_point3:
 label phillip_elvera(month, date):
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Phillip/Month 7/Isaiah_Phillip_Month7_"
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Own Route/Month 7/Phillip_Month7_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Phillip/Month 7/" + player_voice_prefix + "_Phillip_Month7_"
     
     call screen calendar(month, date, "Elvera", 12)
     scene wilson_salon_afternoon with fade
@@ -420,6 +458,7 @@ label phillip_elvera(month, date):
 
     show phillip excited at center with dissolve
     
+    vl alexis_vl_prefix 1
     a "I'm not interrupting anything?"
 
     vl goude_vl_prefix 1
@@ -427,7 +466,8 @@ label phillip_elvera(month, date):
 
     "I take him up on the offer, turning to the prince once I'm settled."
 
-    show phillip neutral    
+    show phillip neutral
+    vl alexis_vl_prefix 2
     a "How does it feel now that all the hard work paid off?"
 
     "He lets out a little laugh."
@@ -436,18 +476,21 @@ label phillip_elvera(month, date):
     vl phillip_vl_prefix 1
     p "I'm not sure I'd call it \"hard work.\""
 
+    vl alexis_vl_prefix 3
     a "How much money did you throw at this again?"
 
     show phillip contemplative
     vl phillip_vl_prefix 2
     p "Yes, because throwing money at the problem is hard work."
 
+    vl alexis_vl_prefix 4
     a "When you did it the way you did? Yes. And don't act like you didn't do anything else to get people on board."
 
     show phillip neutral at center with dissolve
     vl phillip_vl_prefix 3
     p "Alright, I concede. But it is nice to see everyone. The excitement is infectious."
 
+    vl alexis_vl_prefix 5
     a "What's the plan for next year?"
 
     "I turn to the headmaster, feeling guilty for taking over the conversation he'd been having with the prince."
@@ -455,18 +498,23 @@ label phillip_elvera(month, date):
 
     show phillip excited
     #a "It was Apanaʻoha, right?"
+    #TODO: Missing line / updated line
+    vl alexis_vl_prefix 6
     a "It was Ekaska, right?"
 
     vl goude_vl_prefix 2
     h "That's right. It wasn't easy convincing the government to let in so many foreigners all at once, but the king was very accommodating."
 
+    vl alexis_vl_prefix 7
     a "Well, no wonder they're excited! A year in paradise, and practically for free!"
 
     "Just like the Salon, another change that mainly went under the radar came to mind."
     "And it's one that would definitely be relevant to him."
 
-    show phillip neutral    
+    show phillip neutral
+    vl alexis_vl_prefix 8
     a "Are you looking forward to the first Student Council elections in a few months?"
+    voice sustain
     a "It must be exciting even for you, Headmaster. You graduated from MIA, didn't you?"
 
     vl goude_vl_prefix 3
@@ -483,12 +531,14 @@ label phillip_elvera(month, date):
     "We order some drinks and snacks, passing the time with some idle conversation about how things have gone since the beginning of the new year."
 
     show phillip neutral
+    vl alexis_vl_prefix 9
     a "What were you two talking about before I showed up?"
 
     show phillip tired
     vl phillip_vl_prefix 5
     p "We're getting ready for next month's Residency, and this one has kept us really busy."
 
+    vl alexis_vl_prefix 10
     a "Where is it?"
 
     show phillip excited
@@ -502,6 +552,7 @@ label phillip_elvera(month, date):
     h "It only felt right to end the year off with a visit to the Jewel of the Empire. But it's also the largest city, which comes with its own unique challenges."
 
     show phillip contemplative
+    vl alexis_vl_prefix 11
     a "You two are going to be run ragged the entire week, eh?"
 
     "The prince sighs."
@@ -522,6 +573,7 @@ label phillip_elvera(month, date):
     h "As do I. The empress and prime minister are expecting me in the capital for lunch in a few hours and there are preparations to be made."
 
     show phillip excited
+    vl alexis_vl_prefix 12
     a "Good luck with it all. Sounds like you two are going to need it."
 
     if eval(a.name)[0] == "Alexis":
@@ -557,6 +609,7 @@ label route_branch_point5:
 
 label phillip_overa(month, date):
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Own Route/Epilogue/Phillip_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Phillip/Epilogue/" + player_voice_prefix + "_Phillip_Epilogue_"
 
     call screen calendar(month, date, "Overa", 19)
     scene bg mainstreet_afternoon with fade
@@ -581,6 +634,7 @@ label phillip_overa(month, date):
     "The prince."
     "That's the prince standing at that sign. I sprint the rest of the way."
 
+    vl alexis_vl_prefix 1
     a "Your Highness!"
 
     "When he turns to me, he smiles."
@@ -593,10 +647,12 @@ label phillip_overa(month, date):
         vl phillip_vl_prefix 1B
         p "Oh, Blakesley. How've you been?"
 
+    vl alexis_vl_prefix 2
     a "\"How've you been?\" That's what you have to say after being gone for so long?"
 
     "Well, at least he looks to be in good shape. Except for the eyepatch. What in the Abyss happened in Ferenicia?"
 
+    vl alexis_vl_prefix 3
     a "Where have you been? What happened during your last Residency? And what're you doing back after so long?"
 
     show phillip neutral eyepatch at center with dissolve
@@ -617,7 +673,9 @@ label phillip_overa(month, date):
     vl phillip_vl_prefix 4
     p "Now that I think about it, I missed the back half of the Student Council campaign. How's that looking?"
 
+    vl ("<from 0.85>" + alexis_vl_prefix) 4
     a "We voted earlier this week. Results should be posted soon. Might've already happened."
+    voice sustain
     a "The Presidency's the one people watched the closest. Reina's the frontrunner there."
 
     show phillip neutral eyepatch
@@ -650,12 +708,14 @@ label phillip_overa(month, date):
     vl phillip_vl_prefix 7
     p "I didn't even campaign!"
 
+    vl alexis_vl_prefix 5
     a "Well, not openly."
 
     show phillip contemplative eyepatch
     vl phillip_vl_prefix 8
     p "I—what?"
 
+    vl alexis_vl_prefix 6
     a "I'll see you in a bit."
 
     hide phillip with dissolve
@@ -666,6 +726,7 @@ label phillip_overa(month, date):
 
     show phillip tired eyepatch with dissolve
     
+    vl alexis_vl_prefix 7
     a "You alright?"
 
     vl phillip_vl_prefix 9
@@ -677,6 +738,7 @@ label phillip_overa(month, date):
     vl phillip_vl_prefix 10
     p "It's really starting to sink in that the year's over."
 
+    vl alexis_vl_prefix 8
     a "Yeah."
 
     show phillip neutral eyepatch at center with dissolve
@@ -684,6 +746,7 @@ label phillip_overa(month, date):
     vl phillip_vl_prefix 11
     p "It's been pretty nice knowing you this year."
 
+    vl alexis_vl_prefix 9
     a "I'm honored that you think so, Your Highness. It's been my pleasure. But it isn't like this has to be the end, right?"
 
     "He perks up at that."
@@ -698,17 +761,20 @@ label phillip_overa(month, date):
     vl phillip_vl_prefix 13
     p "All of that excitement earlier might've been too much for me. I'm going to head back to House Sloane for some rest."
 
+    vl alexis_vl_prefix 10
     a "Will you need any help getting back?"
 
     show phillip neutral eyepatch
     vl phillip_vl_prefix 14
     p "I'll be fine. Well… if this is the last time we see each other before graduation, good luck, [a]."
 
+    vl alexis_vl_prefix 11
     a "Thank you. Same to you, Your Highness."
 
     "I look over to the crowd of students still crowding the bulletin board. So many of them have relied on him, and are going to next year, too."
     "He was already busy running around for the Spec Ops, and now he's going to have to do it for everyone."
 
+    vl alexis_vl_prefix 12
     a "I think you're really going to need it."
 
     "We say goodbye, and he heads off. I look up at Magis Hall. Well, if I was going around one last time for nostalgia's sake, may as well take advantage of the fact that I'm here."

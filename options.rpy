@@ -189,12 +189,15 @@ init python:
     #build.classify('/**.ico', 'windows')
     #build.classify('/**.ico', 'linux')
     #build.classify('/**.icns', 'mac')
-    #build.classify('**.ogg', None)
+    build.classify('**.ogg', None)
 
     ## To archive files, classify them as 'archive'.
 
     # build.classify('game/**.png', 'archive')
     # build.classify('game/**.jpg', 'archive')
+    # build.archive("audio", "all")
+    # build.classify("game/**.ogg", "audio")
+    # build.classify("game/**.wav", "audio")
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.

@@ -700,6 +700,9 @@ label student_council_verabris(month, date):
     elif chosen_club == "archery":
         a "Well, I want to go for a Master's degree. I just don't know what or where yet."
         #jump student_council_verabis_cont
+    else:
+        #TODO: Add dialogue variant for Scouts route
+        pass
     
     jump student_council_verabris_cont
     

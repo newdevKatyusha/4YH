@@ -1746,6 +1746,9 @@ screen name_input():
                 input id "input" default "Alexis" length 20 xalign 0.5
 
 screen gender_selection():
+    default voice_male_id = 0
+    default voice_female_id = 0
+
     modal True
     
     add "#ffffff"
@@ -1768,27 +1771,71 @@ screen gender_selection():
                 spacing 20
                 xalign 0.5
                 
-                textbutton "Male":
-                    text_size 28
-                    text_color "#ffffff"
-                    text_hover_color "#ffffff"
-                    background "#003366"
-                    hover_background "#0d4d7a"
-                    padding (40, 15)
-                    xsize 200
-                    text_xalign 0.5
-                    action Return("male")
+                hbox:
+                    textbutton "Male":
+                        text_size 28
+                        text_color "#ffffff"
+                        text_hover_color "#ffffff"
+                        background "#003366"
+                        hover_background "#0d4d7a"
+                        padding (40, 15)
+                        xsize 200
+                        text_xalign 0.5
+                        action Return(("male", voice_male_id))
+
+                    hbox:
+                        button:
+                            xysize (50, 50)
+                            #left_padding 30
+                            background "#003366"
+                            hover_background "#0d4d7a"
+                            text "<":
+                                color "#ffffff"
+                            action If(voice_male_id > 0, IncrementLocalVariable("voice_male_id", -1))
+
+                        text "Voice [voice_male_id]"
+
+                        button:
+                            xysize (50, 50)
+                            #left_padding 30
+                            background "#003366"
+                            hover_background "#0d4d7a"
+                            text ">":
+                                color "#ffffff"
+                            action If(voice_male_id < 4, IncrementLocalVariable("voice_male_id", 1))
                 
-                textbutton "Female":
-                    text_size 28
-                    text_color "#ffffff"
-                    text_hover_color "#ffffff"
-                    background "#003366"
-                    hover_background "#0d4d7a"
-                    padding (40, 15)
-                    xsize 200
-                    text_xalign 0.5
-                    action Return("female")
+                hbox:
+                    textbutton "Female":
+                        text_size 28
+                        text_color "#ffffff"
+                        text_hover_color "#ffffff"
+                        background "#003366"
+                        hover_background "#0d4d7a"
+                        padding (40, 15)
+                        xsize 200
+                        text_xalign 0.5
+                        action Return(("female", voice_female_id))
+
+                    hbox:
+                        button:
+                            xysize (50, 50)
+                            #left_padding 30
+                            background "#003366"
+                            hover_background "#0d4d7a"
+                            text "<":
+                                color "#ffffff"
+                            action If(voice_female_id > 0, IncrementLocalVariable("voice_female_id", -1))
+
+                        text "Voice [voice_female_id]"
+
+                        button:
+                            xysize (50, 50)
+                            #left_padding 30
+                            background "#003366"
+                            hover_background "#0d4d7a"
+                            text ">":
+                                color "#ffffff"
+                            action If(voice_female_id < 4, IncrementLocalVariable("voice_female_id", 1))
 
 ## End Screen ################################################################
 ##

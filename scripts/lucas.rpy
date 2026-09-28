@@ -1,6 +1,7 @@
 label literature_route_jinus(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 1/Lucas_M1_"
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Lucas/Month 1/Val_Lucas_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 1/" + player_voice_prefix + "_Lucas_Month1_"
 
     call screen calendar(month, date, "Jinus", 8)
     scene bg classroom_lit_afternoon with fade 
@@ -50,6 +51,7 @@ label literature_route_jinus(month, date):
 
     "Ah, nuts."
 
+    vl alexis_vl_prefix 1
     a "I didn't read the original trilogy, so I'm sure I'm missing some context…"
 
     vl val_vl_prefix 4
@@ -78,6 +80,7 @@ label literature_route_jinus(month, date):
 
     "Crap! How long was I just sitting there staring into space?"
 
+    vl alexis_vl_prefix 2
     a "The road to the Abyss is paved with good intentions. Sofia loves Alonzo, so she wants to help him achieve his goals. And dealing a blow to the Church is a good thing for the people of her city."
 
     vl val_vl_prefix 6
@@ -101,6 +104,7 @@ label literature_route_jinus(month, date):
         vl lucas_vl_prefix 9B
     l "And I appreciate your input, Val. Same to you, [a]."
 
+    vl alexis_vl_prefix 3
     a "Yeah, sure. I just hope next time I'll have more to offer."
 
     "We move on from that topic, but the rest of the meeting is spent discussing other parts of the same book, its themes, its characters, etc."
@@ -114,6 +118,7 @@ label literature_route_jinus(month, date):
 label literature_route_dallinus(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 2/Lucas_M2_"
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Lucas/Month 2/Isaiah_Lucas_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 2/" + player_voice_prefix + "_Lucas_Month2_"
 
     call screen calendar(month, date, "Dallinus", 17)
     scene bg wilson_salon_afternoon with fade
@@ -130,6 +135,7 @@ label literature_route_dallinus(month, date):
     vl lucas_vl_prefix 1
     l "I was thinking about 'The Golden Price.' How do you feel about that?"
 
+    vl alexis_vl_prefix 1
     a "Don't know about that one. My mother's a big fan. I've read it once. It's big."
 
     show lucas tired with dissolve
@@ -142,6 +148,7 @@ label literature_route_dallinus(month, date):
     "The series spans a man's entire life, until he has great-grandchildren, but the first book only covers his relatively uneventful childhood."
     "At best, it might pique someone's interest, but at worst, it could bore them to tears."
 
+    vl alexis_vl_prefix 2
     a "Maybe 'The Blackwater Bastion'? I haven't read it, but I know it's a lot shorter."
 
     show lucas happy with dissolve
@@ -152,6 +159,7 @@ label literature_route_dallinus(month, date):
     h "Blakesley, Flores, it's good to see you two."
     "The headmaster walks up to our table, a folio tucked under his arm."
 
+    vl alexis_vl_prefix 3
     a "Good afternoon, Headmaster. Looking for a break after finishing up some work?"
 
     vl goude_vl_prefix 2
@@ -168,6 +176,7 @@ label literature_route_dallinus(month, date):
     vl goude_vl_prefix 3
     h "Read it? It's one of my favorites. First discovered it when I was in the Literature Club myself."
 
+    vl alexis_vl_prefix 4
     a "You were in the same club as us? Small world."
 
     show lucas happy with dissolve
@@ -217,6 +226,7 @@ label literature_route_dallinus(month, date):
     "The headmaster leaves us, and Lucas goes back to drinking his coffee in silence."
     "I could always just offer my own sympathies, but if the headmaster was a student that long ago, what point would there be in me doing it now?"
 
+    vl alexis_vl_prefix 5
     a "...How long ago was it?"
 
     show lucas sad with dissolve
@@ -225,6 +235,7 @@ label literature_route_dallinus(month, date):
     
     "What a morbid coincidence."
 
+    vl alexis_vl_prefix 6
     a "That's the year I lost my father, too."
 
     vl lucas_vl_prefix 12
@@ -238,12 +249,14 @@ label literature_route_dallinus(month, date):
     voice sustain
     l "Though I suppose it's callous of me to say."
 
+    vl alexis_vl_prefix 7
     a "I don't think so. It's nice to know you're not alone in your grief and all."
 
     show lucas neutral with dissolve
     vl lucas_vl_prefix 14
     l "Perhaps we present the club with a literary treatise on grief. There must be a few good options I can find."
 
+    vl alexis_vl_prefix 8
     a "What a light and airy club discussion that's going to be."
 
     show lucas happy with dissolve
@@ -260,6 +273,7 @@ label literature_route_dallinus(month, date):
 
 label literature_route_vanus(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 3/Lucas_M3_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 3/" + player_voice_prefix + "_Lucas_Month3_"
 
     call screen calendar(month, date, "Vanus", 17)
     scene bg weaver_library_night with fade
@@ -275,23 +289,29 @@ label literature_route_vanus(month, date):
     "He's pointing his own phone at one as he flips through it, consumed by the words on the page."
 
     show lucas neutral with dissolve
+
+    vl alexis_vl_prefix 1
     a "Lucas?"
 
     "He ignores me. I walk up to the table, knocking on its wood. Judging by how high he jumps, he didn't even know that I was there."
 
     show lucas annoyed with hpunch
+
+    vl alexis_vl_prefix 2
     a "Good evening."
 
     show lucas neutral
     vl lucas_vl_prefix 1
     l "Ah, hello."
 
+    vl alexis_vl_prefix 3
     a "A bit late to be here at the library, don't you think? Isn't it after hours?"
 
     show lucas tired
     vl lucas_vl_prefix 2
     l "I suppose I just forgot to lock up."
 
+    vl alexis_vl_prefix 4
     a "With you inside?"
 
     "I take the opportunity to take a look at some of the books around him."
@@ -310,6 +330,8 @@ label literature_route_vanus(month, date):
     "He's distracted. Like he'd rather be back in his books than talking to me."
 
     show lucas neutral
+
+    vl alexis_vl_prefix 5
     a "Clearly, I interrupted you. Some sort of homework?"
 
     show lucas sad
@@ -318,6 +340,7 @@ label literature_route_vanus(month, date):
     vl lucas_vl_prefix 5
     l "No, not quite..."
 
+    vl alexis_vl_prefix 6
     a "Is it anything I can help you with?"
 
     show lucas annoyed
@@ -331,6 +354,7 @@ label literature_route_vanus(month, date):
     vl lucas_vl_prefix 7
     l "Nothing for you to worry about. Sorry you had to see that."
 
+    vl alexis_vl_prefix 7
     a "You don't have to stop because of me."
 
     show lucas sad
@@ -340,6 +364,7 @@ label literature_route_vanus(month, date):
     "Is that it? It's almost like he's trying to hide something."
     "The chance of me finding these books by myself is slim to none, so if that's his plan, it would definitely work. But what does he have to hide?"
 
+    vl alexis_vl_prefix 8
     a "Is everything alright?"
 
     show lucas annoyed with dissolve
@@ -348,6 +373,7 @@ label literature_route_vanus(month, date):
     vl lucas_vl_prefix 9
     l "I was simply searching for something."
 
+    vl alexis_vl_prefix 9
     a "In a bunch of books about how the world was hundreds of years ago? Over a thousand?"
 
     show lucas happy with dissolve
@@ -369,8 +395,11 @@ label literature_route_vanus(month, date):
     vl lucas_vl_prefix 11
     l "Thank you for waiting. Shall we walk together for a moment? Our dorms are in the same general direction."
 
+    vl alexis_vl_prefix 10
     a "Of course."
+
     show lucas neutral at center 
+
     "We aren't together for long, but while we are, we don't say a word."
     "Part of me finds it awkward not to press Lucas on what he was doing so late by himself in the dark."
     "Another, larger, part of me thinks it's better to offer him the silent company than turn our walk into an interrogation. So that's what I do."
@@ -385,6 +414,7 @@ label literature_route_dyalt(month, date):
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Lucas/Month 4/Val_Lucas_Month4_"
     $ clubregular1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 1/Lucas Month 4/ClubRegular1_Lucas_Month4_"
     $ clubmember2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Member 2/Lucas Month 4/ClubMember2_Lucas_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 4/" + player_voice_prefix + "_Lucas_Month4_"
 
     call screen calendar(month, date, "Dyalt", 25)
     scene bg classroom_lit_afternoon with fade
@@ -400,11 +430,13 @@ label literature_route_dyalt(month, date):
     vl val_vl_prefix 1
     v "This is ridiculous. He's pulling this shit again?"
 
+    vl alexis_vl_prefix 1
     a "This isn't usual of him, is it?"
 
     vl val_vl_prefix 2
     v "Ha!"
 
+    vl alexis_vl_prefix 2
     a "That doesn't sound good."
 
     vl val_vl_prefix 3
@@ -424,11 +456,13 @@ label literature_route_dyalt(month, date):
     vl val_vl_prefix 6
     v "And before him, it was his grandpa. Probably whispered to let his pal's brother take over. Rotten, the whole lot."
 
+    vl alexis_vl_prefix 3
     a "Don't you think you're being a little unfair?"
 
     vl val_vl_prefix 7
     v "Unfair? Isn't it more unfair for the president to not show up without warning?"
 
+    vl alexis_vl_prefix 4
     a "Instead of trashing someone who isn't here, how about we do what we came for?"
 
     "Val strides to the center, looking at everyone slacking off."
@@ -450,6 +484,7 @@ label literature_route_dyalt(month, date):
 label literature_route_neralt(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 5/Lucas_M5_"
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Lucas/Month 5/Val_Lucas_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 5/" + player_voice_prefix + "_Lucas_Month5_"
     
     call screen calendar(month, date, "Neralt", 15)
     scene bg classroom_lit_afternoon with fade
@@ -526,6 +561,7 @@ label literature_route_neralt(month, date):
 
     "I get out of my seat, striding over to Val."
 
+    vl alexis_vl_prefix 1
     a "He's here now, isn't he? Let's just move on. We can deal with everything else later."
 
     vl val_vl_prefix 10
@@ -560,6 +596,7 @@ label literature_route_neralt(month, date):
     vl val_vl_prefix 14
     v "Sure as sin doesn't mean you are qualified, either."
 
+    vl alexis_vl_prefix 2
     a "Alright, that's enough."
 
     "Val turns on me."
@@ -567,17 +604,22 @@ label literature_route_neralt(month, date):
     vl val_vl_prefix 15
     v "You stay out of this!"
 
+    vl alexis_vl_prefix 3
     a "You're the one ruining the club meeting with your grievances. This could've been a private discussion."
 
     "I motion to the rest of the club, our silent, enraptured audience."
 
+    vl alexis_vl_prefix 4
     a "Or you could've gone to a faculty member directly with your concerns. But no."
+    voice sustain
     a "Your first instinct was to start a scene. Are you sure you're qualified to be Literature Club President?"
 
     "My words weren't meant to be a tongue lashing, but Val shrinks all the same. Lucas relaxes a bit, but then I look at him."
     "Val started things today, but it was still only a reaction."
 
     show lucas sad
+
+    vl alexis_vl_prefix 5
     a "And you, Lucas. The least you can do is tell us when you're not going to be here."
 
     vl lucas_vl_prefix 11
@@ -622,28 +664,33 @@ label literature_route_neralt(month, date):
 
     "They leave, not giving Lucas a chance to respond. He shrugs."
 
+    vl alexis_vl_prefix 6
     a "What have you been doing these past two months anyway?"
 
     "Since I found him in the library at night, I hadn't mentioned the encounter. But if there was ever a time to do it…"
 
+    vl alexis_vl_prefix 7
     a "Are you still searching through those books?"
 
     show lucas tired
     vl lucas_vl_prefix 16
     l "So you remember that night, do you?"
 
+    vl alexis_vl_prefix 8
     a "If you'd rather not talk about it, that's alright."
 
     show lucas neutral
     vl lucas_vl_prefix 17
     l "No, it's fine. There's a certain Magic Art I'm searching for."
 
+    vl alexis_vl_prefix 9
     a "Magic? Couldn't you just ask some of our teachers?"
 
     show lucas sad
     vl lucas_vl_prefix 18
     l "I tried, in my first year. They all rebuffed me. So, I'm left to search all by my lonesome."
 
+    vl alexis_vl_prefix 10
     a "What spell are you looking for?"
 
     show lucas neutral
@@ -653,12 +700,15 @@ label literature_route_neralt(month, date):
     "He pauses, growing visibly uncomfortable."
 
     show lucas annoyed
+
+    vl alexis_vl_prefix 11
     a "We don't have to talk about it if you don't want to. Really."
 
     show lucas neutral
     vl lucas_vl_prefix 20
     l "Right. Thank you. You can leave without me. I have to make sure the club room is secured before I depart."
 
+    vl alexis_vl_prefix 12
     a "I wouldn't mind waiting."
 
     show lucas tired
@@ -677,6 +727,7 @@ label literature_route_exalt(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 6/Lucas_M6_"
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Lucas/Month 6/Val_Lucas_Month6_"
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Lucas/Month 6/Isaiah_Lucas_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 6/" + player_voice_prefix + "_Lucas_Month6_"
 
     call screen calendar(month, date, "Exalt", 26)
     scene bg classroom_lit_afternoon with fade
@@ -689,11 +740,13 @@ label literature_route_exalt(month, date):
     vl val_vl_prefix 1
     v "The bastard said he wouldn't do this again."
 
+    vl alexis_vl_prefix 1
     a "It doesn't seem like him to break his word like that, though."
 
     vl val_vl_prefix 2
     v "I'm going to Instructor Windsor about this. He'll kick four-eyes out. Or, at the very least, he'll talk some sense into him."
 
+    vl alexis_vl_prefix 2
     a "You go do that. I'm going to see if I can't find him."
 
     "In fact, I don't remember seeing Lucas at all today. He didn't skip school, did he?"
@@ -710,6 +763,8 @@ label literature_route_exalt(month, date):
     "Again, I find Lucas surrounded by a pile of books, so absorbed that he hasn't noticed someone joining him. Just from where I'm standing, something feels wrong."
 
     show lucas tired
+
+    vl alexis_vl_prefix 3
     a "Lucas."
 
     "He glances up at me, dark circles underneath his bloodshot eyes. The haggard young man blinks at me a few times, then frantically checks his phone."
@@ -718,28 +773,33 @@ label literature_route_exalt(month, date):
     vl lucas_vl_prefix 1
     l "Oh, dear, I lost track of the time."
 
+    vl alexis_vl_prefix 4
     a "Lost track of time? Lucas, you skipped school."
 
     show lucas sad
     vl lucas_vl_prefix 2
     l "I did? I only meant to be here for a short while…"
 
+    vl alexis_vl_prefix 5
     a "You need to rest."
 
     "I approach the table, pushing the books away from him. As I reach for the one he's currently reading, he yanks it off of the table."
 
+    vl alexis_vl_prefix 6
     a "Come on, don't do this."
 
     show lucas annoyed
     vl lucas_vl_prefix 3
     l "N-no, I need to keep searching."
 
+    vl alexis_vl_prefix 7
     a "What in the Abyss could be so important that it's worth doing this to yourself? You've been obsessing over them for months."
 
     "Maybe even years, if what Val said was right."
     "His eyes start flitting about the table, trying to settle anywhere else other than me, from the looks of it."
     "Last time, I didn't press the issue, but I can't just walk away because I worry he might be uncomfortable. Not now. I take a seat across from him."
 
+    vl alexis_vl_prefix 8
     a "Talk to me, Lucas. This is worrying."
 
     "He sets the book down and buries his head in his hands. A long moment passes before he looks up, though not at me."
@@ -749,10 +809,12 @@ label literature_route_exalt(month, date):
     vl lucas_vl_prefix 4
     l "Fifteen years. That's how long my father's been asleep."
 
+    vl alexis_vl_prefix 9
     a "So you're searching for some sort of super spell, because medicine and magic both have failed him?"
 
     "All he can manage as a response is a nod."
 
+    vl alexis_vl_prefix 10
     a "Why didn't you tell anyone? Someone could've helped you look so you didn't have to run yourself ragged like this."
 
     "A weak, lifeless laugh escapes him."
@@ -761,6 +823,7 @@ label literature_route_exalt(month, date):
     vl lucas_vl_prefix 5
     l "I already told you, the teachers turned me down. Why would the students be any different?"
 
+    vl alexis_vl_prefix 11
     a "If it's this important to you…"
 
     "I stop short of offering him my help. For, as important as this obviously is to him, I'm not quite sure what  would be best:"
@@ -838,6 +901,7 @@ label literature_route_exalt(month, date):
     "That would be Gabriel Wilson, the priest I saw on my first day and the instructor for Magical Theology:"
     "the study of how various religions around the world interact with the magical beliefs and practices of their followers."
 
+    vl alexis_vl_prefix 12
     a "If the Magical Theology teacher's the one you went to, what does that mean? A God killed him?"
 
     show lucas annoyed
@@ -853,6 +917,7 @@ label literature_route_exalt(month, date):
     vl goude_vl_prefix 11
     h "In the ways they allow. We can heal injuries, to a point; alleviate the symptoms of an illness, but not eradicate it."
 
+    vl alexis_vl_prefix 13
     a "I'm guessing that waking someone up from a coma would be breaking the rules?"
 
     vl goude_vl_prefix 12
@@ -879,6 +944,8 @@ label literature_route_exalt(month, date):
     "Lucas hangs his head, and the headmaster's expression has yet to soften. I place a hand on Lucas's shoulder and break the silence."
 
     show lucas sad
+
+    vl alexis_vl_prefix 14
     a "Then it's best to leave it."
 
     vl lucas_vl_prefix 16
@@ -886,6 +953,7 @@ label literature_route_exalt(month, date):
 
     "His voice is small and weak. It makes my next words stick in my throat, but I manage to force them out."
 
+    vl alexis_vl_prefix 15
     a "When he wakes up, do you want him to find out he's lost both sons?"
 
     "And if Instructor Wilson's theory was right, it would only make things worse."
@@ -898,6 +966,7 @@ label literature_route_exalt(month, date):
     voice sustain
     h "Surely that's something he'd appreciate."
 
+    vl alexis_vl_prefix 16
     a "The headmaster's right. Being there for him next week is something that you can do."
 
     vl goude_vl_prefix 17
@@ -936,6 +1005,7 @@ label literature_route_exalt(month, date):
 label literature_route_elvera(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 7/Lucas_M7_"
     $ hugo_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Hugo/Hugo_Lucas_Month7_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 7/" + player_voice_prefix + "_Lucas_Month7_"
 
     call screen calendar(month, date, "Elvera", 24)
     scene bg classroom_lit_afternoon with fade
@@ -948,17 +1018,20 @@ label literature_route_elvera(month, date):
 
     show lucas tired
 
+    vl alexis_vl_prefix 1
     a "How are you doing?"
 
     vl lucas_vl_prefix 1
     l "Would you believe me if I said \"perfectly alright?\""
 
+    vl alexis_vl_prefix 2
     a "No."
 
     show lucas sad
     vl lucas_vl_prefix 2
     l "Then there you have it."
 
+    vl alexis_vl_prefix 3
     a "Think talking about it might help?"
 
     "I pat the desk next to where I'm sitting. It takes a minute, but he accepts the invitation."
@@ -967,6 +1040,7 @@ label literature_route_elvera(month, date):
     vl lucas_vl_prefix 3
     l "It's like I lost him all over again. Both of them, really."
 
+    vl alexis_vl_prefix 4
     a "I see how it might feel that way. But, this is how it has to be."
 
     vl lucas_vl_prefix 4
@@ -974,6 +1048,7 @@ label literature_route_elvera(month, date):
     voice sustain
     l "And just like that, it was snuffed out. I feel so… lost."
 
+    vl alexis_vl_prefix 5
     a "I was like that once. You could say my father was the glue that held my family together. Losing him was hard."
 
     show lucas neutral
@@ -982,17 +1057,22 @@ label literature_route_elvera(month, date):
 
     "How did I? I wouldn't exactly say it came naturally to me, but it's been so long that I can hardly remember."
 
+    vl alexis_vl_prefix 6
     a "Well, I just pushed right through it, I think. In hindsight, probably not the healthiest approach, but it's what I needed to do."
+    voice sustain
     a "The world wasn't going to wait for me, so I couldn't let myself get bogged down by the grief."
+    voice sustain
     a "My family needed me, so even when it was hard, I gave every day my all. And it just got easier and easier with time."
 
     vl lucas_vl_prefix 6
     l "And it took longer than a month to see the results?"
 
+    vl alexis_vl_prefix 7
     a "Much longer. And even then, could you say you're giving it your all right now?"
 
     "He gives me a small nod, but his forlorn expression remains."
 
+    vl alexis_vl_prefix 8
     a "These things take time, though, so don't beat yourself up about it too much, alright? It's different for everyone."
 
     show lucas tired
@@ -1001,16 +1081,20 @@ label literature_route_elvera(month, date):
 
     "He drums his fingers on the desk, lips pursed."
 
+    vl alexis_vl_prefix 9
     a "Is there something on your mind?"
 
     "Out of his pocket, he produces an envelope and lays it on the desk between us."
 
     show lucas neutral
+
+    vl alexis_vl_prefix 10
     a "Is that…?"
 
     vl lucas_vl_prefix 8
     l "My brother's letter, yes."
 
+    vl alexis_vl_prefix 11
     a "It looks unopened."
 
     show lucas sad
@@ -1019,6 +1103,7 @@ label literature_route_elvera(month, date):
 
     "I place a hand on his arm."
 
+    vl alexis_vl_prefix 12
     a "Then, please, take some of mine."
 
     "Lucas takes a deep breath and opens the envelope, taking out the letter within, and begins to read."
@@ -1058,12 +1143,14 @@ label literature_route_elvera(month, date):
     voice sustain
     "We sit in silence for a long while. When he falls silent, he takes off his glasses and smacks his cheeks."
 
+    vl alexis_vl_prefix 13
     a "Lucas?!"
 
     show lucas tired
     vl lucas_vl_prefix 10
     l "Leave it to my older brother to know me so well. Thank you for staying here with me."
 
+    vl alexis_vl_prefix 14
     a "Of course."
 
     "He extricates himself from me and stands."
@@ -1072,6 +1159,7 @@ label literature_route_elvera(month, date):
     vl lucas_vl_prefix 11
     l "Give each day my utmost, was it? I suppose I'll have to do just that. I might have to lean on you, though, from time to time."
 
+    vl alexis_vl_prefix 15
     a "If it'll make it easier on you, please do."
 
     show lucas happy
@@ -1093,6 +1181,7 @@ label literature_route_verabris(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 8/Lucas_M8_"
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Lucas/Month 8/Val_Lucas_Month8_"
     $ clubregular2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 2/Lucas Month 8/ClubRegular2_Lucas_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Month 8/" + player_voice_prefix + "_Lucas_Month8_"
 
     call screen calendar(month, date, "Verabris", 7)
     scene bg classroom_lit_afternoon with fade
@@ -1108,6 +1197,7 @@ label literature_route_verabris(month, date):
     vl val_vl_prefix 1
     v "Have to leave it to four-eyes, this was a good plan."
 
+    vl alexis_vl_prefix 1
     a "What?"
 
     vl val_vl_prefix 2
@@ -1163,6 +1253,7 @@ label literature_route_verabris(month, date):
     vl val_vl_prefix 3
     v "Good one, four-eyes. I'm impressed."
 
+    vl alexis_vl_prefix 2
     a "High praise, coming from you."
 
     vl val_vl_prefix 4
@@ -1181,6 +1272,7 @@ label literature_route_verabris(month, date):
     vl val_vl_prefix 6
     v "H-hold on a second!"
 
+    vl alexis_vl_prefix 3
     a "What's the problem? You're the one that came for this job a few months ago."
 
     vl lucas_vl_prefix 10
@@ -1211,11 +1303,14 @@ label literature_route_verabris(month, date):
     "We leave Killian in his club room and begin to head out of Magis Hall."
 
     show lucas neutral
+
+    vl alexis_vl_prefix 4
     a "You're doing better."
 
     vl lucas_vl_prefix 13
     l "I'm trying, at least. With how poor of a president I've been, it only felt right to try and inject some new life into the club for after I'm gone."
 
+    vl alexis_vl_prefix 5
     a "And Val?"
 
     show lucas happy
@@ -1240,6 +1335,7 @@ label literature_route_verabris(month, date):
 
 label literature_route_overa(month, date):
     $ lucas_vl_prefix = "audio/voices/Love Interests/Lucas/Own Route/Month 8/Lucas_M9_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Lucas/Epilogue/" + player_voice_prefix + "_Lucas_Epilogue"
 
     call screen calendar(month, date, "Overa", 22)
     play music lucasTheme fadein 1.0
@@ -1252,27 +1348,33 @@ label literature_route_overa(month, date):
     "Not wanting him to be alone, I offered to help. So we find ourselves in the back of the library, out of view of anyone who might come in, surrounded by books that need to be put back where they belong."
 
     show lucas neutral
+
+    vl alexis_vl_prefix 1
     a "Any overdue books to worry about this time?"
 
     vl lucas_vl_prefix 1
     l "There will always be overdue books. The librarian's going to have to chase them by himself, though."
 
+    vl alexis_vl_prefix 2
     a "Best of luck to him."
 
     "For a moment, we stack books in silence. Then I'm reminded of something."
 
+    vl alexis_vl_prefix 3
     a "You weren't there when we listened to the campaign speeches. What happened?"
 
     show lucas tired
     vl lucas_vl_prefix 2
     l "I was feverishly putting together application materials."
 
+    vl alexis_vl_prefix 4
     a "For?"
 
     show lucas neutral
     vl lucas_vl_prefix 3
     l "Graduate school. Outside of the empire. Seeing the world will do me some good."
 
+    vl alexis_vl_prefix 5
     a "Kept you that busy?"
 
     show lucas sad
@@ -1290,6 +1392,7 @@ label literature_route_overa(month, date):
     vl lucas_vl_prefix 6
     l "Because of you."
 
+    vl alexis_vl_prefix 6
     a "Me?"
 
     vl lucas_vl_prefix 7

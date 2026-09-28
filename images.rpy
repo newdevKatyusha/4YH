@@ -245,3 +245,10 @@ init:
     image said neutral = Transform("Sprites/Said/said_neutral.png", zoom=1.55)
     image said happy = Transform("Sprites/Said/said_neutral.png", zoom=1.55)
     image said neutral enseki = Transform("Sprites/Said/said_neutral_club_uniform.png", zoom=1.55)
+
+    image charles neutral = "Sprites/Charles/charles_uniform_neutral.png"
+    image charles excited = "Sprites/Charles/charles_uniform_excited.png"
+    image charles contemplative = "Sprites/Charles/charles_uniform_contemplative.png"
+    image charles neutral_scout = "Sprites/Charles/charles_scout_neutral.png"
+    image charles excited_scout = "Sprites/Charles/charles_scout_excited.png"
+    image charles contemplative_scout = "Sprites/Charles/charles_scout_contemplative.png"

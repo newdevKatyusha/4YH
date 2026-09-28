@@ -1,5 +1,6 @@
 label no_clubs_route_jinus(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Sue/Reina_Sue_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 1/" + player_voice_prefix + "_Sue_Month1_"
 
     call screen calendar(month, date, "Jinus", 19)
     scene bg student_councilroom_afternoon with fade
@@ -17,6 +18,7 @@ label no_clubs_route_jinus(month, date):
     show reina neutral at right with dissolve
     "Reina sits in the corner at her desk, acknowledging my existence with a nod."
 
+    vl alexis_vl_prefix 1
     a "What's that?"
 
     show sue neutral at center with dissolve
@@ -24,6 +26,7 @@ label no_clubs_route_jinus(month, date):
     s "Budget proposals for clubs that the treasurer put together."
     s "I have to go through them, approving them or requesting adjustments."
 
+    vl alexis_vl_prefix 2
     a "For every club?"
 
     show sue neutral
@@ -31,20 +34,26 @@ label no_clubs_route_jinus(month, date):
     "That sounds like a lot of numbers. And she's already been in school all day."
     "How long is she going to be stuck here mulling over these things?"
 
+    vl alexis_vl_prefix 3
     a "Want some help?"
 
     show sue neutral
     s "Thank you, but I'll be alright."
 
+    vl alexis_vl_prefix 4
     a "Are you sure? That's a lot of paper."
 
     show sue happy
     s "It's nothing I'm not used to."
 
+    vl alexis_vl_prefix 5
     a "But that doesn't mean help won't make it go by more quickly."
+    
     "No response to that. I smile to myself. So she sees the sense in that part, at least."
 
+    vl alexis_vl_prefix 6
     a "Besides, I'm actually pretty decent with numbers."
+    voice sustain
     a "Math is one of my better subjects. Even took an accounting class my second year of tertiary school."
 
     show sue neutral
@@ -70,6 +79,7 @@ label no_clubs_route_jinus(month, date):
     "The treasurer's given them all a budget, based on how much the school's set aside for clubs in general."
     "And it's up to Sue to either approve or reject, based on if they're too close to, or even over, how much money they have."
 
+    vl alexis_vl_prefix 7
     a "Gods. Anime Ironburke is how much?"
 
     show sue melancholic
@@ -94,6 +104,7 @@ label no_clubs_route_jinus(month, date):
     show sue neutral
     s "That was quick."
 
+    vl alexis_vl_prefix 8
     a "It's like someone only gave me a fourth of the work."
 
     show sue happy
@@ -103,6 +114,7 @@ label no_clubs_route_jinus(month, date):
     show sue neutral
     s "There. The other half of your half. Satisfied?"
 
+    vl alexis_vl_prefix 9
     a "Very."
 
     "We continue our work in relative silence, with little more than the ruffling of paper to keep us company."
@@ -113,17 +125,20 @@ label no_clubs_route_jinus(month, date):
     "She gives my work a quick look-over, and then offers a satisfied nod."
     s "Good work."
 
+    vl alexis_vl_prefix 10
     a "I try."
 
     show sue neutral
     s "It's... much earlier than I expected it to be when I finished."
 
+    vl alexis_vl_prefix 11
     a "You're welcome."
 
     show sue neutral
     "Rising from her desk, Sue shoulders her bag."
     s "Thank you, [a]. Good work today. You're dismissed."
 
+    vl alexis_vl_prefix 12
     a "Got it. Be seeing you."
 
     "We leave the Student Council Room, heading in opposite directions."
@@ -139,6 +154,7 @@ label no_clubs_route_jinus(month, date):
 label no_clubs_route_dallinus(month, date): 
     $ student1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Student 1/Student1_Sue_Month2_"
     $ student2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Student 2/Student2_Sue_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 2/" + player_voice_prefix + "_Sue_Month2_"
 
     call screen calendar(month, date, "Dallinus", 18)
     scene bg wilson_salon_afternoon with fade
@@ -150,11 +166,13 @@ label no_clubs_route_dallinus(month, date):
 
     "Today, the Student Council isn't meeting, but she's dragged me along anyway. Just so we could go there."
 
+    vl alexis_vl_prefix 1
     a "Why don't I ever hear about this place?"
 
     show sue neutral
     s "It's barred to anyone but nobility, club presidents, and their plus-ones."
 
+    vl alexis_vl_prefix 2
     a "I'm a viscount's kid. I could've come up here whenever I wanted?"
 
     s "That's right."
@@ -166,6 +184,7 @@ label no_clubs_route_dallinus(month, date):
     show sue happy
     s "How are you enjoying MIA so far?"
 
+    vl alexis_vl_prefix 3
     a "I can see why it's so renowned. It's one fancy-ass school. Wasn't Huntsdale built just to be its campus?"
 
     s "That's right. You can thank the Premier for that one."
@@ -175,6 +194,7 @@ label no_clubs_route_dallinus(month, date):
     show sue embarrassed
     s "Do you… not know who that is?"
 
+    vl alexis_vl_prefix 4
     a "Is it bad that I don't?"
 
     s "No…"
@@ -186,10 +206,12 @@ label no_clubs_route_dallinus(month, date):
 
     "So just one of the most important guys in imperial history and I didn't know his nickname. Great."
 
+    vl alexis_vl_prefix 5
     a "Hold on. The emperor founded the school?"
 
     s "Why else did you think Prince Phillip was here? A Magis not attending this school is basically unheard of."
 
+    vl alexis_vl_prefix 6
     a "They're like the final boss of legacy admissions."
 
     "She chuckles at that."
@@ -223,16 +245,19 @@ label no_clubs_route_dallinus(month, date):
 
     "There's something about what that person said that's bugging me."
 
+    vl alexis_vl_prefix 7
     a "You have a bit of an accent."
 
     show sue happy
     s "Very observant of you. Well done."
 
+    vl alexis_vl_prefix 8
     a "Guess that did sound pretty stupid. The thing is—"
 
     show sue neutral
     s "Yes, I am from Goengyi. And them inviting me to a restaurant serving Goengyi cuisine was very much on purpose."
 
+    vl alexis_vl_prefix 9
     a "But why—"
 
     vl student2_vl_prefix 1
@@ -258,26 +283,31 @@ label no_clubs_route_dallinus(month, date):
     show sue happy
     s "Your turn."
 
+    vl alexis_vl_prefix 10
     a "What?"
 
     show sue neutral
     s "You just found out I'm from Goengyi. How about you?"
 
+    vl alexis_vl_prefix 11
     a "Nothing too fancy. Just Prospera."
 
     show sue happy
     s "I'd still call the Old Capital quite fancy. A place any history fan has to visit at least once. There's just so much of it!"
 
+    vl alexis_vl_prefix 12
     a "And, unfortunately, a history fan I'm not."
 
     "I'm sure Sue wanted us to have a nice little after school snack together, but several more people interrupt us."
     "And just like the first two, they don't say so much as a word to me. After the umpteenth one leaves, I have to say it."
 
+    vl alexis_vl_prefix 13
     a "I didn't know you were so popular."
 
     show sue neutral
     s "I'm not."
 
+    vl alexis_vl_prefix 14
     a "With all of this attention you're getting?"
 
     "She smiles and leans across the table."
@@ -285,6 +315,7 @@ label no_clubs_route_dallinus(month, date):
     show sue happy
     s "I'm not. Didn't you recognize a few of them?"
 
+    vl alexis_vl_prefix 15
     a "Well, I thought I did."
 
     show sue neutral
@@ -292,6 +323,7 @@ label no_clubs_route_dallinus(month, date):
 
     "Then it clicks. The greetings, the friendliness, the fact that most of them invited her to dinner or to spend break with their friends."
 
+    vl alexis_vl_prefix 16
     a "They were trying to bribe you?"
 
     s "It comes with the territory."
@@ -301,15 +333,15 @@ label no_clubs_route_dallinus(month, date):
     show sue embarrassed
     s "I hope you didn't mind me using you."
 
+    vl alexis_vl_prefix 17
     a "Not at all."
 
     "If it gave her an excuse to cut those conversations short, she's not going to hear me complaining."
-
     "Sue pointing it out is the only way I was able to piece together what happened."
     "And that's after seeing all of them fail in real time. But she could smell them from a mile away and wasn't having any of it."
-
     "Abyss, she even let them walk off thinking they had a chance. I doubt I'd be able to pull off something like that."
 
+    vl alexis_vl_prefix 18
     a "Didn't you want to say yes to some of them?"
 
     show sue melancholic
@@ -330,6 +362,7 @@ label no_clubs_route_dallinus(month, date):
     call student_council_dallinus("Dallinus", 18) from _call_student_council_dallinus_5
 
 label no_clubs_route_vanus(month, date):
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 3/" + player_voice_prefix + "_Sue_Month3_"
 
     call screen calendar(month, date, "Vanus", 23)
     scene bg weaver_library_afternoon with fade
@@ -347,22 +380,27 @@ label no_clubs_route_vanus(month, date):
 
     "Historians still debate what would've happened if the Eastern Confederation and Magianan Empire went to blows over the far eastern nation."
 
+    vl alexis_vl_prefix 1
     a "Sue?"
 
     s "Yes?"
 
     "It takes me a minute to gather myself."
 
+    vl alexis_vl_prefix 2
     a "I didn't know much about Goengyi until recently. Really recently. Like, after the salon recently."
 
     "I expect her to be disappointed. But the look of scorn I was anticipating never comes."
 
     s "And you wouldn't be alone in that."
 
+    vl alexis_vl_prefix 3
     a "I wouldn't be?"
 
     s "We're just a little city-state. Most people don't have much reason to think of us."
 
+    vl alexis_vl_prefix 4
+    #TODO: Update dialog
     #a "But what about Apanaʻoha and Allowlucia? I hear about those two."
     a "But what about Ekaska and Allowlucia? I hear about those two."
 
@@ -377,15 +415,18 @@ label no_clubs_route_vanus(month, date):
     "It's part of the Eastern Confederation, but it's friendly with Estary, which is part of the Empire."
     "A bit too friendly, according to the other Confederate states."
 
+    vl alexis_vl_prefix 5
     a "…And didn't religion have something to do with it?"
 
     show sue neutral at center with dissolve
     s "It did."
 
+    vl alexis_vl_prefix 6
     a "Shit. Didn't know I said that out loud."
 
     s "You've at least heard about Spiritism?"
 
+    vl alexis_vl_prefix 7
     a "I'm not super religious, but it's some type of Nyrellan thing, right?"
 
     s "A denomination of it, yes. It's the lovechild of Nyrellanism and the animism Estary's people practiced for centuries before the empire got involved in their affairs."
@@ -394,16 +435,18 @@ label no_clubs_route_vanus(month, date):
 
     "I think back to the passage from my book."
 
+    vl alexis_vl_prefix 8
     a "And Goengyi gave it a try as a show of goodwill?"
 
     s "Exactly. Even though the Narrow Sea separates Estary and mainland Voles, the rest of the Confederation got nervous."
     s "And when it came to the mainland through Goengyi?"
 
+    vl alexis_vl_prefix 9
     a "They got scared?"
 
-    show sue melancholic 
+    show sue melancholic
     s "Very. So Otren's been rattling its saber and bullying us ever since. We were a province of theirs once, and—I'm sorry."
-    show sue embarrassed 
+    show sue embarrassed
     s "I'm supposed to be helping you with homework, not lecturing you."
 
     "I don't say anything; there's nothing for me to say. She just told me her country's wrapped up in generations of geopolitical bullshit."
@@ -411,29 +454,34 @@ label no_clubs_route_vanus(month, date):
 
     "Even when I finally do have words to say, I'm sure as sin they aren't the right ones."
 
+    vl alexis_vl_prefix 10
     a "Did you run away? Wait, no! I mean, with… all of that… Did it have anything to do with why you decided to go to a foreign school?"
 
     "Again, I expect her to be angry with me, but she isn't. This woman has the patience of a saint."
 
-    show sue neutral 
+    show sue neutral
     s "It is the reason I'm here, yes. Did I run away, no."
 
     "She crosses her arms and her eyes drift off to the corner of our table."
 
-    show sue melancholic 
+    show sue melancholic
+
+    vl alexis_vl_prefix 11
     a "Is something wrong?"
 
     s "Not exactly. It's just that the idea of me running away will probably make more sense than the truth."
 
+    vl alexis_vl_prefix 12
     a "And what is that truth?" 
 
     "She remains silent for a minute before taking a breath to compose herself."
 
-    show sue neutral 
+    show sue neutral
     s "There is someone I was hoping to meet. Someone who, I believe, will be able to help strengthen my nation's delicate position." 
     s "Give it strong allies it desperately needs to deter any aggression from the rest of the Confederation."
     s "I've been waiting three years for them."
 
+    vl alexis_vl_prefix 13
     a "Three whole years?"
 
     "Who in the Abyss could she have been waiting that long for? And someone with the potential to shift the balance in international affairs?"
@@ -444,6 +492,7 @@ label no_clubs_route_vanus(month, date):
     "So a student, then? But they'd have to have a big enough profile for someone all the way in Goengyi to plan this around when they would start here."
     "What student…"
 
+    vl alexis_vl_prefix 14
     a "You mean the prince."
 
     "I guess he does have the empress on speed dial. And he must have dinner with the prime minister regularly. Is that what she was hoping for?"
@@ -463,7 +512,9 @@ label no_clubs_route_vanus(month, date):
 
     "The only difference is that Sue's problem makes mine seem like a walk in the park."
 
-    show sue neutral 
+    show sue neutral
+
+    vl alexis_vl_prefix 15
     a "No. I don't think you're crazy at all."
 
     "She doesn't say anything in response to that, and we get back to my history assignment."
@@ -474,6 +525,7 @@ label no_clubs_route_vanus(month, date):
 
 label no_clubs_route_dyalt(month, date):
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Sue/Isaiah_Sue_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 4/" + player_voice_prefix + "_Sue_Month4_"
 
     call screen calendar(month, date, "Dyalt", 24)
     scene bg student_councilroom_noon with fade
@@ -505,6 +557,7 @@ label no_clubs_route_dyalt(month, date):
     vl goude_vl_prefix 3
     h "You and the Council did a good job earlier this month."
 
+    vl alexis_vl_prefix 1
     a "I still find it wild that people just ignored the rules on the books for so long."
 
     "I bring Sue's coffee over to her."
@@ -512,6 +565,7 @@ label no_clubs_route_dyalt(month, date):
     vl goude_vl_prefix 4
     h "When I was on the Council, I didn't think too much about that. Though it only makes sense that it would reach a tipping point eventually."
 
+    vl alexis_vl_prefix 2
     a "Would you like some, Headmaster?"
 
     vl goude_vl_prefix 5
@@ -539,6 +593,7 @@ label no_clubs_route_dyalt(month, date):
     vl goude_vl_prefix 9
     h "The only things they care about are making money and gaining the school more prestige."
 
+    vl alexis_vl_prefix 3
     a "And they think that'll happen?"
 
     vl goude_vl_prefix 10
@@ -596,10 +651,12 @@ label no_clubs_route_dyalt(month, date):
 
     s "He does have a point."
 
+    vl alexis_vl_prefix 4
     a "About what?"
 
     s "I could make or break this new charter, couldn't I?"
 
+    vl alexis_vl_prefix 5
     a "Probably. But what was that thing he said about doing the right thing for yourself? Seems pretty ominous, if you ask me."
 
     s "I'm still trying to make sense of that."
@@ -607,10 +664,12 @@ label no_clubs_route_dyalt(month, date):
     "Obviously, the purpose of his visit was to try and get Sue to put her weight behind his plans."
     "Yet he just up and left without her yielding even an inch. What's his game here?"
 
+    vl alexis_vl_prefix 6
     a "Would your answer be no? About this being in the best interest of the school."
 
     s "My thoughts are more complex than a single word could convey."
 
+    vl alexis_vl_prefix 7
     a "So you're somewhere in the middle."
 
     s "You could say that. My problem is the Sectors and the study abroad being a package deal. But I imagine they're going to stay that way."
@@ -634,6 +693,7 @@ label no_clubs_route_dyalt(month, date):
 
 label no_clubs_route_neralt(month, date):
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Sue/Phillip_Sue_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 5/" + player_voice_prefix + "_Sue_Month5_"
     
     call screen calendar(month, date, "Neralt", 11)
     scene bg wilson_salon_afternoon with fade
@@ -644,20 +704,21 @@ label no_clubs_route_neralt(month, date):
 
     "It's been a while since I was last in the salon. There's never much reason for me to go. Usually, the only times I'm around is when Sue drags me up."
     "And today is one of those days. On a weekend too, no less. I guess she wants to have brunch?"
-
     "At Sue's request, the server that greets us leads us to a table in a corner, which is about as private as you can get in this already exclusive establishment."
-
     "We put in an order for tea and an assortment of fruit tarts and then are left alone."
     
+    vl alexis_vl_prefix 1
     a "You said you were waiting for someone?"
 
     s "That's right."
 
+    vl alexis_vl_prefix 2
     a "And you wanted your aide around?"
 
     show sue happy
     s "You're off the clock today. Say it's more like asking a friend for moral support."
 
+    vl alexis_vl_prefix 3
     a "Moral support?"
 
     show sue neutral at center with dissolve
@@ -677,6 +738,7 @@ label no_clubs_route_neralt(month, date):
 
     "The prince is led over to our table. Instinctively, I shoot up, eyes pinned on him."
 
+    vl alexis_vl_prefix 4
     a "He's who you were meeting? Are you two sure you want me to stick around, then?"
 
     show phillip happy:
@@ -805,6 +867,7 @@ label no_clubs_route_neralt(month, date):
     show sue happy at center with dissolve
     "When he's gone, she falls into her chair, leaning back and letting out a long sigh."
 
+    vl alexis_vl_prefix 5
     a "So, um… did the moral support work? I didn't do anything."
 
     s "No, you did great. I don't know if I would've been able to do that alone. Thank you for staying with me. It means more than you know."
@@ -813,11 +876,11 @@ label no_clubs_route_neralt(month, date):
 
     s "Now, how about we finish these off? Wouldn't want them to go to waste."
 
+    vl alexis_vl_prefix 6
     a "You don't have to tell me twice."
 
     "When we're done, we take our leave of the salon. Sue's noticeably more chipper as we do, even humming a little tune to herself."
     "Not like I can blame her. Three and a half years of anticipation, and it's finally paid off. Partially."
-
     "I just hope that, when the chips are down, this talk will actually pay off for her and the people of Goengyi."
     
     # jump to second club route neralt
@@ -825,6 +888,7 @@ label no_clubs_route_neralt(month, date):
     #jump student_council_exalt
 
 label no_clubs_route_exalt(month, date):
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 6/" + player_voice_prefix + "_Sue_Month6_"
     
     call screen calendar(month, date, "Exalt", 29)
     scene bg mainstreet_night with fade
@@ -857,6 +921,7 @@ label no_clubs_route_exalt(month, date):
 
     "When I'm at her side, I lean over and whisper."
 
+    vl alexis_vl_prefix 1
     a "Week of Life is basically the same in Goengyi?"
 
     s "Bigger, actually, because of how important taking care of our loved ones' souls is in animism. Those roots are still strong."
@@ -867,6 +932,7 @@ label no_clubs_route_exalt(month, date):
     s "You know, I had an older brother. His name was Joeng, and he was a soldier."
     s "I always make sure to pray for him at this time of year."
 
+    vl alexis_vl_prefix 2
     a "I'm sorry for your loss."
 
     s "I didn't really get it before he died. But when I lost him, it all started to make sense to me."
@@ -874,6 +940,7 @@ label no_clubs_route_exalt(month, date):
     "I reach for my necklace. Ever since the new dress code passed, I haven't had a reason to hide it."
     "It's been part of my daily routine for so long that I barely think about it anymore. It's almost like it just is part of me."
 
+    vl alexis_vl_prefix 3
     a "This is a memento. Of my father. He… was at the wrong place at the wrong time. This upcoming spring will be eight years."
 
     show sue embarrassed
@@ -884,10 +951,12 @@ label no_clubs_route_exalt(month, date):
 
     s "I'm so sorry."
 
+    vl alexis_vl_prefix 4
     a "What're you apologizing for?"
 
     s "Six months we've known each other, and I didn't know anything."
 
+    vl alexis_vl_prefix 5
     a "W-well, that can be forgiven. It isn't like I ever mentioned him before."
 
     "She shakes her head."
@@ -898,17 +967,23 @@ label no_clubs_route_exalt(month, date):
     "In the end, I decide against it, and go for something else entirely."
 
     show sue neutral at center with dissolve
+
+    vl alexis_vl_prefix 6
     a "I have two younger siblings. A brother named Salem and a sister named Skylar. They're twins. Just started tertiary school this year."
 
     show sue happy
     s "Those are lovely names."
 
+    vl alexis_vl_prefix 7
     a "I'll have to tell my mother that you said that. She put a lot of thought into our names."
 
     s "Did she?"
 
     show sue neutral
+
+    vl alexis_vl_prefix 8
     a "She really did. She hoped that Skylar would get into some top school and make a groundbreaking discovery in some renowned field."
+    voice sustain
     a "Salem's supposed to be a guy people can rely on and feel safe around. He has his moments, but he's a good kid."
 
     s "And what about your name?"
@@ -917,6 +992,7 @@ label no_clubs_route_exalt(month, date):
 
     if temp_name == "Alexis":
         #1 - ALEXIS
+        vl alexis_vl_prefix 9
         a "\"Helper.\""
 
         s "Oh."
@@ -927,6 +1003,7 @@ label no_clubs_route_exalt(month, date):
         s "That makes a lot of sense."
     else:
         #2 - PLAYER INPUTTED NAME
+        vl alexis_vl_prefix 10
         a "[temp_name]? My parents told me it means \"Black Wolf.\" It was a nickname the founder of our house had when he was in the military."
 
         s "Black Wolf… I like that name. They must've been strong."
@@ -935,6 +1012,7 @@ label no_clubs_route_exalt(month, date):
     show sue neutral
     s "Would you mind telling me a little bit more about your family? I feel like there's a lot of lost time to make up for."
 
+    vl alexis_vl_prefix 11
     a "Sure. Let's see… One time, when we went to Troara, my father pissed off a stoat and it got into his clothes…"
 
     "We pass the time, sitting in the corner of the chapel, whispering in hushed tones."
@@ -945,6 +1023,7 @@ label no_clubs_route_exalt(month, date):
     show sue melancholic
     "It took Sue yawning to bring us back to reality."
 
+    vl alexis_vl_prefix 12
     a "We might not have anything to do this week, but I guess that's not an excuse to stay out all night, huh?"
 
     show sue neutral
@@ -960,6 +1039,7 @@ label no_clubs_route_exalt(month, date):
 label no_clubs_route_elvera(month, date):
     #this is sad so maybe add special music for sunofes ? alexis cries so 
     $ sterling_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Sterling/Sterling_Sue_Month7_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 7/" + player_voice_prefix + "_Sue_Month7_"
 
     call screen calendar(month, date, "Elvera", 27)
     scene bg mainstreet_night with fade
@@ -978,6 +1058,7 @@ label no_clubs_route_elvera(month, date):
 
     show sue melancholic
 
+    vl alexis_vl_prefix 1
     a "Still feeling emotional?"
 
     s "Can you blame me?"
@@ -989,7 +1070,10 @@ label no_clubs_route_elvera(month, date):
     "I shrug."
 
     show sue neutral at center with dissolve
+
+    vl alexis_vl_prefix 2
     a "I mean, it was definitely heartfelt, but I'm not sure I'd call it tear-worthy."
+    voice sustain
     a "Besides, I'm just not that much of a crying person."
 
     s "Oh. Well, I suppose that's fair."
@@ -1014,6 +1098,7 @@ label no_clubs_route_elvera(month, date):
 
     s "Up for a little break?"
 
+    vl alexis_vl_prefix 3
     a "Sure."
 
     "We take a seat on a bench, and then I'm suddenly hit with a wave of unease. Why the park, and why this break?"
@@ -1022,6 +1107,7 @@ label no_clubs_route_elvera(month, date):
 
     s "I'm guessing the last time you cried was when your father died?"
 
+    vl alexis_vl_prefix 4
     a "That's…"
 
     "…right? It only makes sense. You'd cry no matter how old you are when you lose a loved one, and I was only twelve."
@@ -1031,13 +1117,16 @@ label no_clubs_route_elvera(month, date):
 
     s "So you didn't?"
 
+    vl alexis_vl_prefix 5
     a "I don't think so. At least, I don't remember it. When he died, I threw myself into making sure the rest of the family was alright."
 
     show sue neutral at center with dissolve
 
     s "So you comforted your mother instead of her comforting you? That's so… shitty of her."
 
+    vl alexis_vl_prefix 6
     a "It isn't like that. She tried. I just didn't let her. I wanted to be the one to make her feel better."
+    voice sustain
     a "Not the other way around."
 
     #"Additional line if the player kept the name Alexis."
@@ -1046,16 +1135,19 @@ label no_clubs_route_elvera(month, date):
     if temp_name == "Alexis":
         s "Because you were that focused on being the \"Helper.\""
 
+        vl alexis_vl_prefix 7
         a "That's right."
 
     #CONTINUE
 
     s "Does that mean you never had a chance to properly grieve?"
 
+    vl alexis_vl_prefix 8
     a "I guess not?"
 
     "I shrug for the second time tonight."
 
+    vl alexis_vl_prefix 9
     a "But it's not that big a deal, right?"
 
     show sue melancholic
@@ -1080,6 +1172,7 @@ label no_clubs_route_elvera(month, date):
     "And that breaks my heart into even tinier fragments."
     "The idea of Mother suffering in silence just because she's the caretaker, and meant to be strong for the children that rely on her."
 
+    vl alexis_vl_prefix 10
     a "I wouldn't like it. Just because she's looking after the other two doesn't mean she should bottle up… Oh."
 
     show sue neutral
@@ -1115,10 +1208,12 @@ label no_clubs_route_elvera(month, date):
 
     "And I never let myself dwell on those thoughts. There were more important things to worry about, I said."
 
+    vl alexis_vl_prefix 11
     "As I cry, Sue wraps an arm around me. That only makes me cry harder. Being comforted in the same way I did for others for so long."
 
     "Eventually, the tears run dry. My voice is hoarse when I next speak."
 
+    vl alexis_vl_prefix 12
     a "I'm sorry for going on for so long. And for crying all over your uniform."
 
     show sue happy
@@ -1131,6 +1226,7 @@ label no_clubs_route_elvera(month, date):
 
     s "Would you like me to walk you back?"
 
+    vl alexis_vl_prefix 13
     a "Yeah, I think I'd like that."
 
     "I do feel much better now. Lighter than I've felt in ages. I could definitely make my way through the quiet streets of Huntsdale on my own."
@@ -1139,6 +1235,7 @@ label no_clubs_route_elvera(month, date):
     call no_clubs_route_verabris("Elvera", 27) from _call_no_clubs_route_verabris
 
 label no_clubs_route_verabris(month, date):
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Month 8/" + player_voice_prefix + "_Sue_Month8_"
 
     call screen calendar(month, date, "Verabris", 3)
     scene bg student_councilroom_afternoon with fade
@@ -1152,15 +1249,20 @@ label no_clubs_route_verabris(month, date):
     "She usually greets the people that enter, or at least looks up from whatever she's working on, but not today."
 
     show sue neutral
+
+    vl alexis_vl_prefix 1
     a "Hey, Sue."
 
     "She jumps. Clearly, she didn't even notice that someone had come in. When she looks at me, the light in her eyes stops me dead in my tracks."
     "Then the next thing I know, her arms are wrapped around me. I don't think I've ever seen her like this."
     show sue happy
+
+    vl alexis_vl_prefix 2
     a "Who are you and what have you done with Sue? What is that piece of paper?"
 
     s "An offer of employment! I have a job for when I get home!"
 
+    vl alexis_vl_prefix 3
     a "That's great! What's the job?"
 
     s "The Goengyi Presidential Office. I'll be an aide, just like you."
@@ -1169,6 +1271,7 @@ label no_clubs_route_verabris(month, date):
 
     s "Oh, how the tables turn. Now it's going to be my job to fetch someone's coffee!"
 
+    vl alexis_vl_prefix 4
     a "Ha ha. Very funny."
 
     "But it sounds like the first step towards a career in politics, and it wouldn't surprise me if those were the sorts of ambitions she had."
@@ -1179,29 +1282,38 @@ label no_clubs_route_verabris(month, date):
     "Her smile falters. Her contagious elation at the news of the new job is pierced by a sudden onslaught of what I can only describe as fear."
 
     show sue melancholic
+
+    vl alexis_vl_prefix 5
     a "Are you alright?"
 
     s "I feel so small and helpless. I want to help Goengyi—I want to help my home—but what can someone like me do against a behemoth?"
 
     "I place a hand on her shoulder and gently squeeze."
 
+    vl alexis_vl_prefix 6
     a "Come on, don't think like that. Focus on the things you've already done."
 
     s "Like what?"
 
+    vl alexis_vl_prefix 7
     a "You worked hard to get into the school, for one. The prince gave you his word to speak up for Goengyi to the powers that be here at home."
+
     s "And now you've got a government job."
 
     s "But that isn't enough to keep everyone safe."
 
+    vl alexis_vl_prefix 8
     a "It might not seem that way, but think about it like this."
 
     "I think back to her conversation with the prince. May as well try something she used on him back then."
 
+    vl alexis_vl_prefix 9
     a "You're one person. Otren's a country of, what, nearly 300 million?"
+    voice sustain
     a "If you're thinking that it's you against all of that, of course you're going to feel hopeless."
-
+    voice sustain
     a "But for just one person, you're doing good, making connections you're going to need to deal with it all."
+    voice sustain
     a "You're not alone in this. You've got me, your parents, the prince, your future co-workers… That should make you feel powerful, not powerless."
 
     "She leans against the table, letting my words sink in."
@@ -1209,11 +1321,13 @@ label no_clubs_route_verabris(month, date):
     show sue neutral at center with dissolve
     s "You're right. I don't have to be Goengyi's sole savior. I can't be. For years, I've had it all wrong. Thank you."
 
+    vl alexis_vl_prefix 10
     a "It's what I'm here for."
 
     show sue embarrassed
     s "And… you meant that earlier? That you were on my side, too?"
 
+    vl alexis_vl_prefix 11
     a "Of course! \"Moral support\" and all."
 
     "She laughs."
@@ -1228,6 +1342,7 @@ label no_clubs_route_verabris(month, date):
 
     "Then it's my turn to laugh."
 
+    vl alexis_vl_prefix 12
     a "As natural as the day I was born."
 
     show sue embarrassed
@@ -1243,6 +1358,7 @@ label no_clubs_route_verabris(month, date):
     #jump student_council_verabis
 
 label no_clubs_route_overa(month, date):
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Sue/Epilogue/" + player_voice_prefix + "_Sue_Epilogue_"
 
     call screen calendar(month, date, "Overa", 23)
     scene bg student_councilroom_afternoon with fade
@@ -1263,6 +1379,8 @@ label no_clubs_route_overa(month, date):
     s "We did good this year, didn't we?"
 
     show sue neutral
+
+    vl alexis_vl_prefix 1
     a "Definitely. I just wish I could be around to see how everyone benefits from all this."
 
     s "Right."
@@ -1277,17 +1395,21 @@ label no_clubs_route_overa(month, date):
     s "With my peers, I could always just wait until we got back from summer break, but that's not an option anymore."
     s "The things I don't say now may very well stay unsaid forever."
 
+    vl alexis_vl_prefix 2
     a "And you'd regret that? You do regret the times it's already happened?"
 
     s "Perhaps. But if this is to be a final goodbye, it's better to make sure that things aren't left unsaid, right?"
 
     show sue neutral at center with dissolve
+
+    vl alexis_vl_prefix 3
     a "I think so, yeah."
 
     "She completes a lap of the room, taking a seat next to me at the table. Then she's silent."
 
     "This… has to do with me, right? I mean, why else would she be talking about regretting things she didn't say to people right before graduation?"
 
+    vl alexis_vl_prefix 4
     a "Um… Sue?"
 
     "She clears her throat, a faint blush blooming across her face."
@@ -1320,6 +1442,7 @@ label no_clubs_route_overa(month, date):
 
     "She didn't say the exact words, but the message is loud and clear."
 
+    vl alexis_vl_prefix 5
     a "Sue..."
     
     menu:
@@ -1333,6 +1456,8 @@ label no_clubs_route_overa(month, date):
 label no_clubs_route_overa_romance_accept:
 
     show sue neutral
+
+    vl alexis_vl_prefix 6
     a "I'd be more than willing."
 
     "Sue blinks at me."
@@ -1341,6 +1466,7 @@ label no_clubs_route_overa_romance_accept:
 
     "I can't help but laugh at that."
 
+    vl alexis_vl_prefix 7
     a "I said that I'd be happy to face the world with you, Sue. Besides, it isn't like I'm the only one that's helped you."
 
     "If not for her, I'd still be bottling up all of the grief that came with Father's death."
@@ -1348,6 +1474,8 @@ label no_clubs_route_overa_romance_accept:
     "I barely have time to meditate on that appreciation before she just about tackles me out of my chair with an embrace."
 
     show sue happy
+
+    vl alexis_vl_prefix 8
     a "Whoa, easy there!"
 
     "She releases me, maintaining a firm grip on my hands."
@@ -1357,21 +1485,29 @@ label no_clubs_route_overa_romance_accept:
     "Then, just like last month, her joy falters."
 
     show sue melancholic
+
+    vl alexis_vl_prefix 9
     a "What's wrong?"
 
     s "Even for you, I can't abandon Goengyi."
 
+    vl alexis_vl_prefix 10
     a "And I wouldn't want you to, either. Besides, I could probably talk the family into making the move."
+    voice sustain
     a "Someday. I think they'd like the change of pace."
 
     s "You'd do that? But uprooting your entire family—"
 
+    vl alexis_vl_prefix 11
     a "If I have to go without them, I will. Just after I make sure they'll be taken care of here."
+    voice sustain
     a "I'd just like to keep them close, is all."
 
     "Then something hits me, which makes the idea of a move more appealing."
 
     show sue neutral
+
+    vl alexis_vl_prefix 12
     a "And the Dominion's stronger than the Confederate Dollar, so it'd be a boost to the bank accounts."
 
     "Sue laughs."
@@ -1379,11 +1515,13 @@ label no_clubs_route_overa_romance_accept:
     show sue happy
     s "How pragmatic of you."
 
+    vl alexis_vl_prefix 13
     a "I'll do my best here at home, so you do your best back in Goengyi, alright?"
 
     show sue neutral
     s "I wouldn't think of giving any less."
 
+    vl alexis_vl_prefix 14
     a "Good. And then, someday, we'll be able to give it our all together, without the oceans keeping us apart."
 
     show sue happy
@@ -1399,6 +1537,8 @@ label no_clubs_route_overa_romance_accept:
 label no_clubs_route_overa_romance_reject: 
 
     show sue neutral
+
+    vl alexis_vl_prefix 15
     a "I'm sorry, but I don't think I can."
 
     show sue melancholic
@@ -1406,11 +1546,14 @@ label no_clubs_route_overa_romance_reject:
 
     "She drops my hands."
 
+    vl alexis_vl_prefix 16
     a "I do like you, but not in that way. And… my family needs me here in Magiana."
+    voice sustain
     a "Dropping it all for Goengyi isn't something I'd be able to do."
 
     s "That I figured."
 
+    vl alexis_vl_prefix 17
     a "I really am sorry."
 
     show sue neutral
@@ -1421,11 +1564,13 @@ label no_clubs_route_overa_romance_reject:
     s "Matters of the heart are messy. I already knew this might happen."
     s "I just didn't want the feelings to go unshared before I left."
 
+    vl alexis_vl_prefix 18
     a "Right."
 
     s "But thank you again, for everything. You're probably the best aide I could've asked for this year."
     s "And just as good a friend."
 
+    vl alexis_vl_prefix 19
     a "And I don't think I could've asked for a better boss."
 
     "She walks over to her desk, inspecting the area behind it. Her back is turned to me when she speaks."
@@ -1433,10 +1578,12 @@ label no_clubs_route_overa_romance_reject:
     show sue melancholic
     s "You don't have to wait up for me."
 
+    vl alexis_vl_prefix 20
     a "Right."
 
     "I collect my things and head for the door. Again, her unspoken message is crystal clear."
 
+    vl alexis_vl_prefix 21
     a "See you later."
 
     s "Until next time."

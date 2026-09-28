@@ -15,6 +15,7 @@ define l = Character("Lucas", color="#ad1457")
 define k = Character("Killian", color="#e65100")
 define n = Character("Naomi", color="#00838f")
 define e = Character("Elio", color="#c62828")
+define cha = Character("Charles")
 define gw = Character("Gwynette")
 define sa = Character("Said", color="#6e6e6e")
 define vin = Character("Vince")
@@ -57,12 +58,14 @@ init:
     $ reina_romance = None
     $ elio_romance = None
     $ killian_romance = None
+    $ charles_romance = None
     $ lucas_platonic = None
     $ naomi_platonic = None
     $ sue_platonic = None
     $ reina_platonic = None
     $ elio_platonic = None
     $ killian_platonic = None
+    $ charles_platonic = None
 
 
     # Hatchling Sounds
@@ -102,7 +105,14 @@ label start:
         $ temp_name = _return
 
     call screen gender_selection
-    $ player_gender = _return
+    $ player_gender, player_voice  = _return
+
+    if player_gender == "female":
+        $ player_voice_prefix = "Alexis_F" + str(player_voice + 1)
+        $ player_voice = "Alexis Fem " + str(player_voice + 1)
+    else:
+        $ player_voice_prefix = "Alexis_M" + str(player_voice + 1)
+        $ player_voice = "Alexis Masc " + str(player_voice + 1)
     
     jump prologue
 
@@ -120,12 +130,17 @@ label prologue:
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Prologue_MeetGwyn&Vince/Vincent_Prologue_MeetGwyn&Vince_"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Prologue/Meeting Ylva Said/Ylva_Prologue_MeetingYlvaSaid_"
     $ said_vl_prefix = "audio/voices/Friends/Said/Said Prologue MeetYlvaSaid/Said_Prologue_MeetYlvaSaid_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingPhilip_"
+
+    python:
+        print(alexis_vl_prefix)
     
     scene bg mainstreet_afternoon with fade
     play music hatchling1 fadein 1.0
 
     $ renpy.notify("Prologue - Welcome to Magiana\nZynday, Esynce 26th, 1027 RD")
     
+    vl alexis_vl_prefix 1
     a "Abyss take me, I'm tired..."
     
     "I'm barely off of the bus, one of the only souls heading north out of Ferenicia. The airship from Prospera was overnight, but of course I didn't get a wink of sleep."
@@ -150,6 +165,8 @@ label prologue:
         xpos 0.6
         yalign 1.0
     with dissolve
+
+    vl alexis_vl_prefix 2
     a "Excuse me? Do you need any help there?"
     
     show phillip excited at center with move
@@ -165,6 +182,7 @@ label prologue:
     "I've heard that accent of his before. Fancy dinners. Tailored suits and flowing dresses. Parlors when Mother and Father called on their noble friends."
     "This was a rich people accent. And I {b}had{/b} seen this boy before. Rich was an understatement with this one. How did I forget about him?"
     
+    vl alexis_vl_prefix 3
     a "Prince Phillip? Your Highness, it is you! I'm Blakesley, [a] Blakesley. We met in Prospera a while ago when your family visited!"
     
     show phillip neutral
@@ -173,6 +191,7 @@ label prologue:
     vl phillip_vl_prefix 3
     p "Blakesley... Blakesley... I'm sorry, the name doesn't ring a bell. I didn't know you went to this school. I would have assumed that you'd stay down south."
     
+    vl alexis_vl_prefix 4
     a "So did I. This is my first time in Huntsdale."
     
     vl phillip_vl_prefix 4
@@ -185,6 +204,7 @@ label prologue:
 
     "And there it is. I knew this was going to happen as soon as I found out I got accepted. May as well get used to telling the story."
     
+    vl alexis_vl_prefix 5
     a "Yeah, I'm new, but I'm a fourth-year."
     
     show phillip excited
@@ -199,6 +219,7 @@ label prologue:
         vl phillip_vl_prefix 7B
     p "That's the school's administrative building. Someone should be able to help you there. Take care, [a]."
 
+    #TODO: Alexis voice line Sunofes version
     a "Thanks… I nearly forgot! Happy belated sixteenth birthday, Your Highness."
 
     "Only last month, too. One of the youngest first years, if not the youngest, but the most famous at the same time. I wonder how that feels."
@@ -238,11 +259,14 @@ label prologue:
     vl sue_vl_prefix 3.2
     "Student Council President" "My name is Sue Daeng Qan, Student Council President. It's nice to meet you."
     
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingSue_"
+    vl alexis_vl_prefix 1
     a "[a] Blakesley. Same to you, Sue."
     
     vl sue_vl_prefix 4.1
     s "So you're the Fourth Year Hatchling the headmaster's told me about. Worry not, it's my job today to help you get a lay of the land, so you're not completely lost your entire first week here at MIA."
     
+    vl alexis_vl_prefix 2
     a "That would be a {b}huge{/b} help."
     
     show sue happy
@@ -251,6 +275,7 @@ label prologue:
     
     "Sue heads towards the door. Only then my brain registers something she just said."
     
+    vl alexis_vl_prefix 3
     a "MIA?"
     
     show sue neutral
@@ -273,6 +298,9 @@ label prologue:
     vl reina_vl_prefix 1
     "Formal Girl" "That's a demerit."
     
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingReina_"
+
+    vl alexis_vl_prefix 1
     a "I'm sorry?"
     
     "She has the same rich people accent as the prince. I guess it only makes sense for all sorts of nobles to go to the same school as him."
@@ -298,15 +326,18 @@ label prologue:
     show sue embarrassed_closed
     s "This is Reina Dreyar. She's the head of the Student Council's Disciplinary Committee. Forgive her. This sort of thing is literally her job."
     
+    vl alexis_vl_prefix 2
     a "But for a necklace?"
     
     "And who cares if it's not a religious symbol? With the memories packed into this thing, it may as well be for me..."
     
+    vl alexis_vl_prefix 3
     a "Don't you think that's a little unreasonable? What, did you go writing up all the new first years who didn't know any better?"
     
     show reina happy
     "She just smiles at me."
     
+    vl alexis_vl_prefix 4
     a "You've got to be kidding me."
     
     show reina neutral
@@ -321,11 +352,13 @@ label prologue:
     hide reina with dissolve
     "Once she's through the doors, I turn on Sue."
     
+    vl alexis_vl_prefix 5
     a "\"Official rules\"? No way she's right."
     
     show sue neutral at center with moveinright
     s "She is."
     
+    vl alexis_vl_prefix 6
     a "That's insane."
     
     s "That's what everyone else said. Which is why we started ignoring them at some point."
@@ -344,6 +377,7 @@ label prologue:
     
     s "Let's keep going?"
     
+    vl alexis_vl_prefix 7
     a "Let's."
     
     "Sue shows me around Huntsdale, pointing out various shops and hangout spots that students frequent. She tells me that a cafe called The Amity and the Plainfield Mall are probably the most popular in Huntsdale itself."
@@ -383,6 +417,9 @@ label prologue:
     vl lucas_vl_prefix 4
     l "Transferring in at the start of your fourth year? Look, I get it might be overwhelming, but if you ever need help with anything in class or in the library, I'd be willing to help you out. Just ask around for Lucas."
     
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingLucas_"
+
+    vl alexis_vl_prefix 1
     a "Thanks for the offer. Definitely think I'm going to have to take you up on that sometime."
     
     vl lucas_vl_prefix 5
@@ -398,11 +435,15 @@ label prologue:
 
     "Seeing it up close, it isn’t quite a castle, but it’s pretty damn close. It’s definitely big, fancy, and {b}old{/b}."
     
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingKillian_"
+
+    vl alexis_vl_prefix 1
     a "Whoa..."
     
     show sue happy at character_pos6 with dissolve
     s "This is Magis Hall. Where most of the magic happens. Haha, impressive, isn't it?"
     
+    vl alexis_vl_prefix 2
     a "This thing must be older than my entire family."
     
     show sue neutral
@@ -429,11 +470,13 @@ label prologue:
     
     "He turns his attention to me, slouching and squinting hard through his circle lenses. I shrink a little under his gaze."
     
+    vl alexis_vl_prefix 3
     a "Can I help you?"
     
     vl killian_vl_prefix 4.1
     "Tall Boy" "You look old for a first-year student. You don't have as much hope and wonderment gleaming in your eyes as the others."
     
+    vl alexis_vl_prefix 4
     a "...Thank you?"
     
     show sue neutral
@@ -465,6 +508,7 @@ label prologue:
     "Without another look at the two of us, he tears off towards Magis Hall, nearly crashing into several people on the way."
     pause 1.0
     
+    vl alexis_vl_prefix 5
     a "What was that about?"
     
     show sue melancholic_closed
@@ -477,6 +521,7 @@ label prologue:
     show sue neutral
     s "Where was I? Oh, right. Magis Hall was built with the rest of the school, in the 8th century. There are plenty of noble titles younger than that."
     
+    vl alexis_vl_prefix 6
     a "Gods. How many times have they ripped its guts out to keep up with the times?"
     
     s "My guess is at least twelve. Come on, let's go inside."
@@ -489,11 +534,13 @@ label prologue:
         vl goude_vl_prefix 1B
     h "Ah, you're [a] Blakesley, I assume?"
     
+    vl alexis_vl_prefix 7
     a "Yes. It's nice to meet you."
     
     vl goude_vl_prefix 2
     h "Likewise. My name is Isaiah Goude. I'm the headmaster of the Imperial Academy at Huntsdale. I'm sorry I wasn't able to give you the tour myself, but I couldn't find the time."
     
+    vl alexis_vl_prefix 8
     a "Don't sweat it. Can't be easy running a school like this."
     
     "Especially the year that royalty comes to campus."
@@ -505,12 +552,15 @@ label prologue:
 
     s "Feel free to walk around by yourself. Magis Hall isn't {b}that{/b} complicated, really. We'll meet out here later, alright?"
     
+    vl alexis_vl_prefix 9
     a "Yeah, sure."
     
     hide sue with dissolve
     "The two of them head off, and I crane my neck to look at the building. Just a bunch of hallways and classrooms. I'll be able to survive that much."
     
     # Start Gwynette & Vince
+
+    #TODO: Alexis voice lines Sunofes version
     scene bg music_hall_afternoon with fade
     
     "On the bright side, Sue was right. It isn't that complicated. The issue is that the floors feel like they were copy-pasted during construction."
@@ -638,16 +688,21 @@ label prologue:
     
     vl naomi_vl_prefix 1
     "Girl in apron" "Why, hello. Are you here for a rice ball, too?"
+
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingNaomi_"
     
+    vl alexis_vl_prefix 1
     a "Oh, just passing the time, really..."
     
     "I scan the room again. No one else is around."
     
+    vl alexis_vl_prefix 2
     a "You're by yourself?"
     
     vl naomi_vl_prefix 2
     "Girl in apron" "Oh, it's no trouble."
     
+    vl alexis_vl_prefix 3
     a "Maybe I could help you out? I'm not doing anything right now anyway."
 
     "If Sue got whisked away by the headmaster of all people, surely she must still be busy, right?"
@@ -658,10 +713,12 @@ label prologue:
     vl naomi_vl_prefix 3
     "Girl in apron" "If you wouldn't mind. My name is Naomi. Naomi Kuzuma. I'm lucky enough to serve as the president of the school's Home Ec Club."
     
+    vl alexis_vl_prefix 4
     a "That I figured. Name's [a] Blakesley, by the way."
     
     "I roll up my sleeves."
     
+    vl alexis_vl_prefix 5
     a "So what do you have for me?"
     
     "She has me wash my hands before showing me to the rice cooker, where she spoons its contents into an equally large bowl. A few moments later, she brings me sheets of seaweed, a knife, a roll of plastic wrap, and a bowl of water."
@@ -724,6 +781,7 @@ label prologue:
 
     "In the center of the gym floor, there’s a crowd gathered."
 
+    #TODO: Alexis voice lines sunofes version
     a "What’s that about?"
 
     show sue happy
@@ -871,6 +929,9 @@ label prologue:
     
     s "I'm showing a new student around. This is [a] Blakesley."
     
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingElio_"
+
+    vl alexis_vl_prefix 1
     a "Nice to meet you, Elio."
     
     play sound "audio/sfx/arrow_release.ogg"
@@ -886,18 +947,118 @@ label prologue:
     hide elio with dissolve
     "He's barely out of earshot before I open my mouth."
     
+    vl alexis_vl_prefix 2
     a "What's his problem?"
     
     s "Oh, he's just not much of a people person. It isn't anything you should take personally. That should be everything, though. Let's get back to the Wilson Building."
 
     stop music fadeout 1.0
+
+    # Meeting Charles starts
+
+    #EXT. HUNTSDALE - MAIN STREET - AFTERNOON
+    scene bg mainstreet_afternoon with fade
+
+    show sue neutral at character_pos6 with dissolve
+
+    "The route Sue and I take on our way back to the Wilson Building cuts through a local park. So late into the summer, it’s buzzing with people basking in the warmth of the sun and enjoying the day’s gentle breeze."
+    "I doubt much of note would happen during the trip. After all, I’ve already seen most of what I needed to. The cacophonous cascade of footfalls behind us is the first hint that something was about to happen."
+
+
+    "Energetic voice" "Behind you, coming through!"
+
+    show charles neutral_scout with MoveTransition(2, enter=offscreenright)
+    hide charles with MoveTransition(2, leave=offscreenleft)
+    "Sue and I steer to the side of the path we’re walking on, allowing a group of uniformed people to pass us by. Well, a group of uniformed children."
+    "A guy around our age is leading them, but everyone else is young. Early primary schoolers, by my guess. And that uniform of theirs… Have I seen it before?"
+
+    $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Prologue/Meeting Charles/Sue_Prologue_MeetCharles_"
+
+    vl sue_vl_prefix 1
+    s "I suppose it would be that time of year."
+
+    a "What’s that?"
+
+    vl sue_vl_prefix 2
+    s "Time for a quick break. It wasn’t planned, but here’s someone else it would be nice for you to know."
+    
+    "The party stops their run a little bit ahead of us, at a gazebo off the main path. A few of the children are leaning against the railing of the gazebo, struggling to catch their breath. Their peers, and their leader, still seem full of energy."
+
+    vl sue_vl_prefix 3
+    s "Wei! Hard at work, I see."
+
+    show charles neutral_scout at character_pos1 with dissolve
+    "The young man turns, lighting up at the sight of us."
+
+    show charles excited_scout
+    "Wei" "Sue, hey!"
+
+    "His eyes flit towards me. There’s an all-encompassing warmth to him that catches me off guard."
+
+    "Wei" "And you must be that mysterious fourth-year I’ve heard about."
+
+    "He thrusts a hand towards me."
+
+    "Wei" "Name’s Charles Liang Ren Wei. Nice to meetcha."
+
+    a "[a] Blakesley. Judging by the uniform… You’re a Scout?"
+
+    cha "That’s right. I lead up one of Huntsdale’s Scout troops."
+
+    "He gestures at the children behind him. Some of them rush to stand in formation. The others are still recovering from their walk."
+
+    cha "These are the new kids joining up this year. Good job, guys. Nice hustle. And don’t sweat it if you didn’t line up. That wasn’t an easy run we did. No shame in focusing on recovery."
+
+    "And just like that, he both praised the kids who went above and beyond, and soothed any egos that might’ve been bruised among those who didn’t. I don’t think I’d have known to cover my bases like that."
+
+    vl sue_vl_prefix 4
+    s "Don’t want to eat up too much of your time if you’re with the kids. I’ll be in touch, though."
+
+    show charles neutral_scout
+    cha "Just a second."
+
+    "He faces the children, waving an arm in Sue’s direction."
+
+    cha "This is my friend, Sue. Student Council President at the Academy. A very important woman at a very important school. She grew up overseas, too. Who wants to hear about her sometime? She’s got all sorts of cool stories."
+
+    "Hands shoot up all around. At the overwhelmingly positive reception, Sue glowers at Charles."
+
+    vl sue_vl_prefix 5
+    s "Don’t volunteer me for this!"
+
+    cha "But the kids would love you! Look at them! You’re not really gonna leave them hanging, are you?"
+
+    "Faced with all of the eager young faces before her, Sue deflates, hanging her head and sighing."
+
+    vl sue_vl_prefix 6
+    s "No, I guess not. Some day before the year is done."
+
+    "The chorus of cheers from the children put Sue a bit at ease, but she still shakes her head."
+
+    vl sue_vl_prefix 7
+    s "Honestly, Wei…"
+
+    cha "Be seeing you two around."
+
+    a "Yeah… Until next time."
+
+    hide charles with dissolve
+
+    "We continue on our way. When he next speaks, Charles’s voice is just loud enough for me to hear him say:"
+
+    cha "We are Scouts. We live by these words: Honor, Integrity, and Justice for All."
+
+    # Meeting Charles ends
     
     scene bg student_councilroom_afternoon with fade
     "When we're finally back, I sink into the seat next to where I left my things. I barely noticed how tired my legs had gotten. Sue settles in at her desk at the back of the room."
     
     show sue neutral at center with dissolve
     s "I hope that proved useful."
+
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     
+    vl alexis_vl_prefix 1
     a "Very."
     
     s "Good."
@@ -913,10 +1074,12 @@ label prologue:
     
     "I let myself deflate, falling back in the chair and letting out the breath I had been holding."
     
+    vl alexis_vl_prefix 2
     a "You had me scared for a second there."
     
     s "Sorry. It's just unorthodox. Student Council Presidents don't usually have aides. I didn't last year. But he believes it'll be useful for you, considering."
     
+    vl alexis_vl_prefix 3
     a "Then I'll be the best aide that ever aided, boss."
     
     show sue happy
@@ -928,6 +1091,7 @@ label prologue:
     show sue neutral
     s "If you are going to be my aide, there are some things I need to tell you. This year is... special."
     
+    vl alexis_vl_prefix 4
     a "Special how?"
     
     s "Let's see... The pins. Did you notice anything about the first years?"
@@ -938,37 +1102,44 @@ label prologue:
     
     s "Starting this year, new students will be placed into one of three 'Sectors': Special Operations, Civic Magic, and General Education."
     
+    vl alexis_vl_prefix 5
     a "Alright. What's that about?"
     
     s "Students graduate and then go on to do all sorts of things. But being expected to ace all your history tests isn't going to be the most useful if you want to join Overseer or become a doctor."
     
+    vl alexis_vl_prefix 6
     a "No, I guess not."
     
     s "They’re there to help students gain real world experience while in school. If they want to go down one of those paths."
     
     s "As for the second thing... in a few years, the school turns three hundred years old."
     
+    vl alexis_vl_prefix 7
     a "No shot, really?"
     
     "I offer a small applause."
     
+    vl alexis_vl_prefix 8
     a "Happy early birthday to MIA, then!"
     
     s "And to celebrate, Headmaster Goude thinks it would be valuable to pack up and leave."
     
     "My clapping stops."
     
+    vl alexis_vl_prefix 9
     a "I'm sorry?"
     
     s "Next year, all school operations would take place {b}outside{/b} the empire. And the year after that. And one more time after that."
 
     "Leaving the country the school was founded in was certainly one way to celebrate the anniversary of its founding."
     
+    vl alexis_vl_prefix 10
     a "And all of that concerns the Student Council how?"
     
     show sue melancholic_closed
     s "Money."
     
+    vl alexis_vl_prefix 11
     a "Oh."
     
     "I don’t know about these \"Sectors\" Sue mentioned, but going worldwide three years in a row? With all of these students? The thought of that price tag alone makes me shudder."
@@ -1020,9 +1191,14 @@ label choose_club:
             $ chosen_club = "archery"
             jump archery_club
 
+        "The Scouts":
+            $ chosen_club = "scouts"
+            jump scouts_club
+
 label art_club:
     s "Art? You draw?"
 
+    #TODO: Alexis voice lines sunofes version
     a "A little bit here and there. Not as much as when I was younger, though. Besides, it sounds like it would be fun to have a place to practice and meet other artists."
 
     s "Indeed it does."
@@ -1072,9 +1248,11 @@ label swordplay_club:
     jump choose_club
 
 label no_clubs:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue neutral at center with dissolve
     s "Really? No other clubs?"
     
+    vl alexis_vl_prefix 12
     a "Not really. Sure, I could try and have fun, but with only one year left, I may as well not tie myself down, you know? Besides, I've already got this new gig as your aide."
     
     show sue melancholic at center
@@ -1083,14 +1261,17 @@ label no_clubs:
     jump prologue_end
 
 label disciplinary_committee:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue neutral at center with dissolve
     s "The Disciplinary Committee?"
     
+    vl alexis_vl_prefix 13
     a "Yeah, why not? What was it Reina said earlier? Something about going through the Student Council after the necklace thing? Trying to make change from the inside. What better way than through the Disciplinary Committee?"
     
     show sue melancholic at center
     s "I don't think that's what she meant. No matter, I can let her know your intentions. I don't see any reason for her to object to you joining her."
     
+    vl alexis_vl_prefix 14
     a "Sweet."
     
     show sue neutral at center
@@ -1098,9 +1279,11 @@ label disciplinary_committee:
     jump prologue_end
 
 label literature_club:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue neutral at center with dissolve
     s "The Literature Club's a good choice. I wouldn't have thought you were much of a reader."
     
+    vl alexis_vl_prefix 15
     a "I can only imagine how many classics must be in the libraries of a place this old. How could I stay away?"
     
     show sue happy at center
@@ -1111,14 +1294,17 @@ label literature_club:
     jump prologue_end
 
 label anime_club:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue neutral at center with dissolve
     s "A very popular choice, that one."
     
+    vl alexis_vl_prefix 16
     a "I wonder why."
     
     show sue happy at center
     s "From what I hear, you'll be in good hands with Killian. He really knows his stuff."
     
+    vl alexis_vl_prefix 17
     a "I'd hope so."
     
     show sue neutral at center
@@ -1126,9 +1312,11 @@ label anime_club:
     jump prologue_end
 
 label home_ec_club:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue happy at center with dissolve
     s "Naomi won you over, didn't she?"
     
+    vl alexis_vl_prefix 18
     a "I think she won over {b}most{/b} people who walked into that room."
     
     s "You're not wrong about that. She'll take good care of you. I've heard nothing but good things from people in her club."
@@ -1138,26 +1326,61 @@ label home_ec_club:
     jump prologue_end
 
 label archery_club:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
     show sue neutral at center with dissolve
     s "So Elio didn't put you off earlier?"
     
+    vl alexis_vl_prefix 19
     a "Don't get me wrong, he's a real piece of work. But I like archery."
     
     show sue happy at center
     s "I guess that is how it would go. Well, you'll get used to him in time."
     
+    vl alexis_vl_prefix 20
     a "I sure as sin hope so."
     
     show sue neutral at center
     s "I don't think there's anything else that needs to be done right now. You can get going."
     jump prologue_end
 
+label scouts_club:
+    $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Prologue/Prologue End/Sue_Prologue_End_2026_"
+
+    # TODO: Sue sprites
+    vl sue_vl_prefix 1
+    s "The Scouts? Don’t tell me Wei impressed you with that stunt of his!"
+
+    a "Not that. I thought I recognized the uniforms. I just remembered that my father was a Scout, once."
+
+    vl sue_vl_prefix 2
+    s "He was?"
+
+    a "I never joined, but I remember him talking about it sometimes. Saw him in uniform once or twice, too."
+
+    vl sue_vl_prefix 3
+    s "Want to make up for lost time from when you were younger?"
+
+    a "Maybe."
+
+    vl sue_vl_prefix 4
+    s "Then I’ll tell Wei you want to sit in on what he does. I doubt he’d mind adding another lamb to his flock."
+
+    a "He’s a Scoutmaster, not a priest."
+
+    vl sue_vl_prefix 5
+    s "But that should be everything we need to do here. You can head out whenever."
+
+    jump prologue_end
+
 label prologue_end:
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+
     "I take up my bag and my suitcase again. Sitting for a little bit did me some good."
 
     show sue neutral at center with dissolve
     s "Zynday, Istday, and Nyday are when the Student Council meets. So just come here after school on those days, alright?"
     
+    vl alexis_vl_prefix 21
     a "You got it, boss. See you later."
     
     hide sue with dissolve

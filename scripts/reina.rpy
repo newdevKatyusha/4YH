@@ -1,5 +1,6 @@
 label disciplinary_route_jinus(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 1/Reina_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 1/" + player_voice_prefix + "_Reina_Month1_"
 
     call screen calendar(month, date, "Jinus", 5)
     scene bg mainstreet_afternoon with fade
@@ -14,20 +15,22 @@ label disciplinary_route_jinus(month, date):
     "Yet, somehow, I still feel adrift."
     "The other fourth-years have already settled into the new trimester, resuming the lives they've built for themselves over the past three years."
 
-    a "My classmates are friendly enough, but they're too focused on their courses and, for some, our impending graduation to worry about the new kid."
-    a "I suppose there's Prince Philip, but between starting his first year and being, you know, royalty, he's got more than enough on his plate."
+    "My classmates are friendly enough, but they're too focused on their courses and, for some, our impending graduation to worry about the new kid."
+    "I suppose there's Prince Philip, but between starting his first year and being, you know, royalty, he's got more than enough on his plate."
 
     show reina neutral at center with moveinright
     vl reina_vl_prefix 1
     r "Are you lost?"
 
     "I turn to find the same girl who wrote me up during my tour. She flashes a polite smile, unaware of how deeply her words cut my soul."
-    a "Gods, I'm getting dramatic. This is why I need friends."
+    "Gods, I'm getting dramatic. This is why I need friends."
 
     show reina neutral 
     vl reina_vl_prefix 2
     r "Ah, the new fourth year. I don't believe I caught your name?"
 
+    #TODO: Modify so it only says last name if name is not Alexis
+    vl alexis_vl_prefix 1
     a "[a] Blakesley."
 
     show reina happy 
@@ -39,6 +42,7 @@ label disciplinary_route_jinus(month, date):
     vl reina_vl_prefix 4
     r "I'm Reina Dreyar."
 
+    vl alexis_vl_prefix 2
     a "As in, Tobias Dreyar? The Duke of Centra?"
 
     vl reina_vl_prefix 5
@@ -54,20 +58,28 @@ label disciplinary_route_jinus(month, date):
     r "I see you removed your necklace."
 
     "Instinctively, my fingers fly to the collar of my shirt."
+
+    vl alexis_vl_prefix 3
     a "That's right."
 
     show reina neutral 
     vl reina_vl_prefix 7
     r "Are you looking for something? I know it can be a bit disorienting at first."
 
+    vl alexis_vl_prefix 4
     a "Actually, I was looking for you. Do you have a moment?"
 
     show reina worried
     vl reina_vl_prefix 8
     r "I'm afraid that demerits are non-negotiable. But don't fret. So long as you honor the Code of Conduct moving forward–"
 
+    vl alexis_vl_prefix 5
     a "I'm not here about demerits..."
+    
+    vl <to 5>alexis_vl_prefix 6
     "I draw in a deep breath before making my confession."
+    
+    vl <from 5.5>alexis_vl_prefix 6
     a "I want to join the disciplinary committee."
 
     show reina neutral with vpunch
@@ -75,6 +87,7 @@ label disciplinary_route_jinus(month, date):
     vl reina_vl_prefix 9
     r "You do?"
 
+    vl alexis_vl_prefix 7
     a "You look shocked."
 
     show reina happy
@@ -100,6 +113,7 @@ label disciplinary_route_jinus(month, date):
     r "Here we are– Oh, how rude of me!"
     "She grabs a second chair while I gape at my dismal surroundings."
 
+    vl alexis_vl_prefix 8
     a "They stuck you all the way in this dark corner?"
 
     show reina neutral
@@ -113,8 +127,12 @@ label disciplinary_route_jinus(month, date):
     vl reina_vl_prefix 14
     r "Apologies for the mess. Between my courses and volunteering, I've been falling behind."
 
+    vl alexis_vl_prefix 9
     a "Can't the rest of the committee help?"
+
     "Reina falters. That's when it hits me..."
+
+    vl alexis_vl_prefix 10
     a "There's no one else on the committee, is there?"
 
     show reina worried
@@ -129,6 +147,7 @@ label disciplinary_route_jinus(month, date):
     r "If you want to leave, I understand. You wouldn't be the first."
     "Across the room, I hear the other students snicker. Ignoring them, I turn back to Reina."
 
+    vl alexis_vl_prefix 11
     a "How can I help?"
 
     show reina happy with hpunch
@@ -139,28 +158,36 @@ label disciplinary_route_jinus(month, date):
     r "You can start by filing these. Newest violation on top..."
 
     "We work in silence for a while. After a time, I look up to find Reina watching me."
+
+    vl alexis_vl_prefix 12
     a "Am I doing it wrong?"
 
     show reina neutral
     vl reina_vl_prefix 18
     r "No. Just... why did you want to join the disciplinary committee?"
 
+    vl alexis_vl_prefix 13
     a "I wanted to get involved, I suppose. I don't have much time at MIA, and I wanted to make it count."
+    voice sustain
     a "Plus, if I have a better understanding of the rules, maybe I won't break another."
+    
     "Reina nods, satisfied with my response."
 
+    vl alexis_vl_prefix 14
     a "What about you? Following in your dad's footsteps?"
     show reina happy
     "Reina laughs."
     vl reina_vl_prefix 19
     r "Don't let him hear you say that."
 
+    vl alexis_vl_prefix 15
     a "Why?"
 
     show reina neutral
     vl reina_vl_prefix 20
     r "It's against Roma custom for women to assume leadership positions."
 
+    vl alexis_vl_prefix 16
     a "So the head of the disciplinary committee is a rulebreaker?"
 
     show reina happy
@@ -179,7 +206,9 @@ label disciplinary_route_jinus(month, date):
     vl reina_vl_prefix 23
     r "Thank you for your time today, [a]. I look forward to working with you again."
 
+    vl alexis_vl_prefix 17
     a "You, too."
+
     hide reina exit with moveoutright
     "With a small curtsy, Reina bustles out of the room."
     "I watch her go, smiling a little to myself. She's certainly not what I expected."
@@ -192,6 +221,7 @@ label disciplinary_route_jinus(month, date):
 
 label disciplinary_route_dallinus(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 2/Reina_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 2/" + player_voice_prefix + "_Reina_Month2_"
 
     call screen calendar(month, date, "Dallinus", 19)
     scene bg classroom_anime_afternoon with fade
@@ -202,13 +232,16 @@ label disciplinary_route_dallinus(month, date):
     "As the lone new fourth-year and half of the disciplinary committee, I still catch a few stares from time to time."
     "But, for the most part, I've started to blend in–"
 
+    vl alexis_vl_prefix 1
     a "Uhhhhhnnnn..."
-    "Or I was, until my last class."
 
+    "Or I was, until my last class."
     "I've always been prone to bloody noses, but what happened in my potion brewing class looked like a godsdamn murder scene."
     "Somehow, I managed to bleed not only all over myself and my concoction but also splatter several classmates."
 
+    vl alexis_vl_prefix 2
     a "Is it too late to drop a class?"
+    
     "After a brief visit to the infirmary, I returned to House Lychester to change out of my bloody uniform and hide from my classmates."
     scene bg dorm_common_noon with fade
     "I'm lying on the couch, trying to recover what's left of my dignity, when..."
@@ -230,6 +263,8 @@ label disciplinary_route_dallinus(month, date):
     stop sound
 
     "I hold up a red-soaked tissue."
+
+    vl alexis_vl_prefix 3
     a "Bloody nose. You?"
 
     play sound reina_vl_prefix + "3.ogg"
@@ -238,15 +273,19 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.9}— allergic to fur."
     stop sound
     
+    vl alexis_vl_prefix 4
     a "Why don't you sit down? I'll make you a cup of tea."
+    
     "She eyes my bloody tissue."
 
+    vl alexis_vl_prefix 5
     a "Don't worry, the bleeding's stopped. I'm just tending to my ego."
 
     show reina worried
     vl reina_vl_prefix 4
     r "Was it that bad?"
 
+    vl alexis_vl_prefix 6
     a "I dribbled blood into my lab partner's hair, so..."
     window hide
 
@@ -264,6 +303,7 @@ label disciplinary_route_dallinus(month, date):
     show reina sickly with vpunch
     r "ACHOO!"
 
+    vl alexis_vl_prefix 7
     a "Tea, then?"
 
     show reina sickly
@@ -277,6 +317,7 @@ label disciplinary_route_dallinus(month, date):
     show reina sickly
     "Returning to the couch, I hand one to her."
 
+    vl alexis_vl_prefix 8
     a "I'm afraid it's nothing fancy."
 
     show reina happy
@@ -286,6 +327,7 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.9}— wonderful. Thank you."
     "We sip our tea in silence for a moment, savoring the warmth."
 
+    vl alexis_vl_prefix 9
     a "So, why were you at the vet? You don't have any animals."
 
     show reina neutral
@@ -295,6 +337,7 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.7}– kittens outside in the rain, so I took them in."
     stop sound
 
+    vl alexis_vl_prefix 10
     a "But, you knew you were allergic. Couldn't someone else have taken them?"
 
     show reina worried
@@ -304,6 +347,7 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.9}– cold."
     stop sound
 
+    vl alexis_vl_prefix 11
     a "So, you took these kittens to the vet by yourself, in the rain?"
 
     show reina neutral
@@ -324,6 +368,7 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.9}– ridiculous... Hand me another tissue, will you?"
     stop sound
 
+    vl alexis_vl_prefix 12
     a "It's not that. I just didn't know you were such a... softie."
 
     show reina neutral
@@ -333,6 +378,7 @@ label disciplinary_route_dallinus(month, date):
     extend "ACHOO!{w=0.9}– right. Anyone in my shoes would do the same."
     stop sound
 
+    vl alexis_vl_prefix 13
     a "Not anyone."
 
     vl reina_vl_prefix SneezeGroan
@@ -349,6 +395,7 @@ label disciplinary_route_dallinus(month, date):
     vl reina_vl_prefix 13
     r "I think I'll rest up before dinner. Thank you for this, [a]."
 
+    vl alexis_vl_prefix 14
     a "My pleasure."
 
     show reina flustered 
@@ -368,6 +415,7 @@ label disciplinary_route_dallinus(month, date):
 label disciplinary_route_vanus(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 3/Reina_Month3_"
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Reina/Val_Reina_Month3_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 3/" + player_voice_prefix + "_Reina_Month3_"
     
     call screen calendar(month, date, "Vanus", 22)
     scene bg mainstreet_afternoon with fade
@@ -397,6 +445,7 @@ label disciplinary_route_vanus(month, date):
 
     "At last, I clear my throat."
 
+    vl alexis_vl_prefix 1
     a "Hey, Reina–"
 
     show reina flustered
@@ -477,6 +526,7 @@ label disciplinary_route_vanus(month, date):
 
     "Reina's lower lip begins to tremble. I've never seen her this upset. I can't let my only friend be humiliated like this. I take a step forward."
 
+    vl alexis_vl_prefix 2
     a "What's your problem? Reina didn't write the Code of Conduct. She's just doing her job."
 
     "Val turns on me, sizing me up. They flash me a smirk."
@@ -484,11 +534,13 @@ label disciplinary_route_vanus(month, date):
     vl val_vl_prefix 7
     v "You're the new fourth-year, aren't you? Here's a tip– you want to make friends, stay away from Reina."
 
+    vl alexis_vl_prefix 3
     a "Reina is my friend."
 
     vl val_vl_prefix Giggle
     "Val laughs."
 
+    vl alexis_vl_prefix 4
     a "Why is that funny? I don't see anyone jumping to your aid."
 
     "The crowd giggles once more. This time, Val doesn't join them."
@@ -496,6 +548,7 @@ label disciplinary_route_vanus(month, date):
     vl val_vl_prefix Muttering
     "Annoyed, Val reaches up and yanks out their cartilage piercing. They toss it to the dirt and start to walk away…"
 
+    vl alexis_vl_prefix 5
     a "You know, littering is against the Code of Conduct."
 
     show reina flustered
@@ -508,16 +561,19 @@ label disciplinary_route_vanus(month, date):
     vl reina_vl_prefix 11
     r "Did you mean that?"
 
+    vl alexis_vl_prefix 6
     a "Oh, no. I know littering isn't actually part of the Code of Conduct. I just wanted to–"
 
     show reina flustered
     vl reina_vl_prefix 12
     r "I mean, about being friends."
 
+    vl alexis_vl_prefix 7
     a "Of course."
 
     "I quickly correct myself."
 
+    vl alexis_vl_prefix 8
     a "Unless, that's not something you want?"
 
     show reina happy
@@ -527,6 +583,8 @@ label disciplinary_route_vanus(month, date):
     "We share a smile. Then, a little flustered, we both look away."
 
     show reina flustered
+
+    vl alexis_vl_prefix 9
     a "How about breakfast?"
     
     show reina neutral
@@ -538,6 +596,7 @@ label disciplinary_route_vanus(month, date):
 
 label disciplinary_route_dyalt(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 4/Reina_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 4/" + player_voice_prefix + "_Reina_Month4_"
 
     call screen calendar(month, date, "Dyalt", 21)
     scene bg mainstreet_night with fade
@@ -555,6 +614,7 @@ label disciplinary_route_dyalt(month, date):
 
     "I ventured to the salon– only to find a \"CLOSED\" sign on the door and no waitstaff in sight. It seems I'm the only sucker dumb enough to go out in this weather."
 
+    vl alexis_vl_prefix 1
     a "At least I got my steps in…"
 
     "I buy a cookie from The Amity to justify my trip. Then, wrapping my arms around myself, I start down the path back toward House Lychester when I hear muffled voices from nearby."
@@ -585,6 +645,7 @@ label disciplinary_route_dyalt(month, date):
     vl reina_vl_prefix 3
     r "[a], how long were you over there?"
 
+    vl alexis_vl_prefix 2
     a "Just a few minutes. I didn't mean to eavesdrop or scare you. It seemed like a… tense conversation."
 
     show reina worried
@@ -599,6 +660,7 @@ label disciplinary_route_dyalt(month, date):
     voice sustain
     "The wind picks up. Reina shivers."
 
+    vl alexis_vl_prefix 3
     a "You must be freezing. Why don't we go inside?"
 
     show reina neutral
@@ -617,6 +679,8 @@ label disciplinary_route_dyalt(month, date):
     r "I don't know if we should be here."
 
     show reina neutral
+
+    vl alexis_vl_prefix 4
     a "As nobility, we're allowed access to the salon during regular business hours. Oh…"
 
     "I reach into my bag and pull out my cookie, now slightly squished from the journey."
@@ -625,6 +689,7 @@ label disciplinary_route_dyalt(month, date):
     vl reina_vl_prefix 7
     r "What's that?"
 
+    vl alexis_vl_prefix 5
     a "It's from The Amity. They make a killer snickerdoodle."
 
     "I offer her half, but she declines."
@@ -637,6 +702,7 @@ label disciplinary_route_dyalt(month, date):
 
     "I decide to take my chances."
 
+    vl alexis_vl_prefix 6
     a "You sounded pretty upset down there. What were you two talking about, if you don't mind me asking?"
 
     show reina worried
@@ -650,6 +716,7 @@ label disciplinary_route_dyalt(month, date):
     show reina sickly
     "She trails off."
 
+    vl alexis_vl_prefix 7
     a "And, what did he say?"
 
     show reina worried
@@ -673,7 +740,9 @@ label disciplinary_route_dyalt(month, date):
     show reina neutral
     "She goes quiet, but I can sense her pain. Reina and I had very different upbringings, but I know how she feels all too well. I clear my throat to speak."
 
+    vl alexis_vl_prefix 8
     a "You know, when my dad passed, my mom started treating me like a completely different person, almost like a business partner."
+    voice sustain
     a "She expected me to take his place caring for her and my siblings and forgot I was just a scared kid who lost my dad."
 
     show reina worried
@@ -682,19 +751,22 @@ label disciplinary_route_dyalt(month, date):
     vl reina_vl_prefix 13
     r "I'm sorry, [a]. I didn't know you'd lost your father."
 
+    vl alexis_vl_prefix 9
     a "It's been a long time. I was 12 when he passed."
 
     show reina sickly
     vl reina_vl_prefix 14
     r "That doesn't matter. I was 10 when I lost my mother, and it still feels like it was yesterday."
 
-    #a "It's wild to think, my siblings barely even knew him. They were so young when it happened. He's more of a story than a person to them."
-    a "It’s wild to think, my siblings have spent almost half of their lives without him. He’s more of a distant memory than a person to them."
+    vl alexis_vl_prefix 10
+    a "It's wild to think, my siblings barely even knew him. They were so young when it happened. He's more of a story than a person to them."
+    #a "It’s wild to think, my siblings have spent almost half of their lives without him. He’s more of a distant memory than a person to them."
 
     show reina worried
     vl reina_vl_prefix 15
     r "Still, it must be nice to share his memory with someone." 
 
+    vl alexis_vl_prefix 11
     a "Your father doesn't talk about her?"
 
     "Reina shakes her head."
@@ -703,6 +775,8 @@ label disciplinary_route_dyalt(month, date):
     r "He's not big on reminiscing."
 
     show reina neutral
+
+    vl alexis_vl_prefix 12
     a "I'm sure he doesn't mean anything by it. They get so swept up in their own pain that they forget we're in the trenches with them."
 
     show reina sickly
@@ -712,6 +786,7 @@ label disciplinary_route_dyalt(month, date):
     show reina worried
     "She shakes her head, remembering."
 
+    vl alexis_vl_prefix 13
     a "Was he like that when your mom was alive?"
 
     show reina sickly
@@ -725,6 +800,8 @@ label disciplinary_route_dyalt(month, date):
     r "Gods... I always seem to be falling apart around you."
 
     show reina neutral
+
+    vl alexis_vl_prefix 14
     a "Or, maybe you just can't always take care of yourself."
 
     show reina happy
@@ -734,6 +811,8 @@ label disciplinary_route_dyalt(month, date):
     r "What if we took care of each other?"
 
     show reina flustered
+
+    vl alexis_vl_prefix 15
     a "What do you mean?"
 
     show reina happy
@@ -749,6 +828,8 @@ label disciplinary_route_dyalt(month, date):
     r "Forgive me, I got carried away. What I meant to say was–"
 
     show reina happy
+
+    vl alexis_vl_prefix 16
     a "It's a deal."
 
     "I hold out my hand for Reina to shake. She takes it, and we laugh a little, in spite of ourselves. Reina eyes the other half of my cookie."
@@ -763,6 +844,7 @@ label disciplinary_route_dyalt(month, date):
 
 label disciplinary_route_neralt(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 5/Reina_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 5/" + player_voice_prefix + "_Reina_Month5_"
 
     call screen calendar(month, date, "Neralt", 10)
     scene bg student_councilroom_afternoon with fade 
@@ -783,16 +865,19 @@ label disciplinary_route_neralt(month, date):
     vl reina_vl_prefix 1
     r "Gods, I am terribly sorry, [a]. I've had the worst day."
 
+    vl alexis_vl_prefix 1
     a "Why? What happened?"
 
     show reina worried
     vl reina_vl_prefix 2
     r "Today, in Fundamentals of Magic, we did a practice exam for the final, and I did terribly. What if I botch the real thing? This could lower my GPA!"
 
+    vl <to 5>alexis_vl_prefix 2
     a "Whoa, slow down. It's just a practice test, and you still have another week to study."
     
     pause 1.0
     
+    vl <from 6>alexis_vl_prefix 2
     a "What did you get, anyway?"
 
     show reina flustered
@@ -801,10 +886,12 @@ label disciplinary_route_neralt(month, date):
     vl reina_vl_prefix 3
     r "You mustn't tell anyone."
 
+    vl alexis_vl_prefix 3
     a "Who would I tell?"
 
     "Relenting, Reina reaches into her bag and extracts a sheet of paper. With a pained expression, she passes it to me, face-down. Bracing myself, I turn the quiz over…"
 
+    vl alexis_vl_prefix 4
     a "You got a B?"
     
     vl reina_vl_prefix 4
@@ -816,6 +903,7 @@ label disciplinary_route_neralt(month, date):
     vl reina_vl_prefix 5
     r "Why are you laughing? This is serious!"
 
+    vl alexis_vl_prefix 5
     a "Reina, a B is a good grade."
 
     vl reina_vl_prefix 6
@@ -824,6 +912,7 @@ label disciplinary_route_neralt(month, date):
     show reina sickly
     "She flops onto the desk, dejected. Unsure what else to do, I place a gentle hand on her shoulder."
 
+    vl alexis_vl_prefix 6
     a "I can help you study."
 
     show reina flustered
@@ -833,6 +922,8 @@ label disciplinary_route_neralt(month, date):
     r "You would do that?"
 
     show reina happy
+
+    vl alexis_vl_prefix 7
     a "Of course… as long as you promise not to be too hard on yourself."
 
     vl reina_vl_prefix 8
@@ -850,16 +941,19 @@ label disciplinary_route_neralt(month, date):
     show reina neutral at center
     "By the end of the week, however, she seems to have mastered everything."
 
+    vl alexis_vl_prefix 8
     a "What are the three major global alliances of the early modern–"
 
     vl reina_vl_prefix 9
     r "The Oceanic Alliance, the Culmarean League, and the Eastern Confederation."
 
+    vl alexis_vl_prefix 9
     a "Okay. This conflict broke out in Spring 700 RD over the ownership of a manite–"
 
     vl reina_vl_prefix 10
     r "The Three Seasons' War."
 
+    vl alexis_vl_prefix 10
     a "Don't you think you should listen to the full question before answering?"
 
     show reina flustered
@@ -867,11 +961,14 @@ label disciplinary_route_neralt(month, date):
     r "I don't have time for that. Next question."
 
     show reina neutral
+
+    vl alexis_vl_prefix 11
     a "Alright. Which imperial scientist first coined the term \"mana lobe\" to refer to the part of the brain–"
 
     vl reina_vl_prefix 12
     r "Dr. William Richardson."
 
+    vl alexis_vl_prefix 12
     a "Nope."
 
     show reina worried
@@ -883,17 +980,20 @@ label disciplinary_route_neralt(month, date):
     vl reina_vl_prefix 14
     r "\"Dr. William Richardson identified that there was a part of the brain that allowed people to use magic, calling it the Mana Lobe.\" That's what I said."
 
+    vl alexis_vl_prefix 13
     a "I know. I was testing you."
 
     show reina flustered
     "Reina picks up the book and playfully smacks me with it."
 
+    vl alexis_vl_prefix 14
     a "Ow! Violence is against the Code of Conduct."
 
     show reina neutral
     vl reina_vl_prefix 15
     r "What's next?"
 
+    vl alexis_vl_prefix 15
     a "That's all." 
 
     vl reina_vl_prefix 16
@@ -901,12 +1001,14 @@ label disciplinary_route_neralt(month, date):
 
     "She sets the book back in front of me, but I don't pick it up."
 
+    vl alexis_vl_prefix 16
     a "The test's in twelve hours. Why don't you rest up?"
 
     show reina worried
     vl reina_vl_prefix 17
     r "It's alright. I won't be able to sleep anyway."
 
+    vl alexis_vl_prefix 17
     a "We've gone through everything twice. I think you know as much about early modern magical history as a third-year possibly could."
 
     "Reina doesn't look convinced. She nervously picks at the hem of her dress."
@@ -915,24 +1017,29 @@ label disciplinary_route_neralt(month, date):
     r "What if she throws in a trick question? Or I forget the Sixfold Path?"
 
     show reina neutral
+
+    vl alexis_vl_prefix 18
     a "You promised me you wouldn't be too hard on yourself."
 
     show reina worried
     vl reina_vl_prefix 19
     r "I know…"
 
+    vl alexis_vl_prefix 19
     a "Whatever happens tomorrow, it doesn't make you any less annoyingly brilliant."
 
     show reina happy
     vl reina_vl_prefix 20
     r "But, I'm going to get an A."
 
+    vl alexis_vl_prefix 20
     a "That's the spirit. And, if Instructor Acre gives you anything less, she'll have me to answer to."
 
     show reina flustered
     vl reina_vl_prefix 21
     r "You know, threatening faculty is grounds for expulsion."
 
+    vl alexis_vl_prefix 21
     a "Only if you're caught."
 
     show reina happy
@@ -957,6 +1064,7 @@ label disciplinary_route_neralt(month, date):
 label disciplinary_route_exalt(month, date):
     $ elio_vl_prefix = "audio/voices/Love Interests/Elio/Reinas Route/Reina/Elio_Reina_Month6_"
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 6/Reina_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 6/" + player_voice_prefix + "_Reina_Month6_"
 
     call screen calendar(month, date, "Exalt", 26)
     scene bg wright_field_afternoon with fade
@@ -1004,6 +1112,7 @@ label disciplinary_route_exalt(month, date):
 
     "With a sheepish curtsy, Reina walks off. I jog after her."
 
+    vl alexis_vl_prefix 1
     a "Reina!"
 
     show reina flustered
@@ -1012,17 +1121,20 @@ label disciplinary_route_exalt(month, date):
     vl reina_vl_prefix 3
     r "Oh, hello, [a]. Please tell me you didn't see that."
 
+    vl alexis_vl_prefix 2
     a "Unfortunately, I did. What were you doing back there?"
 
     show reina neutral
     "She holds out her basket, revealing an assortment of colorful wildflowers. I can't help but gape at their beauty."
 
+    vl alexis_vl_prefix 3
     a "They're beautiful."
 
     show reina happy
     vl reina_vl_prefix 4
     r "Aren't they? I've been out all morning, trying to gather enough for a garland."
 
+    vl alexis_vl_prefix 4
     a "A garland?"
 
     "Reina nods."
@@ -1031,6 +1143,7 @@ label disciplinary_route_exalt(month, date):
     voice sustain
     r "It's meant to celebrate life and the coming spring, and the act of creation is an important part of our religion."
 
+    vl alexis_vl_prefix 5
     a "Ingenuity is one of the Links of Life, isn't it?"
 
     vl reina_vl_prefix 6
@@ -1039,12 +1152,14 @@ label disciplinary_route_exalt(month, date):
     show reina sickly
     r "But, since she passed, I've been on my own."
 
+    vl alexis_vl_prefix 6
     a "Aren't there other Roma students at MIA?"
 
     show reina worried
     vl reina_vl_prefix 7
     r "Not many. There are maybe nine or ten of us in total, but I've never quite fit in."
 
+    vl alexis_vl_prefix 7
     a "That must be difficult."
 
     show reina neutral
@@ -1055,6 +1170,7 @@ label disciplinary_route_exalt(month, date):
     "Reina and I have been through so much together, but standing there with flushed cheeks and her basket of flowers, she seems more vulnerable than ever."
     "I know I can't let her face the holiday alone again."
 
+    vl alexis_vl_prefix 8
     a "Can I celebrate with you?"
 
     show reina flustered
@@ -1065,6 +1181,7 @@ label disciplinary_route_exalt(month, date):
     
     pause 1.0
     
+    vl alexis_vl_prefix 9
     a "You're not forcing me. It sounds fun. Come to think of it, I saw some flowers behind Magis Hall."
 
     show reina happy
@@ -1083,17 +1200,20 @@ label disciplinary_route_exalt(month, date):
     "Once we finish, we drape our garlands over the branches of a nearby tree and tuck into our celebratory feast."
     "We end our celebration by lying side by side on the grass and watching the first stars appear in the sky."
 
+    vl alexis_vl_prefix 10
     a "Isn't that Rex?"
 
     vl reina_vl_prefix 11
     r "No, it's Orphan."
 
+    vl alexis_vl_prefix 11
     a "Well, close enough."
 
     show reina flustered
     vl reina_vl_prefix 12
     r "Close enough? You do know Orphan is a major figure in both of our religions?"
 
+    vl alexis_vl_prefix 12
     a "I'm not observant."
 
     show reina neutral
@@ -1107,6 +1227,7 @@ label disciplinary_route_exalt(month, date):
     vl reina_vl_prefix 14
     r "It must be very special for you to repeatedly break the dress code, despite being half of the disciplinary committee."
 
+    vl alexis_vl_prefix 13
     a "The dress code was amended."
 
     vl reina_vl_prefix 15
@@ -1114,6 +1235,7 @@ label disciplinary_route_exalt(month, date):
 
     "Gingerly, I pull the pendant out from beneath my collar, revealing the ornately-carved pendant."
 
+    vl alexis_vl_prefix 14
     a "It belonged to my father. It's the Blakesley family crest."
 
     show reina flustered
@@ -1122,12 +1244,14 @@ label disciplinary_route_exalt(month, date):
 
     "I nod. Gently, Reina catches the pendant in her fingers and runs her thumb over the carvings."
 
+    vl alexis_vl_prefix 15
     a "It's supposed to be a black wolf. That's what Blakesley means."
 
     show reina happy
     vl reina_vl_prefix 17
     r "It's beautiful."
 
+    vl alexis_vl_prefix 16
     a "Thanks."
 
     "I tuck the pendant beneath my collar once again. Reina looks up at me, the stars reflected in her dark eyes."
@@ -1135,6 +1259,7 @@ label disciplinary_route_exalt(month, date):
     vl reina_vl_prefix 18
     r "Thank you for celebrating with me, [a]."
 
+    vl alexis_vl_prefix 17
     a "Of course."
 
     "We lie there together in content silence, watching the stars blink to life."
@@ -1143,6 +1268,7 @@ label disciplinary_route_exalt(month, date):
 label disciplinary_route_elvera(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 7/Reina_Month7_"
     $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Reina/SueDaengQan_Reina/SueDaengQan_Reina_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 7/" + player_voice_prefix + "_Reina_Month7_"
 
     call screen calendar(month, date, "Elvera", 14)
     scene bg mainstreet_afternoon with fade
@@ -1175,23 +1301,27 @@ label disciplinary_route_elvera(month, date):
     voice sustain
     r "I thought you'd be back at House Lychester by now."
 
+    vl alexis_vl_prefix 1
     a "I thought I'd help with some filing. I completely forgot about the formal. Are you going?"
 
     show reina neutral
     vl reina_vl_prefix 3
     r "Actually, that's why I was looking for you. I wanted to know if you'd come with me."
 
+    vl alexis_vl_prefix 2
     a "You want me to be your date?"
 
     show reina flustered
     vl reina_vl_prefix 4
     r "Not a date! A… platonic escort to keep me company."
 
+    vl alexis_vl_prefix 3
     a "When does it start?"
 
     vl reina_vl_prefix 5
     r "Six o'clock… "
 
+    vl alexis_vl_prefix 4
     a "Six? That's only three hours from now. Did your other date cancel?"
 
     vl reina_vl_prefix 6
@@ -1199,6 +1329,7 @@ label disciplinary_route_elvera(month, date):
 
     "I cut her off."
 
+    vl alexis_vl_prefix 5
     a "Reina, I'm kidding. I'd love to be your platonic escort."
 
     show reina happy
@@ -1207,12 +1338,14 @@ label disciplinary_route_elvera(month, date):
     vl reina_vl_prefix 7
     r "Wonderful! We could get ready together if you'd like. Perhaps I could help with your hair."
 
+    vl alexis_vl_prefix 6
     a "What's wrong with my hair?"
 
     show reina worried
     vl reina_vl_prefix 8
     r "Nothing. It just looks a bit… informal."
 
+    vl alexis_vl_prefix 7
     a "Alright, if you insist."
 
     "We head back to House Lychester together."
@@ -1223,6 +1356,8 @@ label disciplinary_route_elvera(month, date):
     "After freshening up and fearing that Reina might rip my hair out–"
 
     show reina neutral at center
+
+    vl alexis_vl_prefix 8
     a "Ouch!"
 
     show reina flustered
@@ -1253,11 +1388,14 @@ label disciplinary_route_elvera(month, date):
     "I turn to see a familiar face smiling down at me."
 
     show sue happy at center
+
+    vl alexis_vl_prefix 9
     a "Sue! How are you?"
 
     vl sue_vl_prefix 1.1
     s "Good. Still in denial that the school year is ending. How about yourself?"
 
+    vl alexis_vl_prefix 10
     a "Same here. I feel like I finally settled in, just in time to graduate."
 
     show sue neutral
@@ -1269,6 +1407,7 @@ label disciplinary_route_elvera(month, date):
     vl sue_vl_prefix 3.1
     s "Are you and Reina–"
 
+    vl alexis_vl_prefix 11
     a "Oh, I'm just her platonic escort."
 
     show sue happy
@@ -1283,6 +1422,7 @@ label disciplinary_route_elvera(month, date):
     vl sue_vl_prefix 5.1
     s "For president? People keep asking if Reina's running. I wanted to speak with her about it, but I don't want her to feel pressured if she's not interested."
 
+    vl alexis_vl_prefix 12
     a "She hasn't said anything to me."
 
     vl sue_vl_prefix 6.1
@@ -1294,6 +1434,7 @@ label disciplinary_route_elvera(month, date):
     vl sue_vl_prefix 7.2
     s "Excuse me. Nice seeing you, [a]."
 
+    vl alexis_vl_prefix 13
     a "You, too."
 
     hide sue
@@ -1303,6 +1444,7 @@ label disciplinary_route_elvera(month, date):
     vl reina_vl_prefix 11
     r "Sorry to leave you on your own."
 
+    vl alexis_vl_prefix 14
     a "Don't be. I'm glad you're enjoying yourself."
 
     hide reina
@@ -1323,16 +1465,19 @@ label disciplinary_route_elvera(month, date):
     vl reina_vl_prefix 12
     r "Thank you for being my date tonight, [a]."
 
+    vl alexis_vl_prefix 15
     a "Platonic escort."
 
     show reina neutral
     "Reina doesn't laugh. I can tell something is on her mind."
 
+    vl alexis_vl_prefix 16
     a "What's wrong?"
 
     show reina worried
     r "Nothing's wrong. I've just been thinking…"
 
+    vl alexis_vl_prefix 17
     a "Of running for President?"
 
     show reina neutral 
@@ -1341,7 +1486,9 @@ label disciplinary_route_elvera(month, date):
     vl reina_vl_prefix 13
     r "How did you know that?"
 
+    vl alexis_vl_prefix 18
     a "Sue asked me if you had mentioned it."
+    voice sustain
     a "She said she wanted to talk to you about it herself but didn't want to put you on the spot."
 
     "Reina looks surprised."
@@ -1352,6 +1499,8 @@ label disciplinary_route_elvera(month, date):
     "I nod."
 
     show reina happy
+
+    vl alexis_vl_prefix 19
     a "It sounds like the rest of the Council has been asking her. She thinks you'd make a great president, and I agree."
 
     "Reina allows herself to smile."
@@ -1362,6 +1511,7 @@ label disciplinary_route_elvera(month, date):
     voice sustain
     r "But, somehow I feel… called to this. MIA is changing, fast, and I want to be part of it."
 
+    vl alexis_vl_prefix 20
     a "Maybe some rules are meant to be broken."
 
     show reina happy
@@ -1379,6 +1529,7 @@ label disciplinary_route_elvera(month, date):
     vl reina_vl_prefix 17
     r "I'm sorry, I feel like I'm always pressuring you into something. You've already done more than enough, and–"
 
+    vl alexis_vl_prefix 21
     a "I would be honored to help, Reina."
 
     show reina happy
@@ -1398,6 +1549,7 @@ label disciplinary_route_elvera(month, date):
 
 label disciplinary_route_verabris(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Month 8/Reina_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 8/" + player_voice_prefix + "_Reina_Month8_"
 
     call screen calendar(month, date, "Verabris", 8)
     scene bg dorm_common_noon with fade
@@ -1435,6 +1587,7 @@ label disciplinary_route_verabris(month, date):
     voice sustain
     r "That sounds better, right?"
 
+    vl alexis_vl_prefix 1
     a "Hmm?"
 
     show reina worried
@@ -1443,29 +1596,36 @@ label disciplinary_route_verabris(month, date):
     voice sustain
     r "Are you even paying attention?"
 
+    vl alexis_vl_prefix 2
     a "Of course. But, I thought it sounded great three drafts ago."
 
     vl reina_vl_prefix 4
     r "Three drafts ago, I didn't even have a conclusion."
 
+    vl alexis_vl_prefix 3
     a "I just think maybe you're overthinking it. You've put everything into this campaign for a month now."
+    voice sustain
     a "You're clearly the best person for the job–"
 
     show reina flustered
     vl reina_vl_prefix 5
     r "Everyone hated me for the first half of the school year."
     
+    vl alexis_vl_prefix 4
     a "I didn't hate you."
 
     vl reina_vl_prefix 6
     r "Besides you."
 
+    vl alexis_vl_prefix 5
     a "That was months ago, and you've worked yourself to the bone."
+    voice sustain
     a "Don't you think you should take some time to rest up before the big day? You've earned it."
 
     show reina worried
     "She frowns at me, unconvinced. Birdsong filters from the window. I hold a hand up to my ear to listen."
 
+    vl alexis_vl_prefix 6
     a "What's that? They're saying, \"Reina, come outside. You're already Vitamin D deficient.\""
 
     show reina neutral
@@ -1474,6 +1634,7 @@ label disciplinary_route_verabris(month, date):
     vl reina_vl_prefix 7
     r "I am not."
 
+    vl alexis_vl_prefix 7
     a "You will be if you spend every sunny day cooped up in this room. Did you know that sunshine has been linked to a 100 percent increase in Presidential campaign success?"
 
     show reina happy
@@ -1485,6 +1646,7 @@ label disciplinary_route_verabris(month, date):
     vl reina_vl_prefix 9
     r "I suppose I could take an hour off."
 
+    vl alexis_vl_prefix 8
     a "Or three."
 
     vl reina_vl_prefix 10
@@ -1492,6 +1654,7 @@ label disciplinary_route_verabris(month, date):
 
     "I flash her a mischievous grin."
 
+    vl alexis_vl_prefix 9
     a "Wait here. I'll grab a blanket."
 
     scene bg wright_field_afternoon with fade 
@@ -1503,6 +1666,7 @@ label disciplinary_route_verabris(month, date):
     vl reina_vl_prefix 11
     r "All this talk of Vitamin D, and you choose a spot in the shade."
 
+    vl alexis_vl_prefix 10
     a "I'm sure my sunburn from the walk over evens it out."
 
     "Chuckling, she plops down beside me on the blanket. We lie there for a long while, cloud-watching and savoring the early summer breeze."
@@ -1513,11 +1677,13 @@ label disciplinary_route_verabris(month, date):
     vl reina_vl_prefix 12
     r "Thank you, [a]."
 
+    vl alexis_vl_prefix 11
     a "I told you it was a nice day."
 
     vl reina_vl_prefix 13
     r "Not just for this. For everything. I couldn't have done this campaign without you."
 
+    vl alexis_vl_prefix 12
     a "All I did was hang posters."
 
     vl reina_vl_prefix 14
@@ -1527,9 +1693,13 @@ label disciplinary_route_verabris(month, date):
 
     "I squeeze her hand."
 
+    #TODO: Update dialog
+    vl alexis_vl_prefix 13
     #a "It was the least I could do. You helped make MIA my home."
+    #voice sustain
     #a "And, whether  you're here or off in Apanaʻoha, I know you'll do the same for the incoming students next year, too. And, who knows? Maybe you'll meet another fourth-year stray to take my place."
     a "It was the least I could do. You helped make MIA my home. And, whether  you’re here or off in Ekaska, I know you’ll do the same for the incoming students next year, too."
+    voice sustain
     a "And, who knows? Maybe you’ll meet another fourth-year stray to take my place."
 
     show reina flustered
@@ -1546,6 +1716,7 @@ label disciplinary_route_verabris(month, date):
 
 label disciplinary_route_overa(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Epilogue/Reina_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Epilogue/" + player_voice_prefix + "_Reina_Epilogue_"
 
     call screen calendar(month, date, "Overa", 19)
     scene bg student_councilroom_afternoon with fade
@@ -1559,11 +1730,14 @@ label disciplinary_route_overa(month, date):
     "So, when I enter the Student Council room in hopes of locating my ever-elusive water bottle, I'm only half-surprised to find Reina seated at our old desk, sorting through the school year's final batch of citations."
 
     show reina neutral 
+
+    vl alexis_vl_prefix 1
     a "You're still here? Everyone's headed to The Amity to celebrate."
 
     vl reina_vl_prefix 1
     r "I'm almost finished."
 
+    vl alexis_vl_prefix 2
     a "You realize you're off of the disciplinary committee now?"
 
     vl reina_vl_prefix 2
@@ -1574,6 +1748,7 @@ label disciplinary_route_overa(month, date):
     vl reina_vl_prefix 3
     r "What're you doing?"
 
+    vl alexis_vl_prefix 3
     a "Many hands make light work. And, the quicker I get you out of here, the quicker I get my cheese fries." 
 
     "Reina hands me a folder. After a quarter hour of working in silence, we file away our last citations and lock the cabinets."
@@ -1584,7 +1759,9 @@ label disciplinary_route_overa(month, date):
     vl reina_vl_prefix 4
     r "I think I'm still in shock. I mean, class president? How did I get so lucky?"
 
+    vl alexis_vl_prefix 4
     a "It's not luck. You busted your ass for this, and you're going to be the best president MIA's ever had."
+    voice sustain
     a "I just wish I could be here to see it."
 
     show reina happy
@@ -1601,6 +1778,7 @@ label disciplinary_route_overa(month, date):
 
     "Fluffing up the bow, she hands me the giftbox."
     
+    vl alexis_vl_prefix 5
     a "Thank you. Should I open it now?"
 
     show reina happy
@@ -1617,6 +1795,7 @@ label disciplinary_route_overa_choice:
 
 label disciplinary_route_overa_romance:
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Epilogue/"+ player_gender + " MC/Reina_Epilogue_Fem_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 1/" + player_voice_prefix + "_Reina_Epilogue_"
 
     show reina happy 
     "I unwrap the box, revealing a stunning black opal necklace. The pendant is carved in the shape of a wolf's head."
@@ -1630,6 +1809,7 @@ label disciplinary_route_overa_romance:
     vl reina_vl_prefix 2
     r "Do you like it?"
 
+    vl alexis_vl_prefix 6
     a "Like it? It's incredible. Thank you, Reina."
 
     "I pull her into a tight embrace."
@@ -1681,6 +1861,7 @@ label disciplinary_route_overa_romance:
 label disciplinary_route_overa_romance_accept:
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Epilogue/"+ player_gender + " MC/Accepted/Reina_Epilogue_FemAccept_"
     $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Reina/SueDaengQan_Reina/SueDaengQan_Reina_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 1/" + player_voice_prefix + "_Reina_Epilogue_"
 
     show reina flustered 
     a "How could I not?"
@@ -1736,6 +1917,7 @@ label disciplinary_route_overa_romance_accept:
 label disciplinary_route_overa_romance_reject: 
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Epilogue/"+ player_gender + " MC/Rejected/Reina_Epilogue_FemReject_"
     $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Reina/SueDaengQan_Reina/SueDaengQan_Reina_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 1/" + player_voice_prefix + "_Reina_Epilogue_"
 
     show reina neutral 
     a "I do care for you… as a friend."
@@ -1808,6 +1990,7 @@ label disciplinary_route_overa_romance_reject:
 
 label disciplinary_route_overa_platonic:
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Own Route/Epilogue/"+ player_gender + " MC/Reina_Epilogue_Masc_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Reina/Month 1/" + player_voice_prefix + "_Reina_Epilogue_"
     
     show reina happy 
     "She nods. I unwrap the box, revealing a stunning black wolf, carved from obsidian."
@@ -1820,10 +2003,12 @@ label disciplinary_route_overa_platonic:
     vl reina_vl_prefix 2
     r "Do you like it?"
 
+    vl alexis_vl_prefix 6
     a "Like it? It's perfect. Thank you, Reina."
 
     "I pull her in for a hug."
 
+    vl alexis_vl_prefix 7
     a "Now I feel bad. I should've gotten you something, too."
 
     show reina happy
@@ -1832,6 +2017,7 @@ label disciplinary_route_overa_platonic:
 
     "I hold out my hand."
 
+    vl alexis_vl_prefix 8
     a "You have yourself a deal."
 
     "Laughing, she shakes it. Together, we leave the Student Council room and head into town."

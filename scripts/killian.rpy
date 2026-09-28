@@ -2,6 +2,7 @@ label anime_route_jinus(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month1_"
     $ clubregular1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 1/Killian Month 1/ClubRegular1_Killian_Month1_"
     $ clubregular2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 2/Killian Month 1/ClubRegular2_Killian_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 1/" + player_voice_prefix + "_Killian_Month1_"
 
     call screen calendar(month, date, "Jinus", 1)
     scene bg dorm_common_noon with fade
@@ -43,6 +44,10 @@ label anime_route_jinus(month, date):
     "President Moto eyes me like he did before, only from a swivel chair now."
 
     show killian neutral with dissolve
+    if eval(a.name)[0] == "Alexis":
+        vl ("<to 9.5>" + alexis_vl_prefix) 1
+    else:
+        vl ("<from 9.6>" + alexis_vl_prefix) 1
     a "In the flesh. Blakesley. [a] Blakesley. And I'm not a first-year. Just a transfer student."
 
     show killian happy with dissolve
@@ -60,6 +65,7 @@ label anime_route_jinus(month, date):
     "I look around and see a few awkward first and second year students are watching quietly across the room."
     "The projector shows a super-powered fisherman beating up a feathery naval officer while a tiny bear cub in a bowler hat keeps crying."
 
+    vl alexis_vl_prefix 2
     a "What? No and no. I mean, why not? I come in peace."
 
     show killian neutral with dissolve
@@ -103,6 +109,7 @@ label anime_route_jinus(month, date):
     vl killian_vl_prefix 8.1
     k "Anyway, enough exposition. Can I be honest with you about something?"
 
+    vl alexis_vl_prefix 3
     a "Uh, sure?"
     "I really hope he doesn't make shit weirder already..."
 
@@ -112,24 +119,28 @@ label anime_route_jinus(month, date):
     voice sustain
     k "You strike me as one of the former."
 
+    vl alexis_vl_prefix 4
     a "Good to know?"
 
     show killian embarrassed with dissolve
     vl killian_vl_prefix 10.1
     k "What I'm trying to get at here is that I never thought that you were the type to take interest in anime and manga."
 
+    vl alexis_vl_prefix 5
     a "Oh? And what makes you say that?"
 
     show killian surprised with hpunch
     vl killian_vl_prefix 11.1
     k "I mean... You look normal."
 
+    vl alexis_vl_prefix 6
     a "...What's that supposed to mean?"
 
     show killian fear with dissolve
     vl killian_vl_prefix 12.1
     k "Like... You know... It's not like... I'm not trying to..."
 
+    vl alexis_vl_prefix 7
     a "Stereotype?"
 
     show killian happy with dissolve
@@ -141,10 +152,12 @@ label anime_route_jinus(month, date):
     voice sustain
     k "Not that I'd start after we ge-"
 
+    vl alexis_vl_prefix 8
     a "Wow. Just wow."
     "Quite the tongue for an elected official. It's kinda cute really. Y'know, until he actually starts feeling bad about himself."
 
     show killian sad with dissolve
+    vl alexis_vl_prefix 9
     a "Relax, I'm messing with you."
 
     show killian sad with dissolve
@@ -164,6 +177,7 @@ label anime_route_dallinus(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month2_"
     $ clubregular1_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 1/Killian Month 2/ClubRegular1_Killian_Month2_"
     $ clubregular2_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Club Regular 2/Killian Month 2/ClubRegular2_Killian_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 2/" + player_voice_prefix + "_Killian_Month2_"
 
     call screen calendar(month, date, "Dallinus", 19)
     scene bg classroom_anime_afternoon with fade
@@ -171,8 +185,8 @@ label anime_route_dallinus(month, date):
 
     $ renpy.notify("Killian - Trash Tastes\nNyday, Dallinus 19th, 1027 RD")
 
-    a "If there's anything to say about MIA's Anime and Manga Association, it's definitely an interesting time."
-    a "I guess watching nerds argue about fiction in person is its own sort of live show."
+    "If there's anything to say about MIA's Anime and Manga Association, it's definitely an interesting time."
+    "I guess watching nerds argue about fiction in person is its own sort of live show."
 
     show killian angry at center with dissolve:
         zoom 1.1
@@ -197,6 +211,7 @@ label anime_route_dallinus(month, date):
     vl killian_vl_prefix 3.1
     k "Say, Mx. Blakesley! What do you think?"
 
+    vl alexis_vl_prefix 1
     a "Huh?"
     "One of the regulars mumbles something under their breath. Probably something about me being a 'normie'."
     
@@ -215,6 +230,7 @@ label anime_route_dallinus(month, date):
     k "It's a popular anime that the general public seems to latch onto nowadays."
     "...Well, that's what I get for getting my hopes up. At least he's trying to accommodate for my sake."
 
+    vl alexis_vl_prefix 2
     a "Can't say I have..."
 
     show killian neutral with dissolve
@@ -237,17 +253,23 @@ label anime_route_dallinus(month, date):
     voice sustain
     k "Is a child abandoned by their village able to overcome that neglect or is that unrealistic?"
 
+    vl alexis_vl_prefix 3
     a "Damn, a whole village?"
     #"[Beat.]"
+    vl alexis_vl_prefix 4
     a "I'm sorry."
+    vl alexis_vl_prefix 5
     a "Um... Yes. I wouldn't rule it out completely."
 
     show killian angry with dissolve
     vl killian_vl_prefix 11.1
     k "That includes their family, friends, and strangers hating you, thinking you're some supernatural freak, and that's all you've grown up knowing."
 
+    vl alexis_vl_prefix 6
     a "It might be hard but everyone's able to come out of hardship."
+    vl alexis_vl_prefix 7
     a "That Larips guy probably knew that those labels the village gave him from day one weren't what defined him at the end of the day."
+    vl alexis_vl_prefix 8
     a "He understood that he could be anything and that he was his own person."
 
     show killian happy with hpunch
@@ -285,6 +307,7 @@ label anime_route_dallinus(month, date):
     k "I've been starved of quality conversation for so long."
     "The guy's almost puppy-eyed, I swear."
 
+    vl alexis_vl_prefix 9
     a "Tell me where I can watch it. We can circle back here once I'm done bingeing it."
 
     show killian happy with dissolve
@@ -306,6 +329,7 @@ label anime_route_dallinus(month, date):
 
 label anime_route_vanus(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month3_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 3/" + player_voice_prefix + "_Killian_Month3_"
     
     call screen calendar(month, date, "Vanus", 15)
     scene bg classroom_anime_afternoon with fade
@@ -335,6 +359,7 @@ label anime_route_vanus(month, date):
     show killian neutral
     "As I'm contemplating all of this, I hear Killian coughing in the back of the room, trying to stifle the noise."
 
+    vl alexis_vl_prefix 1
     a "Everything alright back here?"
 
     show killian neutral
@@ -345,12 +370,14 @@ label anime_route_vanus(month, date):
     "As I get a better look at him, he looks clammy and his breathing is off."
     "I go and pad his forehead with the back of my hand just to verify what I'm seeing."
 
+    vl alexis_vl_prefix 2
     a "Your temperature says otherwise..."
 
     show killian sick
     vl killian_vl_prefix 2
     k "Please... A little bit of fatigue isn't going to stop me from doing my due diligence."
 
+    vl alexis_vl_prefix 3
     a "That's noble and all but... What about retreating and living to fight another day?"
 
     # TODO: Add Killian sneeze effect
@@ -363,6 +390,7 @@ label anime_route_vanus(month, date):
     "Right in my face. Gross."
     "In war, even metaphorical ones, there are always casualties and, today, I am one of them."
 
+    vl alexis_vl_prefix 4
     a "Gross... Can somebody get me a tissue ple- BY THE GODS."
     play music hatchling21 fadein 1.0
 
@@ -391,6 +419,7 @@ label anime_route_vanus(month, date):
 label anime_route_dyalt(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month4_"
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Killians Route/Month 4/Naomi_Killian_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 4/" + player_voice_prefix + "_Killian_Month4_"
 
     call screen calendar(month, date, "Dyalt", 26)
     scene bg maincastle with fade
@@ -433,7 +462,8 @@ label anime_route_dyalt(month, date):
     vl naomi_vl_prefix 2
     n "You're doing fine. Here, have some of my meat."
     
-    "...Ahem."
+    vl alexis_vl_prefix 1
+    a "...Ahem."
 
     with hpunch
     show killian neutral
@@ -450,11 +480,13 @@ label anime_route_dyalt(month, date):
     
     
     stop music fadeout 1.0
+    vl alexis_vl_prefix 2
     a "Please do."
     play music hatchling22 fadein 1.0
     
     "Naomi whips out a comically large cured sausage from out of nowhere and holds it out in front of me. The damn thing could easily be a murder weapon if you swung it at someone's head hard enough."
     
+    vl alexis_vl_prefix 3
     a "...What is that?"
 
     show killian sad:
@@ -470,12 +502,14 @@ label anime_route_dyalt(month, date):
     
     "Killian gets to his feet, chest bare, uniform top and blazer hanging on a nearby tree branch (for reasons I can't explain—medical professionals would probably refer to this phenomenon as 'shock'—I can only picture him with all of it on)."
     
+    vl alexis_vl_prefix 4
     a "So I take it you're all better then? After those long nights alone in the infirmary? Finally getting enough sleep between study sessions?"
     
     show killian fear
     vl killian_vl_prefix 4
     k "Mx. Blakesley, I swear that this isn't what it looks like!"
     
+    vl alexis_vl_prefix 5
     a "Oh, really? Out with it then. I'd love to see where this soap opera goes."
     
     pause 1.0
@@ -515,6 +549,7 @@ label anime_route_dyalt(month, date):
     vl killian_vl_prefix 9
     k "Why aren't you saying anything?"
     
+    vl alexis_vl_prefix 6
     a "You do realize that I haven't seen you in several weeks, right?"
     
     show killian sad
@@ -529,16 +564,19 @@ label anime_route_dyalt(month, date):
     vl killian_vl_prefix 11
     k "You noticed?"
     
+    vl alexis_vl_prefix 7
     a "Why wouldn't I?"
     
     "This whole time I thought we were... He's just being dense now, right?"
     
+    vl alexis_vl_prefix 8
     a "Naomi."
     
     show naomi surprised
     vl naomi_vl_prefix 7
     n "Eep!"
     
+    vl alexis_vl_prefix 9
     a "Did you know that Killian was in the infirmary a while ago?"
     
     vl naomi_vl_prefix 8
@@ -561,6 +599,7 @@ label anime_route_dyalt(month, date):
 
 label anime_route_neralt(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 5/" + player_voice_prefix + "_Killian_Month5_"
 
     call screen calendar(month, date, "Neralt", 16)
     scene bg classroom_anime_afternoon with fade
@@ -607,6 +646,7 @@ label anime_route_neralt(month, date):
     vl killian_vl_prefix 7
     k "Mx. Blakesley, do you mind if I have a moment with you?"
 
+    vl alexis_vl_prefix 1
     a "Um… Sure. What’s up?"
 
     vl killian_vl_prefix 8.2
@@ -614,24 +654,29 @@ label anime_route_neralt(month, date):
     vl killian_vl_prefix 9
     k "And so, because I’ve yet to find such a thing, I’ve come bearing an alternative to you: I want to formally apologize."
 
+    vl alexis_vl_prefix 2
     a "Thanks for the formality… But I’m not sure there’s a need to do that… It should be me apologizing but I’ve been… squirrely after the last time we spoke with each other."
 
+    vl alexis_vl_prefix 3
     a "I wonder if this school has a counselor on-site…"
 
     vl killian_vl_prefix 10
     k "Come again?"
 
+    vl alexis_vl_prefix 4
     a "Nothing! You were saying?"
 
     vl killian_vl_prefix 11
     k "Ah, yes. I guess that makes us both fools and cowards for different reasons. But that also makes us even in my book."
 
+    vl alexis_vl_prefix 5
     a "I’m glad. A balanced book sounds good to me."
 
     "It seems that we’ve both overcome this hurdle through the power of mature conversation."
     "But, as I turn to head out of 3-3, Killian has a strange look on his face—the one a kid might have while struggling to hold their piss in."
     play music hatchling22 fadein 1.0
 
+    vl alexis_vl_prefix 6
     a "Is there something wrong?"
 
     show killian angry
@@ -646,6 +691,7 @@ label anime_route_neralt(month, date):
     vl killian_vl_prefix 14
     k "TO STRICTLY MAKE THINGS UP TO YOU!"
 
+    vl alexis_vl_prefix 7
     a "You were gonna take me out somewhere?"
 
     vl killian_vl_prefix 15
@@ -660,6 +706,7 @@ label anime_route_neralt(month, date):
     vl killian_vl_prefix 16
     k "Oh, what the fuck?! The afternoon’s ruined!"
 
+    vl alexis_vl_prefix 8
     a "There’s no need to get too worked up. They’re probably just repainting the place."
 
     show killian sad
@@ -670,11 +717,13 @@ label anime_route_neralt(month, date):
     vl killian_vl_prefix 18
     k "The gods are cruel and crave misery from me, I suppose."
 
+    vl alexis_vl_prefix 9
     a "Why don’t we just head back and watch some anime instead? Maybe the next time we swing by here, they’ll be back up with a whole new look!"
 
     vl killian_vl_prefix 19
     k "…I’m sorry."
 
+    vl alexis_vl_prefix 10
     a "Seriously, there’s nothing to be sorry about. I can handle a bumpy road but not an empty car so let’s get going."
 
     "Kindness for kindness’ sake has always felt good to me—but seeing it bring calm to another feels even better."
@@ -693,6 +742,7 @@ label anime_route_exalt(month, date):
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Killian/Month6/Reina_Killian_Month6_"
     $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Killian/SueDaengQan_Killian/SueDaengQan_Killian_"
     $ phillip_vl_prefix = "audio/voices/Supporting-Extra/Phillip/Killian/Phillip_Killian_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 6/" + player_voice_prefix + "_Killian_Month6_"
 
     call screen calendar(month, date, "Exalt", 22)
     scene bg maincastle with fade
@@ -712,11 +762,13 @@ label anime_route_exalt(month, date):
 
     show killian neutral at center with dissolve
 
+    vl alexis_vl_prefix 1
     a "Sooo… What are we doing here exactly?"
 
     vl killian_vl_prefix 1
     k "We… Are going… To meet… Our quota."
 
+    vl alexis_vl_prefix 2
     a "And what is the \"quota\" exactly?"
 
     vl killian_vl_prefix 2
@@ -735,6 +787,7 @@ label anime_route_exalt(month, date):
     vl killian_vl_prefix 5
     k "I'm going to sing a song to attract the masses!"
 
+    vl alexis_vl_prefix 3
     a "Since when do you know how to sing?"
 
     vl killian_vl_prefix 6
@@ -744,6 +797,7 @@ label anime_route_exalt(month, date):
 
     "That sounds like such a bad idea."
 
+    vl alexis_vl_prefix 4
     a "This sounds like such a bad idea."
 
     show killian neutral
@@ -765,6 +819,7 @@ label anime_route_exalt(month, date):
     "Damn it all…"
     "I reluctantly pick up the mic and let the metaphorical spirit of altruism and true friendship take the wheel."
 
+    vl alexis_vl_prefix 5
     a "The, Uh, welcome everyone… To MIA's…"
 
     "Killian, what the fuck?"
@@ -777,6 +832,7 @@ label anime_route_exalt(month, date):
 
     "(Nah, but seriously, what the fuck, Killian; why have you run off like a cannon's aiming for you?)"
 
+    vl alexis_vl_prefix 6
     a "To MIA's Open Library Auction… Brought to you by the Anime and Manga Association! Come spend some cash and sign up to learn more about the club!"
 
     "The next hour or so become a blur to me. I do my best bid caller impression, yapping away at a mile a minute, successfully encouraging bidding wars for weeb shit."
@@ -790,6 +846,7 @@ label anime_route_exalt(month, date):
     vl killian_vl_prefix 9
     k "…Have they all left?"
 
+    vl alexis_vl_prefix 7
     a "Mr. President, what the fuck?! Where have you been?"
 
     "Almost immediately, Killian sighs, looking defeated, before bawling."
@@ -799,6 +856,7 @@ label anime_route_exalt(month, date):
     vl killian_vl_prefix 10
     k "Thank you so much, Mx. Blakesley… I tried so hard, I really did but I couldn't, I really couldn't… My voice wouldn't-"
 
+    vl alexis_vl_prefix 8
     a "Look, it's alright, we can talk about this later if you want. Just calm down and catch your breath."
 
     "Killian takes a moment to recollect himself."
@@ -806,6 +864,7 @@ label anime_route_exalt(month, date):
     vl killian_vl_prefix 11
     k "Mx. Blakesley, may I hug you? And maybe buy you dinner tonight? It's the least I can do to thank you really."
 
+    vl alexis_vl_prefix 9
     a "Oh, well, sure. It's-"
 
     stop music fadeout 2.0
@@ -820,6 +879,7 @@ label anime_route_exalt(month, date):
     vl sue_vl_prefix 1.2
     s "I do apologize. Am I interrupting?"
 
+    vl alexis_vl_prefix 10
     a "Huh? No, no, we're just… Wait, why are you here?"
 
     vl sue_vl_prefix 2.2
@@ -837,6 +897,7 @@ label anime_route_exalt(month, date):
     vl killian_vl_prefix 13
     k "Oh my… That was so quick."
 
+    vl alexis_vl_prefix 11
     a "It helps when the student council's accounts manager doing your totals hates to procrastinate."
 
     show reina happy
@@ -890,6 +951,7 @@ label anime_route_elvera(month, date):
     $ elio_vl_prefix = "audio/voices/Love Interests/Elio/Killians Route/Killian/Elio_Killian_EoE_"
     $ reina_vl_prefix = "audio/voices/Love Interests/Reina/Killian/Month 7/Reina_Killian_Month7_"
     $ naomi_vl_prefix = "audio/voices/Love Interests/Naomi/Killians Route/Month 7/Naomi_Killian_Month7_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 7/" + player_voice_prefix + "_Killian_Month7_"
 
     call screen calendar(month, date, "Elvera", 18)
     scene bg maincastle with fade
@@ -901,23 +963,28 @@ label anime_route_elvera(month, date):
     "With grades passing, friends being made, and being the hero of someone else’s story, I’d say that I’m having a grand time so far."
     "Not unlike Killian who, during lunch, hasn’t been so inconspicuous about something by the way he’s been muttering to himself like a madman."
 
-    show killian angry with dissolve 
+    show killian angry with dissolve
+
+    vl alexis_vl_prefix 1
     a "Are you alright?"
 
     vl killian_vl_prefix 1
     k "Huh? What? Of course I’m alright. I’m all left, all up, and all down too."
 
+    vl alexis_vl_prefix 2
     a "Okay… Just checking to make sure…"
 
     vl killian_vl_prefix 2
     k "How can she be so cruel with the way she speaks? Just because you’re the disciplinary head doesn’t mean you have to wave the title in peoples’ faces like a hammer!"
 
+    vl alexis_vl_prefix 3
     a "What are you talking about?"
 
     show killian disgust
     vl killian_vl_prefix 3
     k "Reina Dreyar. Let’s just say that I don’t appreciate the way that she spoke at me."
 
+    vl ("<to 3.6>" + alexis_vl_prefix) 4
     a "Is it really worth getting this worked up about it though?"
 
     show killian neutral
@@ -930,7 +997,9 @@ label anime_route_elvera(month, date):
     voice sustain
     k "People put me in the position I am today because they saw something in me when I couldn’t."
 
+    vl ("<from 4>" + alexis_vl_prefix) 4
     a "So, I won’t deny any of that. But, from what I know about the club’s financial history…"
+    voice sustain
     a "She’s got good reason to be a bit testy with you when it comes to this sort of thing."
 
     vl killian_vl_prefix 6
@@ -941,6 +1010,7 @@ label anime_route_elvera(month, date):
     with hpunch
     "Killian’s phone pings and he chokes on the carton of milk he’s been sipping."
 
+    vl alexis_vl_prefix 5
     a "Okay, what was that? What happened?"
 
     show killian surprised
@@ -963,7 +1033,8 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 8
     "He flashes smiles and puffs light laughter but I think that… I don’t know… Killian just seems detached from it all…"
 
-    show killian neutral with dissolve 
+    show killian neutral with dissolve
+    vl alexis_vl_prefix 6
     a "Hey there! Is everything alright?"
 
     vl killian_vl_prefix 9
@@ -974,21 +1045,25 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 10
     k "Is there something wrong?"
 
+    vl alexis_vl_prefix 7
     a "No. Well… You tell me."
 
     vl killian_vl_prefix 11
     k "…It’s nothing that you should worry about. Have you been outside? You look like you’ve been shivering."
 
+    vl alexis_vl_prefix 8
     a "It’ll make you feel better if you talk it out with someone. Whatever’s bothering you, you don’t have to deal with it alone."
 
     vl killian_vl_prefix 12
     k "It’s official Student Council business. Even if I wanted to, I’m not permitted to disclose such details."
 
+    vl alexis_vl_prefix 9
     a "That doesn’t make sense, I’m a council aide. Student council business is my business too."
 
     vl killian_vl_prefix 13
     k "Well, it’s on a need to know basis and you don’t need to know."
 
+    vl alexis_vl_prefix 10
     a "…Killian, just tell me what’s wrong and I’ll leave you and this fucking Anime Club alone."
 
     show killian surprised
@@ -1017,6 +1092,7 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 17
     k "…I’m truly sorry for… Raising my voice…"
 
+    vl alexis_vl_prefix 11
     a "I really shouldn’t have word- I mean, I didn’t mean to-"
 
     vl killian_vl_prefix 18
@@ -1035,7 +1111,7 @@ label anime_route_elvera(month, date):
     hide killian with fade
     #FADE TO:
 
-    call screen calendar("Elvera", da18te, "Elvera", 21)
+    call screen calendar("Elvera", date, "Elvera", 21)
     scene bg home_ec_room_door_afternoon with fade
 
     $ renpy.notify("Killian - End of Everything\nZynday, Elvera 21st, 1028 RD")
@@ -1049,23 +1125,27 @@ label anime_route_elvera(month, date):
     vl naomi_vl_prefix 1
     n "Who is it?"
 
+    vl alexis_vl_prefix 12
     a "It’s… [a]. You could tell when someone’s coming into the room like that?"
 
     vl naomi_vl_prefix 2
     n "It’s not like I’m psychic or anything like that. Our uniform shoes aren’t exactly the sneakiest of sneakers. Was there something you needed from me?"
 
+    vl alexis_vl_prefix 13
     a "Yes, actually. I was wondering if you knew anything about Killian?"
 
     show naomi thinking apron
     vl naomi_vl_prefix 3
     n "Oh, well, I’m not one for Estarese cartoons so I can’t really offer much about that. As far as I know, Killian’s cool. A bit quiet but who am I to judge?"
 
+    vl alexis_vl_prefix 14
     a "Oh, no, you see, he’s been a bit on edge. There was a bit of an incident at the Anime Club the other day and-"
 
     show naomi neutral apron
     vl naomi_vl_prefix 4
     n "Don’t worry, I heard."
 
+    vl alexis_vl_prefix 15
     a "Wait, what? Who told you?"
 
     vl naomi_vl_prefix 5
@@ -1077,7 +1157,9 @@ label anime_route_elvera(month, date):
     vl naomi_vl_prefix 6
     n "Don’t give me that look. I can feel it when people are looking at me funny."
 
+    vl alexis_vl_prefix 16
     a "Sorry, I didn’t mean to. Look, I just wanted to ask if something might’ve happened with him or the club?"
+    voice sustain
     a "Maybe something happened after the last meeting that I don’t know about?"
 
     show naomi neutral apron
@@ -1088,6 +1170,7 @@ label anime_route_elvera(month, date):
     voice sustain
     n "There’s no guarantee that they’ll tell you anything but it’s worth a shot to try, right?"
 
+    vl alexis_vl_prefix 17
     a "Right. Thanks, Naomi."
 
     vl naomi_vl_prefix 9
@@ -1116,6 +1199,7 @@ label anime_route_elvera(month, date):
     vl elio_vl_prefix 1
     e "Get off it, will ya? So what if I buy clothes at the soup store in my personal time? You don’t hear me barking at you when you’re all by your lonesome, eh?"
 
+    vl alexis_vl_prefix 18
     a "Hey! Sorry, excuse me, I was wondering if I could ask the two of you a few questions real quick?"
 
     vl reina_vl_prefix 2
@@ -1124,6 +1208,7 @@ label anime_route_elvera(month, date):
     vl elio_vl_prefix 2
     e "Whatever."
 
+    vl alexis_vl_prefix 19
     a "Please! If you want to get technical about it, it does concern the wellbeing of a key member of the student council."
 
     vl elio_vl_prefix 3
@@ -1137,6 +1222,7 @@ label anime_route_elvera(month, date):
 
     "After that, Reina storms off."
 
+    vl alexis_vl_prefix 20
     a "What’s she talking about?"
 
     show elio confused
@@ -1184,10 +1270,12 @@ label anime_route_elvera(month, date):
     vl naomi_vl_prefix 11
     n "Oh! Funny seeing you here again. Were you able to find anything with your investigation?"
 
+    vl ("<to 4.8>" + alexis_vl_prefix) 21
     a "I did actually and it’s kind of depressing if I’m being honest."
 
     pause 1.0
 
+    vl ("<from 6.9>" + alexis_vl_prefix) 21
     a "Say, how come you didn’t tell me anything about the school board?"
 
     show naomi worried
@@ -1202,12 +1290,14 @@ label anime_route_elvera(month, date):
 
     "By the look of the basket, at least she isn’t half-assing anything."
 
+    vl alexis_vl_prefix 22
     a "Special delivery, I take it?"
 
     show naomi neutral
     vl naomi_vl_prefix 14
     n "It is, actually. I’m taking this to the chapel just past Main Street."
 
+    vl alexis_vl_prefix 23
     a "I didn’t exactly strike you as religious."
 
     show naomi thinking
@@ -1220,6 +1310,7 @@ label anime_route_elvera(month, date):
 
     "I take one last look back at 3-3 before closing the door behind me."
 
+    vl alexis_vl_prefix 24
     a "Sure. Why not?"
 
     stop music fadeout 1.0
@@ -1251,17 +1342,20 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 20
     k "…How’d you find me?"
 
+    vl alexis_vl_prefix 25
     a "Naomi. Reina and Elio told me about the school board. Mostly Elio."
 
     #[Beat.]
     vl killian_vl_prefix 21
     k "They sent out the message a few days ago. Everything still feels fresh."
 
+    vl alexis_vl_prefix 26
     a "I’m sorry that everything turned out like this."
 
     vl killian_vl_prefix 22
     k "After all our efforts. After all the work I put into, after being a good soldier, I have nothing."
 
+    vl alexis_vl_prefix 27
     a "…Well, think about it like this: we’re still going to graduate and we’ll still have fond memories with th-"
 
     show killian disgust
@@ -1286,13 +1380,16 @@ label anime_route_elvera(month, date):
 
     pause 1.0 
 
+    vl alexis_vl_prefix 28
     a "Nobody’s nothing, you know."
 
+    vl alexis_vl_prefix 29
     a "Take a man. He can be many things. A warrior. A poet. A husband. A father. He can live as plainly as possible but he’ll never be a nobody."
 
     vl killian_vl_prefix 29
     k "Those are all titles given to them by other people throughout their life. Without them, they’re nothing."
 
+    vl alexis_vl_prefix 30
     a "They simply know the man as they know them. They’re just reflections, and everything reflects who we are at the end of the day."
 
     vl killian_vl_prefix 30
@@ -1304,6 +1401,7 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 32
     k "I know it. Whether I wanted it or not, people simply knew me the way I am now. It was predestined."
 
+    vl alexis_vl_prefix 31
     a "So the Anime Club… You weren’t always a leader were you?"
 
     vl killian_vl_prefix 33
@@ -1318,6 +1416,7 @@ label anime_route_elvera(month, date):
     vl killian_vl_prefix 35
     k "[a], I don’t want to go back to being that hermit with no direction that people use as a warning."
 
+    vl alexis_vl_prefix 32
     a "You know it doesn’t have to be that way, right?"
 
     vl killian_vl_prefix 36
@@ -1333,6 +1432,7 @@ label anime_route_elvera(month, date):
 
     pause 1.0
 
+    vl alexis_vl_prefix 33
     a "You do what everyone else does every day. You do the best you can."
 
     "Killian breaks down and huddles close to me for comfort. I embrace him and the two of us don’t say anything further."
@@ -1344,6 +1444,7 @@ label anime_route_elvera(month, date):
 
 label anime_route_verabris(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Month 8/" + player_voice_prefix + "_Killian_Month8_"
 
     call screen calendar(month, date, "Verabris", 9)
     scene bg classroom_anime_afternoon with fade
@@ -1361,38 +1462,45 @@ label anime_route_verabris(month, date):
     vl killian_vl_prefix 1
     k "M-mx. Blakesley! I didn’t know you’d be stopping by."
 
+    vl alexis_vl_prefix 1
     a "Well, I’ve been coming through almost every week this year. Why would this week be any different?"
 
     "Killian tries to put the instrument away."
 
+    vl alexis_vl_prefix 2
     a "Where’d you learn to play?"
 
     show killian neutral with dissolve
     vl killian_vl_prefix 2
     k "M-my grandfather. It’s his actually."
 
+    vl alexis_vl_prefix 3
     a "The instrument or the song?"
 
     show killian surprised with hpunch
     vl killian_vl_prefix 3
     k "W-what?"
 
+    vl alexis_vl_prefix 4
     a "Is it your grandfather’s ocarina or were you playing a tune your grandfather wrote?"
 
     show killian neutral with dissolve
     vl killian_vl_prefix 4
     k "Oh. It’s his. The instrument I mean. I… Sorry…"
 
+    vl alexis_vl_prefix 5
     a "What are you apologizing for?"
 
     vl killian_vl_prefix 5
     k "It’s just… I wasn’t exactly expecting anyone to show up today."
 
+    vl alexis_vl_prefix 6
     a "I see. So, you’ve told them?"
 
     vl killian_vl_prefix 6
     k "Yeah. It’s just a room now. Plus, I didn’t feel in the mood to watch anything so I figured I’d just prac-"
 
+    vl alexis_vl_prefix 7
     a "How come you never played for the club?"
 
     vl killian_vl_prefix 7
@@ -1400,18 +1508,22 @@ label anime_route_verabris(month, date):
 
     "That makes two of us."
 
-    vl killian_vl_prefix 8
+    vl ("<to 1.5>" + killian_vl_prefix) 8
     k "Hey, [a]."
-    voice sustain
+
+    vl alexis_vl_prefix 8
     a "Hmm?"
-    voice sustain
+
+    vl ("<from 1.6>" + killian_vl_prefix) 8
     k "Do you know what you’re gonna do? When all of this is over, I mean."
 
+    vl alexis_vl_prefix 9
     a "It’s hard to say. I’ll be working and sending money back to the family, I know that much."
 
     vl killian_vl_prefix 9
     k "And what will you do when the work is done?"
 
+    vl alexis_vl_prefix 10
     a "I… Don’t know. I never thought about that, honestly. Any recommendations?"
 
     show killian happy with dissolve
@@ -1425,6 +1537,7 @@ label anime_route_verabris(month, date):
 
     "Pupils contracting, shoulders sliding down back at a casual level, breathing becoming regular again."
 
+    vl alexis_vl_prefix 11
     a "Can I stay?"
 
     "He caresses my hand with both of his and gives me a nervous smile."
@@ -1443,6 +1556,7 @@ label anime_route_verabris(month, date):
 
 label anime_route_overa(month, date):
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_Month9_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Epilogue/" + player_voice_prefix + "_Killian_Epilogue_"
 
     call screen calendar(month, date, "Overa", 24)
     scene bg maincastle with fade
@@ -1484,6 +1598,7 @@ label anime_route_overa(month, date):
     vl killian_vl_prefix 1.1
     k "MX. BLAKESLEY! MX. BLAKESLEY!"
 
+    vl alexis_vl_prefix 1
     a "LOOK OUT!"
 
     with hpunch
@@ -1498,24 +1613,28 @@ label anime_route_overa(month, date):
     vl killian_vl_prefix 3.1
     k "I’ve got good news… I wanted to tell you…"
 
+    vl alexis_vl_prefix 2
     a "Oh. Well, that’s great and all but you already have my number, you could’v-"
 
     show killian surprised with dissolve
     vl killian_vl_prefix 4.1
     k "News this big deserves an in-person delivery! Like business deals and pregnancy announcements!"
 
+    vl alexis_vl_prefix 3
     a "Okay then. What’s up? Oh wait! Were you actually able to save the AMA?"
 
     show killian happy with dissolve
     vl killian_vl_prefix 5.1
     k "Gods no! That would’ve been really cool but no. I wanted to let you know that I know what I want to do after we all graduate."
 
+    vl alexis_vl_prefix 4
     a "Oh… Okay. I’m glad you’ve got your life sorted ou-"
 
     show killian sad with hpunch
     vl killian_vl_prefix 6.1
     k "PLEASE LET ME BE WITH YOU!"
 
+    vl alexis_vl_prefix 5
     a "Wh-... What?"
     stop music fadeout 1.0
 
@@ -1664,11 +1783,13 @@ label anime_route_overa_romance_reject:
 
 label anime_route_overa_platonic:
     $ killian_vl_prefix = "audio/voices/Love Interests/Killian/Killan_Own_PlatonicReaction_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Killian/Epilogue/" + player_voice_prefix + "_Killian_Epilogue_"
 
     #$ killian_platonic = True
 
     scene bg mainstreet_afternoon with fade 
 
+    vl alexis_vl_prefix 6
     a "…Were we not doing that already?"
 
     vl killian_vl_prefix 1.1
@@ -1676,12 +1797,14 @@ label anime_route_overa_platonic:
     vl killian_vl_prefix 2.1
     k "But wait, how long have you felt that way?"
 
+    vl alexis_vl_prefix 7
     a "Since we first met. Though, I’ll admit, I was a bit skeptical at first, all reservations were brushed aside once we really got to know each other."
 
     show killian surprised with hpunch
     vl killian_vl_prefix 3.1
     k "WAIT, WHAT?! THAT WAS SO LONG AGO, OH MY GOODNESS!"
 
+    vl alexis_vl_prefix 8
     a "I mean, yeah. Everyone’s gotta make friends somehow."
     play music hatchling10 fadein 1.0
 
@@ -1689,6 +1812,7 @@ label anime_route_overa_platonic:
     vl killian_vl_prefix 4.1
     k "Make… Friends… Right."
 
+    vl alexis_vl_prefix 9
     a "Are you alright?"
 
     vl killian_vl_prefix 5.1
@@ -1696,6 +1820,7 @@ label anime_route_overa_platonic:
 
     "I go over and pull him in for a hug since he’s trying to be vague and mysterious again. One of these days, that act’s gonna reel someone in for him."
 
+    vl alexis_vl_prefix 10
     a "Have you had anything to eat? Why don’t we go find some ramen around here? We gotta celebrate graduation somehow, right?"
 
     show killian neutral with dissolve
@@ -1709,11 +1834,13 @@ label anime_route_overa_platonic:
         vl killian_vl_prefix 7.2
     k "Um… [a]?"
 
+    vl alexis_vl_prefix 11
     a "Yeah, Killian?"
 
     vl killian_vl_prefix 8.1
     k "Thanks for being there for me. Even when I couldn’t be there for me."
 
+    vl alexis_vl_prefix 12
     a "Of course. What else are good friends for?"
 
     show killian happy with dissolve
@@ -1729,11 +1856,13 @@ label anime_route_overa_platonic:
         vl killian_vl_prefix 10.1
     k "Hey, [a]."
 
+    vl alexis_vl_prefix 13
     a "Yeah?"
 
     vl killian_vl_prefix 11.1
     k "Do you really think that everything’s gonna be alright? Today and tomorrow and every other tomorrow?"
 
+    vl alexis_vl_prefix 14
     a "I hope so. If not, at least I know I’ve got back up on my side, right?"
 
     vl killian_vl_prefix 12.1

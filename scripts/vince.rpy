@@ -762,7 +762,8 @@ label art_route_exalt(month, date):
 
     $ renpy.notify("Vince - \nZaeday, Exalt 22nd, 1027 RD")
 
-    "I awake this morning to find House Lychester buzzing with excitement. It’s the Zaeday before the Week of Life– AKA, one week until vacation. And, as much as I love MIA, a week at home with Mom, my siblings, and zero responsibilities  is exactly what I need right now."
+    "I awake this morning to find House Lychester buzzing with excitement. It’s the Zaeday before the Week of Life– AKA, one week until vacation."
+    "And, as much as I love MIA, a week at home with Mom, my siblings, and zero responsibilities  is exactly what I need right now."
     "Fueled by holiday cheer, I decide to stroll into town to grab coffee and admire the decorations."
     
     scene mainstreet_noon with fade
