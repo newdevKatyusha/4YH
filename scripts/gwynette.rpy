@@ -1,5 +1,6 @@
 label music_route_jinus(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 1/Gwynette_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 1/" + player_voice_prefix + "_Gwynette_Month1_"
 
     call screen calendar(month, date, "Jinus", 26)
     scene bg music_hall_noon with fade
@@ -18,6 +19,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 1
     "Drachkin Girl" "Hey! Glad you were able to make it."
     
+    vl alexis_vl_prefix 1
     a "Y-yeah. Been busy this past month, but finally had a chance to stop by."
     
     "Have I seen this girl before? That greeting felt a little too familiar…"
@@ -27,6 +29,7 @@ label music_route_jinus(month, date):
     
     "She turns and begins to walk away."
     
+    vl alexis_vl_prefix 2
     a "Um, I’m sorry, but… have we met before?"
     
     "Turning back, the girl crosses her arm and tilts her head."
@@ -34,6 +37,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 3
     "Drachkin Girl" "You don’t remember me?"
     
+    vl alexis_vl_prefix 3
     a "Sorry…"
     
     vl gwynette_vl_prefix 4
@@ -41,6 +45,7 @@ label music_route_jinus(month, date):
     
     "First it’s \"BB\" that jogs my memory. Then the name \"Gwynette\" hits me. We have met before but…"
     
+    vl alexis_vl_prefix 4
     a "What happened to you?! I mean…"
     
     vl gwynette_vl_prefix Laugh
@@ -49,6 +54,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 5
     gw "Oh, that? My piercings are clip-ons, and my tattoos are temporary."
     
+    vl alexis_vl_prefix 5
     a "But… why?"
     
     vl gwynette_vl_prefix ClearThroat
@@ -57,6 +63,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 6
     gw "\"We are born bare, with not a blemish upon our flesh. As we would not deface a temple with obscene markings, nor bore holes into its walls for unnecessary decoration, let us not do the same to the bodies the Divines have gifted us.\""
     
+    vl alexis_vl_prefix 6
     a "Were you quoting someone?"
     
     vl gwynette_vl_prefix 7
@@ -64,6 +71,7 @@ label music_route_jinus(month, date):
     
     "Boy, this girl is {b}religious{/b}. It’s one thing to cite a leader of the Church to explain away… how much her look’s changed, but one I’ve never heard of from the middle of the millennium?"
     
+    vl alexis_vl_prefix 7
     a "That’s… very interesting."
     
     vl gwynette_vl_prefix 8
@@ -71,6 +79,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 9
     gw "So, how about that tour?"
     
+    vl alexis_vl_prefix 8
     a "Oh, right."
     
     "Gwynette takes me around the room, pointing out the various instruments and introducing me to some of the other club members."
@@ -79,6 +88,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 10
     gw "So, hit me."
     
+    vl alexis_vl_prefix 9
     a "Huh?"
     
     "We’ve stopped in a corner of the club room, away from most of the others."
@@ -86,6 +96,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 11
     gw "Sing a little something for me. Your pick."
     
+    vl alexis_vl_prefix 10
     a "Oh, um…"
     
     "I came to a music club. Why is it just hitting me that I’d have to sing in front of people?"
@@ -93,6 +104,7 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 12
     gw "No pressure. We have the entire year ahead of us. You could always try next time."
     
+    vl alexis_vl_prefix 11
     a "I think I’ll just listen today, yeah."
     
     vl gwynette_vl_prefix 13
@@ -105,11 +117,13 @@ label music_route_jinus(month, date):
     vl gwynette_vl_prefix 14
     gw "Sorry! Didn’t mean to ignore you there."
     
+    vl alexis_vl_prefix 12
     a "Don’t worry about it. I got a damn good show."
     
     vl gwynette_vl_prefix 15
     gw "If you really don’t mind, how about you return the favor next time?"
     
+    vl alexis_vl_prefix 13
     a "I’ll try practicing in the shower so I don’t embarrass myself."
     
     vl gwynette_vl_prefix 16
@@ -124,6 +138,7 @@ label music_route_jinus(month, date):
 
 label music_route_dallinus(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 2/Gwynette_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 2/" + player_voice_prefix + "_Gwynette_Month2_"
 
     call screen calendar(month, date, "Dallinus", 5)
     scene bg mainstreet_afternoon with fade
@@ -137,6 +152,7 @@ label music_route_dallinus(month, date):
     scene bg bus_terminal with fade
     "I pass by a bus stop, then stop. I look over my shoulder. A drachkin girl in MIA’s uniform sits on the bench, head downturned. It takes me a second to recognize her."
     
+    vl alexis_vl_prefix 1
     a "Gwynette?"
     
     show gwynette neutral
@@ -145,6 +161,7 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 1
     gw "BB, hey."
     
+    vl alexis_vl_prefix 2
     a "Bit of an odd place to take a load off, don’t you think?"
     
     vl gwynette_vl_prefix 2
@@ -155,6 +172,7 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 3
     gw "So, what’s up?"
     
+    vl alexis_vl_prefix 3
     a "Wrapped up some work for the Student Council. On my way back to House Lychester."
     
     stop music fadeout 1.0
@@ -163,11 +181,13 @@ label music_route_dallinus(month, date):
 
     play music hatchling22 fadein 1.0
     
+    vl alexis_vl_prefix 4
     a "Isn’t the point of a nickname to be {b}shorter{/b} than someone’s actual name?"
     
     vl gwynette_vl_prefix 5
     gw "Nuh-uh! The point is to be cuter."
     
+    vl alexis_vl_prefix 5
     a "How is \"Dick\" cuter than \"Richard\"?"
     
     vl gwynette_vl_prefix 6
@@ -181,10 +201,12 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix Laugh
     "She bursts out laughing. I can’t help but join in."
     
+    vl alexis_vl_prefix 6
     a "Excellent choice of words."
     
     "When I calm down, I’m reminded of how this little interaction started."
     
+    vl alexis_vl_prefix 7
     a "What were you doing out here anyway?"
     
     vl gwynette_vl_prefix 8
@@ -195,6 +217,7 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 9
     gw "I was waiting for VV."
     
+    vl alexis_vl_prefix 8
     a "He’s running late?"
     
     vl gwynette_vl_prefix 10
@@ -202,11 +225,13 @@ label music_route_dallinus(month, date):
     
     "So the poor girl got stood up."
     
+    vl alexis_vl_prefix 9
     a "Well, how about a drink, on me?"
     
     vl gwynette_vl_prefix 11
     gw "Are you sure? I wouldn’t want to bother you."
     
+    vl alexis_vl_prefix 10
     a "Not at all. Come on, follow me."
     
     scene black with fade
@@ -225,25 +250,30 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 13
     gw "It’s like The Amity, but fancier."
     
+    vl alexis_vl_prefix 11
     a "Figure that’s the point. So all the fancy people can feel the part."
     
     vl gwynette_vl_prefix 14
     gw "I never knew about this place."
     
+    vl alexis_vl_prefix 12
     a "Only found out about it recently from Reina. Nobles and club presidents only."
     
     vl gwynette_vl_prefix 15
     gw "And I’m guessing the new kid didn’t start a new club just to get an invite?"
     
+    vl alexis_vl_prefix 13
     a "That’s right."
     
     "There’s a moment of silence. Then I realize there was a second question hidden in what she said."
     
+    vl alexis_vl_prefix 14
     a "I’m from a viscount’s family down south. We live in Prospera."
     
     vl gwynette_vl_prefix 16
     gw "Just a viscount? Darn. I was hoping I was rubbing elbows with a dukeling."
     
+    vl alexis_vl_prefix 15
     a "My most sincere apologies for not being blue-blooded enough, my lady."
     
     vl gwynette_vl_prefix 17
@@ -252,11 +282,13 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix Laugh2
     "We share another laugh."
     
+    vl alexis_vl_prefix 16
     a "Feeling any better?"
     
     vl gwynette_vl_prefix 18
     gw "A bit, thanks. Some time with a friend is exactly what I needed."
     
+    vl alexis_vl_prefix 17
     a "I’m just glad I passed by that bus stop when I did. Thank the Divines I had so much work to do, huh?"
     
     vl gwynette_vl_prefix 19
@@ -264,6 +296,7 @@ label music_route_dallinus(month, date):
     
     "It was meant to just be a common turn of phrase, but now that I think about it, those three words must’ve meant a lot more to her than they did me."
     
+    vl alexis_vl_prefix 18
     a "Do you… actually think the Divines bogged me down with work so I would run into you when I did?"
     
     vl gwynette_vl_prefix 20
@@ -274,6 +307,7 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 21
     gw "Hold on a second…"
     
+    vl alexis_vl_prefix 19
     a "What’s up?"
     
     vl gwynette_vl_prefix 22
@@ -301,6 +335,7 @@ label music_route_dallinus(month, date):
     
     "I roll my eyes."
     
+    vl alexis_vl_prefix 20
     a "Ha ha. Very funny."
     
     vl gwynette_vl_prefix 25
@@ -316,6 +351,7 @@ label music_route_dallinus(month, date):
     vl gwynette_vl_prefix 26
     gw "I’m off to the chapel for a little bit. Later, BB. Thanks for tonight, too."
     
+    vl alexis_vl_prefix 21
     a "Don’t mention it. See you later."
     
     "As we part ways, Gwynette and I get into a waving match, determined to be the last one left waving. My arm gives out before hers, and she turns with a satisfied little smile on her face."
@@ -332,6 +368,7 @@ label music_route_dallinus(month, date):
 
 label music_route_dyalt(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 4/Gwynette_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 4/" + player_voice_prefix + "_Gwynette_Month4_"
 
     call screen calendar(month, date, "Dyalt", 6)
     scene bg mainstreet_noon with fade
@@ -346,6 +383,7 @@ label music_route_dyalt(month, date):
     vl gwynette_vl_prefix 1
     gw "Ooh, look, Variance Comics! Wanna go inside?"
     
+    vl alexis_vl_prefix 1
     a "You read comics?"
     
     vl gwynette_vl_prefix 2
@@ -353,6 +391,7 @@ label music_route_dyalt(month, date):
     
     "Can’t argue with that."
     
+    vl alexis_vl_prefix 2
     a "Lead the way."
     
     "Comic Books are only a fraction of what Variance carries. Trading Cards, model kits, miniatures, hats, tees, CDs, all manner of things."
@@ -364,16 +403,19 @@ label music_route_dyalt(month, date):
     
     "She picks it up and begins feverishly flipping through the pages."
     
+    vl alexis_vl_prefix 3
     a "You’re a fan?"
     
     vl gwynette_vl_prefix 4
     gw "Just casual. But it’s wild. So much Nyrellan imagery, you can’t help but wonder what it all means."
     
+    vl alexis_vl_prefix 4
     a "Sounds deep."
     
     vl gwynette_vl_prefix 5
     gw "People have been debating for decades whether it’s all because the director just thought it was cool."
     
+    vl alexis_vl_prefix 5
     a "…I don’t know if I should be offended by that."
     
     vl gwynette_vl_prefix 6
@@ -386,6 +428,7 @@ label music_route_dyalt(month, date):
     vl gwynette_vl_prefix 8
     gw "Never been much of a gamer, but maybe I should try it out one of these days."
     
+    vl alexis_vl_prefix 6
     a "Is that a rabbit hole you want to go down?"
     
     vl gwynette_vl_prefix 9
@@ -396,15 +439,18 @@ label music_route_dyalt(month, date):
     vl gwynette_vl_prefix 10
     gw "I’ve lost count of how many times I’ve come in here over the years."
     
+    vl alexis_vl_prefix 7
     a "Oh yeah? And how much have you bought?"
     
     "She winks at me."
     
+    vl alexis_vl_prefix 8
     a "Serial loiterer."
     
     vl gwynette_vl_prefix 11
     gw "I prefer \"serial window shopper.\""
     
+    vl alexis_vl_prefix 9
     a "If it helps you sleep at night."
     
     vl gwynette_vl_prefix 12
@@ -415,6 +461,7 @@ label music_route_dyalt(month, date):
     vl gwynette_vl_prefix 13
     gw "Do you like animals?"
     
+    vl alexis_vl_prefix 10
     a "Depends on the animal. But, if it isn’t trying to kill me, why not?"
     
     vl gwynette_vl_prefix 14
@@ -440,6 +487,7 @@ label music_route_dyalt(month, date):
     vl gwynette_vl_prefix 17
     gw "Just the cutest little thing, isn’t he?"
     
+    vl alexis_vl_prefix 11
     a "You’re right. Always thought I was a cat or dog person, but this little one’s an amazing salesferret."
     stop music fadeout 1.0
     pause 1.0
@@ -455,15 +503,18 @@ label music_route_dyalt(month, date):
     
     "Ah, so that’s what she means. Reincarnation is a core Nyrellan belief, so it only makes sense that Gwynette would bring it up."
     
+    vl alexis_vl_prefix 12
     a "{b}Does{/b} it work the same for animals? I mean, a person being reborn as a ferret? Or a ferret as a person?"
     
     vl gwynette_vl_prefix 20
     gw "I guess it depends. Do you think souls are created? Or recycled?"
     
+    vl alexis_vl_prefix 13
     a "Way to put me on the spot. But if there’s only so many to go around, I guess they {b}have{/b} to be included."
     
     "The ferret gets a hold of the wand and begins to roll around the mat with it clutched in its jaws."
     
+    vl alexis_vl_prefix 14
     a "Seems a bit unfair for a \"vile villain\" to enjoy playing with people gushing over their cuteness."
     
     vl gwynette_vl_prefix 21
@@ -476,11 +527,13 @@ label music_route_dyalt(month, date):
     play music hatchling1 fadein 1.0
     "Gwynette gasps, then hurriedly says goodbye to the ferret and the pet store employee who was supervising her. She pats herself down and takes out her phone as she heads for the entrance."
     
+    vl alexis_vl_prefix 15
     a "Run out of time?"
     
     vl gwynette_vl_prefix 22
     gw "Yeah, VV’s waiting for me. We’re taking a bus down to the capital for the rest of the day."
     
+    vl alexis_vl_prefix 16
     a "Nice to hear you two made up."
     
     "Her only response is a nervous little laugh. Alright, then…"
@@ -503,6 +556,7 @@ label music_route_dyalt(month, date):
 label music_route_neralt(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 5/Gwynette_Month5_"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Gwynette/Month 5/Ylva_Gwynette_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 5/" + player_voice_prefix + "_Gwynette_Month5_"
 
     call screen calendar(month, date, "Neralt", 25)
     scene bg chapel_night with fade
@@ -519,6 +573,7 @@ label music_route_neralt(month, date):
     vl gwynette_vl_prefix Sob
     "The small sobs are what ultimately lead me to her. I let out a sigh of relief when I see Ylva sitting at her side, an arm wrapped around her."
     
+    vl alexis_vl_prefix 1
     a "Gwynette, there you are. I was worried."
     
     vl gwynette_vl_prefix 1
@@ -533,6 +588,7 @@ label music_route_neralt(month, date):
     
     "I take a seat on a pew on Gwynette’s other side. I’m about to ask what happened, then it hits me. A crying Gwynette flanked by people, and neither one of them is her boyfriend."
     
+    vl alexis_vl_prefix 2
     a "Dammit, Ziani…"
     
     "Ylva glances over at me."
@@ -542,6 +598,7 @@ label music_route_neralt(month, date):
     
     "And she no doubt told him as soon as she found out, only to look out into the pews and not see his face."
     
+    vl alexis_vl_prefix 3
     a "What a piece of work."
     
     "Sputtering through her tears, Gwynette shakes her head."
@@ -558,6 +615,7 @@ label music_route_neralt(month, date):
     vl ylva_vl_prefix 4
     yl "No amount of stress justifies skipping this. It isn’t like you were asking much of him, and he couldn’t do even that?"
     
+    vl alexis_vl_prefix 4
     a "\"Come to church a single morning to hear me sing, it means a lot to me.\" Such an easy assignment."
     
     vl gwynette_vl_prefix 4
@@ -583,18 +641,21 @@ label music_route_neralt(month, date):
     
     "The guilty silence that hits her gets a little smile out of Gwynette."
     
+    vl alexis_vl_prefix 5
     a "Even if he’s a tragic figure, it doesn’t justify dragging someone down because he’s homesick or whatever."
-    
+    voice sustain
     a "You deserve better than him, Gwynette."
     
     vl gwynette_vl_prefix 8
     gw "I \"deserve better\"? Funny. That’s what VV said earlier when he…"
     
+    vl alexis_vl_prefix 6
     a "Why did you do it, Gwynette?"
     
     vl gwynette_vl_prefix 9
     gw "Do what?"
     
+    vl alexis_vl_prefix 7
     a "Even when it came to breaking it off, he had to do it. You were going to keep soldiering on, weren’t you? How could you put up with all of it?"
     
     "A moment of silence passes as she gathers her thoughts. Gwynette lets out a breath and begins to speak."
@@ -617,10 +678,12 @@ label music_route_neralt(month, date):
     "It takes a bit of time to absorb everything she did. The more I do, the more radiant Gwynette becomes."
     "Grace, Mirthfulness, Empathy, Forgiveness, Guardianship, Tenacity, Harmony."
     
+    vl alexis_vl_prefix 8
     a "You are… perfect."
     
     "She smiles at that, and I can’t help but smile back. If that small gesture boosted her spirits, I’m glad."
     
+    vl alexis_vl_prefix 9
     a "Sorry, that’s not what I meant. I mean… that’s all {b}seven{/B} of the Divine Virtues."
     
     vl ylva_vl_prefix 6
@@ -633,6 +696,7 @@ label music_route_neralt(month, date):
     vl gwynette_vl_prefix 17
     gw "Don’t say that. I’m not going to get canonized."
     
+    vl alexis_vl_prefix 10
     a "Too late. I’ve already canonized you in my heart."
     
     "Ylva rolls her eyes."
@@ -640,10 +704,12 @@ label music_route_neralt(month, date):
     vl ylva_vl_prefix 7
     yl "Couldn’t you at least wait a few days before trying to seduce her?"
     
+    vl alexis_vl_prefix 11
     a "I’m not trying to seduce her."
     
     "Although… That is a good point. Vincent did call it off. One day, Gwynette’s going to have to start thinking about this sort of thing again."
     
+    vl alexis_vl_prefix 12
     a "You should let go, I think. Like you said, \"forgive and forget.\" But don’t expect him to make up for this, either."
     
     vl ylva_vl_prefix 8
@@ -660,6 +726,7 @@ label music_route_neralt(month, date):
     vl gwynette_vl_prefix 19
     gw "Thanks for stopping by, BB. Sorry if I made you panic."
     
+    vl alexis_vl_prefix 13
     a "Don’t mention it. That’s what friends are for, right?"
     stop music fadeout 1.0
     
@@ -683,6 +750,7 @@ label music_route_exalt(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 6/Gwynette_Month6_"
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Gwynette_Month6/Vincent_Gwynette_Month6_"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Gwynette/Month 6/Ylva_Gwynette_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 6/" + player_voice_prefix + "_Gwynette_Month6_"
 
     call screen calendar(month, date, "Exalt", 22)
     scene bg chapel_day with fade
@@ -702,6 +770,7 @@ label music_route_exalt(month, date):
     vl ylva_vl_prefix 1
     yl "Glad you could join us."
     
+    vl alexis_vl_prefix 1
     a "Wouldn’t miss this for the world."
     
     "This time around, Gwynette extended an invitation to me to hear her perform at the chapel. Telling her I’d be there right on time was a no brainer."
@@ -715,6 +784,8 @@ label music_route_exalt(month, date):
     show vince neutral at character_pos1 with dissolve
     show reina worried
     show ylva neutral
+
+    vl alexis_vl_prefix 2
     a "Funny, I was wondering the same thing."
     
     r "Such language in a church, really…"
@@ -727,6 +798,7 @@ label music_route_exalt(month, date):
     
     "Vince and I take our seats. We end up next to each other, so I lean over and whisper to him."
     
+    vl alexis_vl_prefix 3
     a "Gwynette tell you about this one, too?"
     
     vl vince_vl_prefix 3
@@ -827,6 +899,7 @@ label music_route_exalt(month, date):
     vl vince_vl_prefix 6
     vin "What did you just call me?"
     
+    vl alexis_vl_prefix 4
     a "It’s true that I’m not big on religion. Not the end of the world though, right?"
     
     vl gwynette_vl_prefix 7
@@ -840,6 +913,7 @@ label music_route_exalt(month, date):
     vl vince_vl_prefix 7
     vin "You have come a long way, huh?"
     
+    vl alexis_vl_prefix 5
     a "Slink? Is that a person?"
     
     "Gwynette shakes her head."
@@ -862,6 +936,7 @@ label music_route_exalt(month, date):
     
     "A line to try and lighten the mood comes to me."
     
+    vl alexis_vl_prefix 6
     a "How does it feel to be second place to a ferret, Vince?"
     
     vl vince_vl_prefix 8
@@ -884,6 +959,7 @@ label music_route_exalt(month, date):
     
     "This isn’t over. They have a long, hard talk to have. But still…"
     
+    vl alexis_vl_prefix 7
     a "It’s nice to see you two getting along."
     
     "Their eyes meet, and a blushing Vince looks away from Gwynette. Even Ylva appears at ease, watching the two of them."
@@ -891,11 +967,13 @@ label music_route_exalt(month, date):
     vl ylva_vl_prefix 9
     yl "Enjoy your surprise date, you two."
     
+    vl alexis_vl_prefix 8
     a "I want to hear all about it."
     
     vl gwynette_vl_prefix 15
     gw "Oh, you’ll hear all about it alright."
     
+    vl alexis_vl_prefix 9
     a "Excuse me?"
     
     vl ylva_vl_prefix 10
@@ -916,6 +994,7 @@ label music_route_exalt(month, date):
     vl ylva_vl_prefix 11
     yl "I’ll be going now."
     
+    vl alexis_vl_prefix 10
     a "Right. Sounds good."
     
     hide ylva with dissolve
@@ -929,6 +1008,7 @@ label music_route_exalt(month, date):
 
 label music_route_verabris(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Month 8/Gwynette_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 7/" + player_voice_prefix + "_Gwynette_Month7_"
 
     call screen calendar(month, date, "Verabris", 22)
     scene bg mainstreet_noon with fade
@@ -938,6 +1018,7 @@ label music_route_verabris(month, date):
     play music hatchling1 fadein 1.0
     "I’m on my way back from catching a movie when I notice someone on the sidewalk ahead of me. It’s been a little while since I’ve seen them, too."
     
+    vl alexis_vl_prefix 1
     a "Well, look who it is. Gwynette Ellis, is that you?"
     
     "She turns, and instead of smiling, she looks confused."
@@ -946,6 +1027,7 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix 1
     gw "Did you have to pull out the full name? You made me worry I was in trouble."
     
+    vl alexis_vl_prefix 2
     a "You are in trouble, young lady. You’ve just about ignored me the last two months."
     
     "In true \"honeymoon phase\" fashion, as soon as she and Vincent had made up, she disappeared. Outside of club meetings, I barely saw her."
@@ -953,6 +1035,7 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix NervousLaugh
     "She offers no defense, just a nervous laugh acknowledging her guilt."
     
+    vl alexis_vl_prefix 3
     a "So, how’ve you been?"
     
     vl gwynette_vl_prefix 2
@@ -965,11 +1048,13 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix 3
     gw "Remember that ferret from the pet store a few months back?"
     
+    vl alexis_vl_prefix 4
     a "When you randomly hit me with the \"Do you think animals are reincarnated the same as men\" thing?"
     
     vl gwynette_vl_prefix 4
     gw "Yeah, that! Little guy went and got adopted."
     
+    vl alexis_vl_prefix 5
     a "And that made you… cry?"
     
     vl gwynette_vl_prefix 5
@@ -977,11 +1062,13 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix 6
     gw "Mark my words, when I have my own ferret-friendly place, I’m getting another one. No, {b}two{/b} of them!"
     
+    vl alexis_vl_prefix 6
     a "What a noble goal."
     
     vl gwynette_vl_prefix 7
     gw "And I even have the perfect names for them."
     
+    vl alexis_vl_prefix 7
     a "Oh, really? Hit me."
     
     vl gwynette_vl_prefix 8
@@ -989,15 +1076,19 @@ label music_route_verabris(month, date):
     
     #"[Beat.]"
     
+    vl alexis_vl_prefix 8
     a "{b}That’s{/b} the best you could do?"
     
     vl gwynette_vl_prefix 9
     gw "What? I like them. And as their future owner, isn’t that what’s important?"
     
+    vl alexis_vl_prefix 9
     a "I think there’s a lot more to it than that, but go off, I guess."
     stop music fadeout 1.0
     pause 0.5
     play music hatchling1 fadein 1.0
+
+    vl alexis_vl_prefix 10
     a "Things with Vince going alright?"
     
     vl gwynette_vl_prefix 10
@@ -1005,6 +1096,7 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix 11
     gw "I figure that would help him feel a bit more at home here, if he’s stuck."
     
+    vl alexis_vl_prefix 11
     a "And make it less likely he’ll blow you off?"
     
     vl gwynette_vl_prefix 12
@@ -1012,6 +1104,7 @@ label music_route_verabris(month, date):
     vl gwynette_vl_prefix 13
     gw "I haven’t been the best at that lately, so I’m trying to make up for it. We can definitely hang out soon, though."
     
+    vl alexis_vl_prefix 12
     a "I’d like that. And make sure to answer my texts this time."
     
     vl gwynette_vl_prefix 14
@@ -1027,6 +1120,7 @@ label music_route_verabris(month, date):
 
 label music_route_overa(month, date):
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Own/Epilogue/Gwynette_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Gwynette/Month 9/" + player_voice_prefix + "_Gwynette_Month9_"
 
     call screen calendar(month, date, "Overa", 21)
     scene bg music_hall_afternoon with fade
@@ -1042,6 +1136,7 @@ label music_route_overa(month, date):
     vl gwynette_vl_prefix 1
     gw "BB, hey!"
     
+    vl alexis_vl_prefix 1
     a "Hey. What’s going on here?"
     
     vl gwynette_vl_prefix 2
@@ -1052,11 +1147,13 @@ label music_route_overa(month, date):
     vl gwynette_vl_prefix 3
     gw "You and everyone else graduating at the end of the week. It’s our last chance to send you guys off, after all."
     
+    vl alexis_vl_prefix 2
     a "You’re right about that…"
     
     vl gwynette_vl_prefix 4
     gw "So just kick back, relax, and enjoy the music, alright?"
     
+    vl alexis_vl_prefix 3
     a "Yeah, sure."
     
     "I recognize some of the other seated fourth-years, so striking up conversations isn’t the most awkward thing in the world."
@@ -1096,11 +1193,13 @@ label music_route_overa(month, date):
     vl gwynette_vl_prefix 10
     gw "If I make it big and one of those guys sells something I signed, I’m coming after them for a cut."
     
+    vl alexis_vl_prefix 4
     a "{b}When{/b} you make it big, you mean."
     
     vl gwynette_vl_prefix 11
     gw "Please. Even my ego can only take so much inflating."
     
+    vl alexis_vl_prefix 5
     a "But it’s deserved. You did a great job."
     
     "She practically glows at the praise."
@@ -1117,11 +1216,13 @@ label music_route_overa(month, date):
     vl gwynette_vl_prefix 13
     gw "Thank you for being my friend this past year."
     
+    vl alexis_vl_prefix 6
     a "I should be thanking you, honestly."
     
     vl gwynette_vl_prefix 14
     gw "Graduation definitely isn’t the end! Promise!"
     
+    vl alexis_vl_prefix 7
     a "It’s not the end. I promise."
     
     "She pulls me into a quick hug. When it breaks, she looks at me less like a girl seeing off a friend and more a proud mother, or something."
@@ -1129,6 +1230,7 @@ label music_route_overa(month, date):
     vl gwynette_vl_prefix 15
     gw "I’ll be seeing you around."
     
+    vl alexis_vl_prefix 8
     a "Definitely."
     
     scene black with fade

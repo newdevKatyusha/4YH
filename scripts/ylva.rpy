@@ -1,5 +1,6 @@
 label swordplay_route_jinus(month, date):
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 1/Ylva_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 1/" + player_voice_prefix + "_Ylva_Month1_"
 
     call screen calendar(month, date, "Jinus", 27)
     scene bg wright_gymnasium_afternoon with fade
@@ -12,6 +13,7 @@ label swordplay_route_jinus(month, date):
     "Most of all, Ylva is out of this world. After yet another set of conditioning swings, I’m taking a break when I see her facing down three people at once. They’re some of the more experienced club members, and she’s still making it look easy."
     "Just like during her little match with Said, she’s making use of that trick where her sword and stick become a spear to manipulate the distance between her and her opponents."
     
+    vl alexis_vl_prefix 1
     a "And she’s the Vice Captain?"
     
     anek2 "I know, right?"
@@ -19,6 +21,8 @@ label swordplay_route_jinus(month, date):
     "When her opponents are either disarmed or laid out on the ground, the club members who weren’t busy offer a small round of applause. Ylva’s taking a drink when I go up to her."
 
     show ylva warm club at center with dissolve
+
+    vl alexis_vl_prefix 2
     a "Mind if I give you a whirl? After your break."
     
     vl ylva_vl_prefix 1
@@ -26,6 +30,7 @@ label swordplay_route_jinus(month, date):
     
     "She screws the cap on her water bottle and picks up her weapons."
     
+    vl alexis_vl_prefix 3
     a "Hold on—"
     
     stop music fadeout 1.0
@@ -39,6 +44,7 @@ label swordplay_route_jinus(month, date):
     vl ylva_vl_prefix 3
     yl "Are you sure about this?"
     
+    vl alexis_vl_prefix 4
     a "Very."
     
     vl ylva_vl_prefix 4
@@ -56,19 +62,23 @@ label swordplay_route_jinus(month, date):
     
     "She helps me to my feet and offers me a drink."
     
+    vl alexis_vl_prefix 5
     a "That explains why you let me have at it."
     
     vl ylva_vl_prefix 6
     yl "Better luck next time."
     
+    vl alexis_vl_prefix 6
     a "And you are the Vice Captain, right?"
     
     "She nods. I scan the room, but I don’t see anyone that seems half as skilled as her."
     
+    vl alexis_vl_prefix 7
     a "Then where’s the real deal?"
     
     anek2 "Busy with work, probably."
     
+    vl alexis_vl_prefix 8
     a "Work? At a school like this?"
     
     "Figures that some people at a school like this would need to work on the side to cover the costs, but…"
@@ -78,10 +88,12 @@ label swordplay_route_jinus(month, date):
     vl ylva_vl_prefix 7
     yl "He’s an Overseer Initiate."
     
+    vl alexis_vl_prefix 9
     a "Come again?"
     
     "Everyone knows Overseer. The All-Seeing Eye badge of the international police is one of the most iconic symbols on Unios. But an Initiate, not a Prospect? That means they already decided this guy was worth bringing on full time."
     
+    vl alexis_vl_prefix 10
     a "So he’s enough to give even you a run for your money, Ylva?"
     
     vl ylva_vl_prefix 8
@@ -90,6 +102,7 @@ label swordplay_route_jinus(month, date):
     vl ylva_vl_prefix 9
     yl "I’ve never beaten him."
     
+    vl alexis_vl_prefix 11
     a "You don’t seem to mind it much."
     
     vl ylva_vl_prefix 10
@@ -107,6 +120,7 @@ label swordplay_route_jinus(month, date):
     
     anek2 "No prob. See you around, [a]."
     
+    vl alexis_vl_prefix 12
     a "Later."
     
     scene bg mainstreet_afternoon with fade
@@ -116,12 +130,14 @@ label swordplay_route_jinus(month, date):
     "The long platinum blonde hair of the girl ahead of me, though, is impossible to mistake. I hasten to catch up to her."
     stop music fadeout 1.0
     
+    vl alexis_vl_prefix 13
     a "Ylva!"
     
     play music hatchling14 fadein 1.0
     show ylva neutral at center with dissolve
     "The look she gives me when she stops and glances over her shoulder stops me cold. None of the warmth I’ve grown used to seeing in her during club is there."
     
+    vl alexis_vl_prefix 14
     a "…Hey?"
     
     vl ylva_vl_prefix 13
@@ -129,11 +145,13 @@ label swordplay_route_jinus(month, date):
     
     "Where did this attitude come from? Did I say something to upset her?"
     
+    vl alexis_vl_prefix 15
     a "I just wanted to talk."
     
     vl ylva_vl_prefix 14
     yl "And I have somewhere to be."
     
+    vl alexis_vl_prefix 16
     a "So do I. We could always walk and talk."
     
     vl ylva_vl_prefix 15
@@ -150,6 +168,7 @@ label swordplay_route_jinus(month, date):
 label swordplay_route_dallinus(month, date):
     $ goude_vl_prefix = "audio/voices/Supporting-Extra/Isaiah/Ylva/Month 2/Isaiah_Ylva_Month2 - _"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 2/Ylva_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 2/" + player_voice_prefix + "_Ylva_Month2_"
 
     call screen calendar(month, date, "Dallinus", 9)
     scene bg wright_gymnasium_afternoon with fade
@@ -180,14 +199,17 @@ label swordplay_route_dallinus(month, date):
     vl ylva_vl_prefix 3
     yl "I think the Mother would denounce her children before the day I find one of our meetings boring!"
     
+    vl alexis_vl_prefix 1
     a "Um…"
     
     "The three of them turn to me. I have been silent up until this point, so I guess I surprised them."
     
+    vl alexis_vl_prefix 2
     a "Oh, uh… I just noticed something about Ylva. I don’t think I’ve heard anyone at this school use titles like \"Lord\" or \"Lady,\" other than her."
     
     r "It isn’t just her formality that confuses you, but people saying it back to her, I assume?"
     
+    vl alexis_vl_prefix 3
     a "Sort of. Just being respectful, maybe?"
     
     vl goude_vl_prefix 2
@@ -195,6 +217,7 @@ label swordplay_route_dallinus(month, date):
     
     "I turn to Ylva."
     
+    vl alexis_vl_prefix 4
     a "You’re nobility?"
     
     "The few senior club members still hanging around laugh."
@@ -207,6 +230,7 @@ label swordplay_route_dallinus(month, date):
     yl "M-my older brother is the head of King Emil’s personal guard…"
     vl ylva_vl_prefix 4
     
+    vl alexis_vl_prefix 5
     a "Personal guard? Of the king?"
     
     "There’s another round of laughter."
@@ -280,6 +304,7 @@ label swordplay_route_dallinus(month, date):
     "The Osman government stands by that claim, but nowhere else in the world does. And the Roma themselves hate it."
     "Everyone’s stunned into silence, but seeing Reina there, on the verge of tears, I can’t sit on the sidelines any longer. I approach her, deliberately blocking her view of Ylva."
     
+    vl alexis_vl_prefix 6
     a "Would you like me to walk you outside?"
     
     "She sniffles and nods."
@@ -296,6 +321,7 @@ label swordplay_route_dallinus(month, date):
     
     r "I am sorry you had to see me lose my composure like that."
     
+    vl alexis_vl_prefix 7
     a "\"Lose your composure\"? Reina, do you have any idea how composed you looked to me?"
     
     show reina neutral with dissolve
@@ -303,12 +329,14 @@ label swordplay_route_dallinus(month, date):
     
     r "I suppose I don’t."
     
+    vl alexis_vl_prefix 8
     a "But I’m sorry you had to hear that. I don’t know what came over her."
     
     r "Don’t apologize for her boorish behavior. You didn’t do anything wrong."
     
     "More of the others come outside, offering quick apologies of their own to Reina. They don’t stop to give her a chance and address them, so she just gives them little nods of acknowledgement."
     
+    vl alexis_vl_prefix 9
     a "Need me to walk you somewhere?"
     
     r "I’ll be fine. But thank you for the offer. Take care, [a]."
@@ -321,11 +349,13 @@ label swordplay_route_dallinus(month, date):
     show ylva neutral club at center with dissolve
     "Ylva’s engaged in some rather rigorous drills, trying to blow off steam."
     
+    vl alexis_vl_prefix 10
     a "What in the Abyss was that?"
     
     vl ylva_vl_prefix 11
     yl "She insulted me."
     
+    vl alexis_vl_prefix 11
     a "After you insulted her family first. What you said was bigoted and wrong, Ylva."
     
     "She stops her drills, turning away from me. That’s about as clear a dismissal as I could get. I sigh and leave her. Right on my way out the door, though, I hear her whisper something to herself."
@@ -341,6 +371,7 @@ label swordplay_route_dallinus(month, date):
 
 label swordplay_route_dyalt(month, date):
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 4/Ylva_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 4/" + player_voice_prefix + "_Ylva_Month4_"
 
     call screen calendar(month, date, "Dyalt", 9)
     scene bg wright_gymnasium_afternoon with fade
@@ -356,6 +387,7 @@ label swordplay_route_dyalt(month, date):
     
     "Ylva looms over me, perplexed."
     
+    vl alexis_vl_prefix 1
     a "Just being dramatic."
     
     "She pulls me to my feet. Once again, I’ve challenged her and lost. Not like I stood a chance, but it still stings a bit. And not just my leg after she smacked it with her stick."
@@ -363,6 +395,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 2
     yl "Keep trying. Maybe you’ll have me beat by year’s end."
     
+    vl alexis_vl_prefix 2
     a "I hope so. That’s going to be the last chance I have."
     
     "I move off to the side and sit against the wall to catch my breath. Ylva joins me, taking the chance to have some water. We stop by a few of the others, leaning or sitting against the wall."
@@ -372,6 +405,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 3
     yl "Splendidly, from what I hear. A fine group of young ladies this time around."
     
+    vl alexis_vl_prefix 3
     a "Revolution Festival? I thought Ekaska was still a monarchy."
     
     "The member of the club who asked looks down at me."
@@ -388,6 +422,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 6
     yl "No matter the phase of her life, a woman is free to participate, but those major milestones are the main ones."
     
+    vl alexis_vl_prefix 4
     a "Have you ever danced in it, Ylva?"
     
     vl ylva_vl_prefix 7
@@ -409,17 +444,20 @@ label swordplay_route_dyalt(month, date):
     "And if she does, I’d have squandered a perfect chance to have an important talk."
     play music hatchling10 fadein 1.0
     
+    vl alexis_vl_prefix 5
     a "Hey, Ylva."
     
     vl ylva_vl_prefix 9
     yl "Yes?"
     
+    vl alexis_vl_prefix 6
     a "About what happened with Reina a few months ago…"
     
     show ylva neutral club
     vl ylva_vl_prefix 10
     yl "What about it?"
     
+    vl alexis_vl_prefix 7
     a "Do you actually believe the things you said?"
     
     "It takes her a while to answer. That isn’t exactly comforting."
@@ -427,6 +465,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 11
     yl "I stand by what I said about the Dreyar family abandoning their homeland and cozying up to a foreign king."
     
+    vl alexis_vl_prefix 8
     a "But it isn’t like they don’t care about other Roma. Even if they don’t live in Oslein. The Mortal Coil Foundation’s proof of that."
     
     "She nods."
@@ -434,6 +473,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 12
     yl "Her father’s philanthropy is the thing propping up the respect I do have for them."
     
+    vl alexis_vl_prefix 9
     a "And the other thing you said?"
     
     "More silence."
@@ -441,6 +481,7 @@ label swordplay_route_dyalt(month, date):
     vl ylva_vl_prefix 13
     yl "Like I said back then, she insulted me."
     
+    vl alexis_vl_prefix 10
     a "That’s just an excuse."
     
     voice "<to 2>audio/voices/Friends/Ylva/Month 4/Ylva_Month4_14.ogg"
@@ -453,11 +494,13 @@ label swordplay_route_dyalt(month, date):
     
     "I rack my brain, trying to recall that day and what it was Reina had said to set Ylva off. I remember \"brute\" and \"skirt\"..."
     
+    vl alexis_vl_prefix 11
     a "Because she was saying you weren’t acting like a lady? That’s what set you off?"
     
     show ylva bashful club
     "She turns away from me, but not quickly enough. I noticed that blush creeping across her cheeks."
     
+    vl alexis_vl_prefix 12
     a "I… wasn’t expecting that."
     
     vl ylva_vl_prefix 15
@@ -465,16 +508,19 @@ label swordplay_route_dyalt(month, date):
     
     "I sigh. It is easy to forget Ylva isn’t a fourth-year. But times like this really hammer it home that she’s just a 17-year-old girl, at the end of the day."
     
+    vl alexis_vl_prefix 13
     a "You don’t hate Reina. I remember you calling her \"Lady,\" even when you were angry."
     
     vl ylva_vl_prefix 16
     yl "How could I hate someone like her?"
     
+    vl alexis_vl_prefix 14
     a "So when are you planning on apologizing to her?"
     
     vl ylva_vl_prefix 17
     yl "When my heart is ready."
     
+    vl alexis_vl_prefix 15
     a "And that will be…?"
     
     vl ylva_vl_prefix 18
@@ -482,6 +528,7 @@ label swordplay_route_dyalt(month, date):
     
     "Again, I sigh. Guess you can’t force these sorts of things. At least she knows it needs to happen. I rise to my feet, ignoring the stinging in my leg."
     
+    vl alexis_vl_prefix 16
     a "Well, if I’m ever going to beat you, I need to get better. Time to find someone to spar with."
     
     hide ylva with dissolve
@@ -494,6 +541,7 @@ label swordplay_route_dyalt(month, date):
 
 label swordplay_route_neralt(month, date):
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 5/Ylva_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 5/" + player_voice_prefix + "_Ylva_Month5_"
 
     call screen calendar(month, date, "Neralt", 26)
     scene bg student_councilroom_afternoon with fade
@@ -528,24 +576,29 @@ label swordplay_route_neralt(month, date):
     show sue neutral at center with move
     "She’s barely closed the door behind her before I speak."
     
+    vl alexis_vl_prefix 1
     a "\"We\"?"
     
     s "Yes, we. There’s something that needs to be done, and I doubt I can do it alone."
     
+    vl alexis_vl_prefix 2
     a "You need me for something?"
     
     s "You’re acquainted with Ylva Brandt, yes? At the very least, I’m pretty sure you’re in her club."
     
     "So that’s what this is about."
     
+    vl alexis_vl_prefix 3
     a "Is something up with Reina?"
     
     s "The quality of her work has been slipping. I’ve heard about what happened between them, and it started around then."
     
+    vl alexis_vl_prefix 4
     a "Ylva hasn’t apologized yet? That girl…"
     
     "I shake my head."
     
+    vl alexis_vl_prefix 5
     a "So what’s the plan?"
     
     s "We find Ylva, drag her to the salon, and chaperone her and Reina like the children they are."
@@ -556,6 +609,7 @@ label swordplay_route_neralt(month, date):
     
     "Sue stands, her work also noticeably incomplete."
     
+    vl alexis_vl_prefix 6
     a "Getting right to it, are we?"
     
     s "The sooner we get them together the better, right?"
@@ -579,6 +633,7 @@ label swordplay_route_neralt(month, date):
     
     "Sue nods in my direction, and I step forward."
     
+    vl alexis_vl_prefix 7
     a "Ylva, is your heart ready?"
     
     "For a moment, she’s confused. Then she begins stammering wildly."
@@ -587,6 +642,7 @@ label swordplay_route_neralt(month, date):
     vl ylva_vl_prefix 2
     yl "I-i-it’s happening already?!"
     
+    vl alexis_vl_prefix 8
     a "Ylva, it’s been a month since you told me you’d apologize when you’re ready. Well, are you?"
     
     vl ylva_vl_prefix 3
@@ -655,6 +711,7 @@ label swordplay_route_neralt(month, date):
     show sue happy
     s "And thus, peace was made! To celebrate, how about some drinks and snacks?"
     
+    vl alexis_vl_prefix 9
     a "Sounds good to me. Ladies?"
     
     vl ylva_vl_prefix 9
@@ -671,10 +728,13 @@ label swordplay_route_neralt(month, date):
     "I end up side by side with Reina, since we’re heading to the same place."
     
     show reina neutral at center with moveinleft
+
+    vl alexis_vl_prefix 10
     a "How’re you feeling?"
     
     r "A bit better. Thank you. Even if it was just dragging her to the salon."
     
+    vl alexis_vl_prefix 11
     a "Just glad to know it all worked out."
     
     "At least it seems like a weight has been lifted from both of their shoulders. All’s well that ends well."
@@ -685,6 +745,7 @@ label swordplay_route_neralt(month, date):
     
 label swordplay_route_exalt(month, date):
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 6/Ylva_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 6/" + player_voice_prefix + "_Ylva_Month6_"
 
     call screen calendar(month, date, "Exalt", 21)
     scene bg weaver_library_afternoon with fade
@@ -699,6 +760,7 @@ label swordplay_route_exalt(month, date):
     "Thankfully, the deeper into the library I go, the less crowded it is. Most of the little study tables here seat two, but only have one occupant, if they have any at all."
     "It makes the most sense for me to sit at one of the empty ones, but when I spy Ylva, I can’t help but go up to her."
     
+    vl alexis_vl_prefix 1
     a "Mind if I take a seat?"
     
     "She looks up at me, brow furrowed. A moment later, she shrugs."
@@ -710,6 +772,7 @@ label swordplay_route_exalt(month, date):
     "I sit and take out my study materials. We pass the time, working on our own things, enjoying the companionable silence. The turning of a page and the sound of pencil on paper are all there is to accompany us."
     "Until I speak up."
     
+    vl alexis_vl_prefix 2
     a "Winter’s almost over, but it's as cold as ever, huh?"
     
     vl ylva_vl_prefix 2
@@ -718,27 +781,32 @@ label swordplay_route_exalt(month, date):
     vl ylva_vl_prefix 3
     "She shivers."
     
+    vl alexis_vl_prefix 3
     a "But the hot springs are supposed to help, right? Ekaska’s famous for them, isn't it?"
     
     show ylva warm
     vl ylva_vl_prefix 4
     yl "Rightfully so. You won’t find better hot springs anywhere on Unios."
     
+    vl alexis_vl_prefix 4
     a "The most I’ve ever seen of them is postcards. Or the odd video here and there."
     
     vl ylva_vl_prefix 5
     yl "Everyone should try to visit, at least once. The City is a marvel in and of itself, but Brasan has its own unique charm."
     
+    vl alexis_vl_prefix 5
     a "I’m guessing those are places?"
     
     vl ylva_vl_prefix 6
     yl "We are only one island, so it isn’t like we have many settlements. Brasan is on the western side of the island. It’s the second biggest city."
     
+    vl alexis_vl_prefix 6
     a "And \"The City\" is the capital?"
     
     vl ylva_vl_prefix 7
     yl "To the rest of the world, it’s \"Säkerhet,\" but to us, it’s just \"The City.\""
     
+    vl alexis_vl_prefix 7
     a "It’s not just those two, is it? Only two cities is a bit…"
     
     vl ylva_vl_prefix 8
@@ -749,12 +817,15 @@ label swordplay_route_exalt(month, date):
     vl ylva_vl_prefix 9
     yl "Let me guess. \"How could such a tiny island be such an important country?\""
     
+    vl alexis_vl_prefix 8
     a "Felt a little inappropriate to say out loud, so thanks for doing the hard part for me."
     
     vl ylva_vl_prefix 10
     yl "The fish caught in Ekaskan waters are some of the best in the world. Especially in the summer. Then there’s the fact that anyone that wants to sail across the Western Ocean is going to need somewhere to restock. And did I mention the manite?"
     
     stop music fadeout 1.0
+
+    vl alexis_vl_prefix 9
     a "Stendamm?"
     
     show ylva adoration
@@ -784,6 +855,7 @@ label swordplay_route_exalt(month, date):
     vl ylva_vl_prefix 15
     yl "You imperials are so weird, with your obsessions with tiny furballs like cats and dogs. If you ever met my little Siggy, it would be love at first sight. So what if he's a giant wolf?"
     
+    vl alexis_vl_prefix 10
     a "Um, it isn’t like he isn’t cute! I was just caught off guard."
     
     vl ylva_vl_prefix 16
@@ -795,6 +867,8 @@ label swordplay_route_exalt(month, date):
     
     show ylva neutral at character_pos2 with move
     show lucas neutral at character_pos6 with moveinright
+
+    vl alexis_vl_prefix 11
     a "I’m alright. Sorry if we were being loud."
     
     stop music fadeout 1.0
@@ -815,11 +889,13 @@ label swordplay_route_exalt(month, date):
     
     "He turns to leave."
     
+    vl alexis_vl_prefix 12
     a "Hold it."
     
     vl ylva_vl_prefix 19
     yl "Don’t \"hold it.\" I want him gone."
     
+    vl alexis_vl_prefix 13
     a "And that’s exactly why I’m asking him to \"hold it.\" He’s just doing his job. You’re being rude."
     
     stop music fadeout 1.0
@@ -836,6 +912,8 @@ label swordplay_route_exalt(month, date):
     "With a nod, he leaves the two of us."
 
     show ylva bashful at center with move
+
+    vl alexis_vl_prefix 14
     a "Was that really so hard?"
     
     "Ylva doesn’t respond. A sigh escapes me. There’s some small comfort in the fact that she didn’t tell me to leave or leave herself. I let us return to our silent studying, hoping that my presence will be a small comfort to her as she calms down."
@@ -848,6 +926,7 @@ label swordplay_route_exalt(month, date):
 label swordplay_route_verabris(month, date):
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Month 8/Ylva_Month8_"
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Ylva_s Route/Month 8/Gwynette_Ylva_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 8/" + player_voice_prefix + "_Ylva_Month8_"
 
     call screen calendar(month, date, "Verabris", 18)
     scene bg wright_gymnasium_afternoon with fade
@@ -864,6 +943,7 @@ label swordplay_route_verabris(month, date):
     
     "I jump. When did she get here?"
     
+    vl alexis_vl_prefix 1
     a "Just contemplating my impending graduation."
     
     vl ylva_vl_prefix 2.1
@@ -885,12 +965,14 @@ label swordplay_route_verabris(month, date):
     
     n "Gwynette invited me out to spend time with her and a friend. Well, more like \"insisted,\" than invited, really…"
     
+    vl alexis_vl_prefix 2
     a "Well, the more the merrier, right?"
     hide ylva with moveoutleft
 
     vl gwynette_vl_prefix 2
     gw "Exactly! Hey, why don’t you come with us, BB? We were going to catch a movie at the mall. Or something."
     
+    vl alexis_vl_prefix 3
     a "Sign me up. Not like I’m doing anything with the rest of the day. Just need to finish up here."
     
     "There isn’t that much left to do, so the wait isn’t long. Once we’re done, I meet the girls by the gym’s exit. I need to stop by House Lychester to freshen up first, so we decide to split up for a bit and then meet up at the mall."
@@ -909,6 +991,7 @@ label swordplay_route_verabris(month, date):
     vl ylva_vl_prefix 4
     yl "I’m a fool…"
     
+    vl alexis_vl_prefix 4
     a "Where did this come from?"
     
     "She just barely lifts her gaze to look at the three of us."
@@ -932,6 +1015,7 @@ label swordplay_route_verabris(month, date):
     vl gwynette_vl_prefix 4
     gw "Then the powers that be were right, right?"
     
+    vl alexis_vl_prefix 5
     a "And it’s not just us. You’re getting on better with Reina and Sue too, right?"
     
     n "Um, Ylva?"
@@ -949,11 +1033,13 @@ label swordplay_route_verabris(month, date):
     
     "I place a hand on Ylva’s shoulder."
     
+    vl alexis_vl_prefix 6
     a "Congrats on learning that we’re not all bad. I can say the same about you."
     
     vl ylva_vl_prefix 9
     yl "Was that supposed to be a compliment?"
     
+    vl alexis_vl_prefix 7
     a "With some of the things I’ve heard you say this year? I wouldn’t blame people for thinking you’re a rabid she-wolf who’d bite their head off if they looked at you the wrong way."
     
     "She rolls her eyes."
@@ -961,6 +1047,7 @@ label swordplay_route_verabris(month, date):
     vl ylva_vl_prefix 10
     yl "What an original joke."
     
+    vl alexis_vl_prefix 8
     a "Point is, under that icy exterior, you’re a girl anyone would be lucky to have as a friend. Like how, apparently, you learned that anyone who isn’t Ekaskan isn’t some two-faced snake."
     
     vl gwynette_vl_prefix 6
@@ -978,6 +1065,7 @@ label swordplay_route_verabris(month, date):
     vl ylva_vl_prefix 13
     yl "I don’t know why I didn’t notice it earlier."
     
+    vl alexis_vl_prefix 9
     a "Maybe your heart \"wasn’t ready.\""
     
     "She blushes and turns away from me."
@@ -985,6 +1073,7 @@ label swordplay_route_verabris(month, date):
     vl ylva_vl_prefix 14
     yl "Don’t you have a shower to go take?"
     
+    vl alexis_vl_prefix 10
     a "Same to you. Gwynette, Naomi, see you two soon?"
     
     vl gwynette_vl_prefix 7
@@ -1006,6 +1095,7 @@ label swordplay_route_overa(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Ylva_Epilogue/Vincent_Ylva_Epilogue_"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Epilogue/Ylva_Epilogue_"
     $ said_vl_prefix = "audio/voices/Friends/Said/Said Ylva Epilogue/Said_Ylva_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Ylva/Month 9/" + player_voice_prefix + "_Ylva_Month9_"
 
     call screen calendar(month, date, "Overa", 19)
     scene bg confession_tree_night with fade
@@ -1016,6 +1106,7 @@ label swordplay_route_overa(month, date):
     "I don’t quite know why Ylva invited me out to the park at night, but I didn’t have any sort of reason to deny her. She wanted to meet up at the gazebo, but the small army I found when I got there was not at all what I was expecting."
     "One, two… ten other people? Why?"
     
+    vl alexis_vl_prefix 1
     a "Oh boy."
     
     show vince neutral at character_pos1 with dissolve
@@ -1024,6 +1115,7 @@ label swordplay_route_overa(month, date):
     vl gwynette_vl_prefix 1
     gw "Hey, BB."
     
+    vl alexis_vl_prefix 2
     a "What’s going on here? Where’s Ylva?"
     
     s "Your guess is as good as ours. Some of us here don’t exactly surprise me, but…"
@@ -1194,6 +1286,7 @@ label swordplay_route_overa(month, date):
     vl ylva_vl_prefix 9
     yl "Thank you for coming."
     
+    vl alexis_vl_prefix 3
     a "No, thank you for putting this on for us."
     
     "Again, she goes red."
@@ -1212,6 +1305,7 @@ label swordplay_route_overa(month, date):
     vl ylva_vl_prefix 11
     yl "Thank you."
     
+    vl alexis_vl_prefix 4
     a "What did I do?"
     
     vl ylva_vl_prefix 12
@@ -1219,11 +1313,13 @@ label swordplay_route_overa(month, date):
     
     "I guess I am, huh? If not for my meddling in those situations, she and Reina would still be beefing. And Lucas probably would’ve stalked off furious at Ylva for making noise in the library."
     
+    vl alexis_vl_prefix 5
     a "Well, you’re welcome."
     
     vl ylva_vl_prefix 13
     yl "I will miss you, you know."
     
+    vl alexis_vl_prefix 6
     a "Have mercy. I already only have a week. Don’t make it even harder for me to say goodbye to this place."
     
     "Then she does something I couldn’t have ever imagined her doing. She hugs me."
@@ -1231,11 +1327,13 @@ label swordplay_route_overa(month, date):
     vl ylva_vl_prefix 14
     yl "Be sure to take care of yourself."
     
+    vl alexis_vl_prefix 7
     a "I will, don’t worry. See you at the last club meeting?"
     
     vl ylva_vl_prefix 15
     yl "Yes. You can get going. I’d like a moment alone with the Mother."
     
+    vl alexis_vl_prefix 8
     a "Of course. See you, Ylva."
     
     "I turn and go, not giving in to the temptation to turn back. Even knowing that she’ll always be a call or a text away, something about knowing that it’ll be so much harder to see her makes the thought of saying goodbye all the more agonizing."

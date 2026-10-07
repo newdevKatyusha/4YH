@@ -1,6 +1,7 @@
 label art_route_jinus(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month1/Vincent_Month1_"
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Vince_s Route/Month 1/Gwynette_Vince_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 1/" + player_voice_prefix + "_Vince_Month1_"
 
     call screen calendar(month, date, "Jinus", 27)
     scene bg art_room_noon with fade
@@ -19,6 +20,7 @@ label art_route_jinus(month, date):
     "He doesn’t look up when I enter– he just bangs his head to the beat and flicks his paintbrush, speckling the canvas before him with neon orange paint."
     "Feeling a little awkward, I clear my throat."
     
+    vl alexis_vl_prefix 1
     a "Um, hey. Is the Art Club meeting today?"
     
     "Vince doesn’t respond. He just dips his paintbrush in a new color,  lime-green, and continues splattering away."
@@ -32,6 +34,7 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 1
     vin "The fuck’s your problem? You almost ruined my painting!"
     
+    vl alexis_vl_prefix 2
     a "Well, you probably ruined my uniform, so we’re even."
     
     "Vince squints at me, recognition dawning."
@@ -39,6 +42,7 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 2
     vin "You’re that old new kid."
     
+    vl alexis_vl_prefix 3
     a "I’m a fourth-year, thank you."
     
     "Uninterested, Vince pops his earbud back in, but I don’t budge."
@@ -46,6 +50,7 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 3
     vin "What are you still doing here?"
     
+    vl alexis_vl_prefix 4
     a "I want to join Art Club. Sue said this was the regular meeting time."
     
     "He sighs with annoyance."
@@ -53,16 +58,19 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 4
     vin "Inspiration doesn’t conform to a weekly schedule. Club members come and go as they please."
     
+    vl alexis_vl_prefix 5
     a "Okay, but the club calendar–"
     
     vl vince_vl_prefix 5
     vin "I know what the calendar says. We had to give them a formal meeting time to get funding. Any other questions?"
     
+    vl alexis_vl_prefix 6
     a "Sue said something about a showcase?"
     
     vl vince_vl_prefix 6
     vin "We host showcases at the end of each trimester, yeah. I’m working on my piece for the fall one– or I was, until you ruined my focus."
     
+    vl alexis_vl_prefix 7
     a "Sorry."
     
     stop music fadeout 1.0
@@ -88,11 +96,13 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 9
     vin "You gonna take it or what?"
     
+    vl alexis_vl_prefix 8
     a "Um, yeah. Thanks."
     
     vl vince_vl_prefix 10
     vin "There’s an art supply shop in town. They’re overpriced, but they run sales every month or so."
     
+    vl alexis_vl_prefix 9
     a "I’ll check it out."
     
     "He lingers a moment, studying my sketch."
@@ -100,6 +110,7 @@ label art_route_jinus(month, date):
     vl vince_vl_prefix 11
     vin "You’re pretty good."
     
+    vl alexis_vl_prefix 10
     a "Thank you. I haven’t drawn in years."
     
     vl vince_vl_prefix 12
@@ -129,6 +140,7 @@ label art_route_jinus(month, date):
         vl gwynette_vl_prefix 3B
     gw "Hi! [a], right?"
     
+    vl alexis_vl_prefix 11
     a "Yup. And you’re Gwynette?"
     
     "She nods."
@@ -136,6 +148,7 @@ label art_route_jinus(month, date):
     vl gwynette_vl_prefix 4
     gw "That’s right. You’re joining the Art Club, then?"
     
+    vl alexis_vl_prefix 12
     a "Mhmm. Are you a member, too?"
     
     vl gwynette_vl_prefix 5
@@ -165,11 +178,13 @@ label art_route_jinus(month, date):
     
     "Gwynette rolls her eyes and shoots me a look."
     
+    vl alexis_vl_prefix 13
     a "I can wash your brushes if you’d like."
     
     vl vince_vl_prefix 17
     vin "You know, I was almost starting to like you."
     
+    vl alexis_vl_prefix 14
     a "You were?"
     
     vl vince_vl_prefix 18
@@ -182,6 +197,7 @@ label art_route_jinus(month, date):
     
     "Reluctantly, Vince removes his apron and allows Gwynette to wipe the speckled paint from his cheeks. Then, the two gather their things. I call out as they head for the door."
     
+    vl alexis_vl_prefix 15
     a "Have fun!"
     
     hide gwynette with dissolve
@@ -195,6 +211,7 @@ label art_route_jinus(month, date):
 label art_route_dallinus(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month2/Vincent_Month2_"
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Vince_s Route/Month 2/Gwynette_Vince_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 2/" + player_voice_prefix + "_Vince_Month2_"
 
     call screen calendar(month, date, "Dallinus", 6)
     scene bg art_room_noon with fade
@@ -250,6 +267,7 @@ label art_route_dallinus(month, date):
     vl gwynette_vl_prefix 5
     gw "BB! I didn’t see ya there."
     
+    vl alexis_vl_prefix 1
     a "Hey, uh, I can come back–"
     
     vl gwynette_vl_prefix 6
@@ -266,6 +284,8 @@ label art_route_dallinus(month, date):
     "But, she’s already gone. Groaning, Vince sinks into his stool. He sweeps a hand across the bottom of his easel, sending some paintbrushes and a pencil clattering to the ground. Then, he buries his face in his hands."
     
     show vince neutral at center with move
+
+    vl alexis_vl_prefix 2
     a "What ha–"
     
     vl vince_vl_prefix 5
@@ -274,6 +294,7 @@ label art_route_dallinus(month, date):
     "Throwing up my hands in surrender, I head to my usual work station. I pull out my latest piece – a sketch of Magis Hall in the autumn light - and a fresh set of colored pencils."
     "After adding some detail to the front door, I look over at Vince. He remains slumped in his stool, near-catatonic. I clear my throat."
     
+    vl alexis_vl_prefix 3
     a "Still don’t want to talk about it?"
     
     "Sighing, Vince turns to face me."
@@ -281,6 +302,7 @@ label art_route_dallinus(month, date):
     vl vince_vl_prefix 6
     vin "Gwynette and I were supposed to see a movie in town last night, but I missed it."
     
+    vl alexis_vl_prefix 4
     a "Because you were painting?"
     
     "Vince nods."
@@ -290,15 +312,18 @@ label art_route_dallinus(month, date):
     vl vince_vl_prefix 8
     vin "I guess she waited for thirty minutes and called a bunch of times, but I didn’t pick up."
     
+    vl alexis_vl_prefix 5
     a "You didn’t have your phone? You always listen to music when you paint."
     
     vl vince_vl_prefix 9
     vin "It was on \"do not disturb.\""
     
+    vl alexis_vl_prefix 6
     a "Well, I’m sure it’ll blow over. It’s not like this happens all the time."
     
     "Vince looks away, sheepish."
     
+    vl alexis_vl_prefix 7
     a "…Or does it?"
     
     "Vince sighs."
@@ -311,20 +336,24 @@ label art_route_dallinus(month, date):
     vl vince_vl_prefix 11
     vin "Don’t touch me."
     
+    vl alexis_vl_prefix 8
     a "Sorry."
     
     "I quickly retract my hand."
     
+    vl alexis_vl_prefix 9
     a "Look, Gwynette knows how passionate you are about your art. Maybe there’s a way to make it up to her?"
     
     vl vince_vl_prefix 12
     vin "Like what?"
     
+    vl alexis_vl_prefix 10
     a "What about that dance night at the Amity? You could take her on Zynday."
     
     vl vince_vl_prefix 13
     vin "I told you, I hate dancing."
     
+    vl alexis_vl_prefix 11
     a "Exactly. It’ll show her how much you care."
     
     "Vince frowns, mulling this over… "
@@ -350,6 +379,7 @@ label art_route_dallinus(month, date):
     show gwynette neutral at character_pos5 with dissolve
     "–I turn to see Vince and Gwynette, cuddled up together on a bench. I walk over to them."
     
+    vl alexis_vl_prefix 12
     a "Hey, lovebirds. How are you two?"
     
     vl gwynette_vl_prefix 8
@@ -357,6 +387,7 @@ label art_route_dallinus(month, date):
     
     "I try to hide my smirk."
     
+    vl alexis_vl_prefix 13
     a "Really? I didn’t know Vince was a dancer."
     
     "Vince flips me off. Gwynette giggles."
@@ -370,6 +401,7 @@ label art_route_dallinus(month, date):
     vl gwynette_vl_prefix Laugh
     "Gwynette and I laugh."
     
+    vl alexis_vl_prefix 14
     a "Well, I should get going. See you two around."
     
     "Vince and Gwynette bid me farewell. As I walk away, Gwynette curls up against Vince’s arm. He peers over the top of her head to meet my eyes and mouths two words: \"Thank you.\""
@@ -382,6 +414,7 @@ label art_route_dallinus(month, date):
 
 label art_route_dyalt(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month4/Vincent_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 4/" + player_voice_prefix + "_Vince_Month4_"
 
     call screen calendar(month, date, "Dyalt", 13)
     scene bg mainstreet_noon with fade
@@ -396,6 +429,7 @@ label art_route_dyalt(month, date):
     vl vince_vl_prefix 1
     vin "You’re not using that shit on your showcase piece."
     
+    vl alexis_vl_prefix 1
     a "What? I’m on a budget."
     
     "Aghast, Vince confiscated my basket and insisted on buying me three tubes of his preferred brand of paint. I tried to pay, but he refused."
@@ -406,6 +440,8 @@ label art_route_dyalt(month, date):
     "So, shopping bags in tow, we’re en route to The Amity. As we walk down the street, Vince’s phone buzzes. Checking the screen, he groans."
     
     show vince annoyed at center with dissolve
+
+    vl alexis_vl_prefix 2
     a "Who is it?"
     
     vl vince_vl_prefix 3
@@ -419,6 +455,7 @@ label art_route_dyalt(month, date):
     vl vince_vl_prefix 4
     vin "Sorry about that."
     
+    vl alexis_vl_prefix 3
     a "It’s fine. Everything okay?"
     
     vl vince_vl_prefix 5
@@ -440,10 +477,12 @@ label art_route_dyalt(month, date):
     vl vince_vl_prefix 7
     vin "Stop staring at me."
     
+    vl alexis_vl_prefix 4
     a "Sorry."
     
     "A waitress approaches to take our order. I order a bowl of the soup du jour with a side of cheese fries. (It’s been a long week.) Vince just requests a cappuccino."
     
+    vl alexis_vl_prefix 5
     a "Lunch is on me, remember?"
     
     vl vince_vl_prefix 8
@@ -451,56 +490,67 @@ label art_route_dyalt(month, date):
     
     "Satisfied, the waitress walks off. I wait for her to be out of earshot before turning back to Vince."
     
+    vl alexis_vl_prefix 6
     a "So, you gonna tell me what’s up?"
     
     vl vince_vl_prefix 9
     vin "Just my parents being assholes. Nothing new."
     
+    vl alexis_vl_prefix 7
     a "What did they want?"
     
     vl vince_vl_prefix 10
     vin "Goude told them I’ve been missing class, so they’re threatening to pull me out of Art Club."
     
+    vl alexis_vl_prefix 8
     a "Ugh, I’m sorry. How much class did you miss?"
     
     vl vince_vl_prefix 11
     vin "I skipped last week."
     
+    vl alexis_vl_prefix 9
     a "All week?"
     
     vl vince_vl_prefix 12
     vin "Whose side are you on?"
     
+    vl alexis_vl_prefix 10
     a "I’m not judging. Just, why?"
     
     vl vince_vl_prefix 13
     vin "Because it’s bullshit. I didn’t ask to come here. My art’s the one thing that’s keeping me from exploding, and now they’re threatening to take that away."
     
+    vl alexis_vl_prefix 11
     a "Wait, you didn’t want to come here?"
     
     vl vince_vl_prefix 14
     vin "Gods no. I got kicked out of my old school back in Archos. I had some… issues with the other kids. After that, I wanted to go to art school, but they sent me to this shithole instead."
     
+    vl alexis_vl_prefix 12
     a "Why MIA? Why not somewhere else in Archos? "
     
     vl vince_vl_prefix 15
     vin "They thought the change of scenery would be good for me, plus MIA’s known for their science program."
     
+    vl alexis_vl_prefix 13
     a "Are your parents scientists?"
     
     vl vince_vl_prefix 16
     vin "My mom’s a surgeon. My dad’s a theologist. Classic elf rationalism bullshit. You can imagine their reaction when I got into painting."
     
+    vl alexis_vl_prefix 14
     a "So, they thought if they sent you to MIA, you’d have a change of heart?"
     
     vl vince_vl_prefix 17
     vin "I guess, but I’m a year in and nothing’s changed. I hate everything about this godsdamn place."
     
+    vl alexis_vl_prefix 15
     a "What about Gwynette?"
     
     vl vince_vl_prefix 18
     vin "Alright, fine. There’s one good thing about this place."
     
+    vl alexis_vl_prefix 16
     a "What about me?"
     
     vl vince_vl_prefix 19
@@ -508,11 +558,13 @@ label art_route_dyalt(month, date):
     
     "I smile. That’s the best I’ll get out of him. As we wait for our order, Vince taps on the table impatiently. I can tell the phone call is still weighing on him."
     
+    vl alexis_vl_prefix 17
     a "Maybe you should play along."
     
     vl vince_vl_prefix 20
     vin "Huh?"
     
+    vl alexis_vl_prefix 18
     a "I mean, appease your parents. Go to class. Then, they won’t pull you out of Art Club."
     
     vl vince_vl_prefix 21
@@ -520,6 +572,7 @@ label art_route_dyalt(month, date):
     
     "Before I can retort, the door to the cafe opens, revealing Headmaster Goude."
     
+    vl alexis_vl_prefix 19
     a "Speak of the Fiend."
     
     stop music fadeout 2.0
@@ -531,6 +584,7 @@ label art_route_dyalt(month, date):
     
     "Vince ducks down under the table as Headmaster Goude crosses the restaurant, unwinding his scarf. I whisper to Vince."
     
+    vl alexis_vl_prefix 20
     a "I thought you wanted to be–"
     
     vl vince_vl_prefix 23
@@ -539,6 +593,7 @@ label art_route_dyalt(month, date):
     "Oblivious, the headmaster sets down his coat and heads to the restroom."
     "Vince rises, sighing with relief."
     
+    vl alexis_vl_prefix 21
     a "Thought you wanted to be kicked out?"
     
     vl vince_vl_prefix 24
@@ -546,11 +601,13 @@ label art_route_dyalt(month, date):
     
     "He grabs his bag."
     
+    vl alexis_vl_prefix 22
     a "Where are you going?"
     
     vl vince_vl_prefix 25
     vin "Back to Crowlin."
     
+    vl alexis_vl_prefix 23
     a "What about your cappuccino?"
     
     vl vince_vl_prefix 26
@@ -561,6 +618,7 @@ label art_route_dyalt(month, date):
     vl vince_vl_prefix 27
     vin "See ya at Art Club."
     
+    vl alexis_vl_prefix 24
     a "See ya–"
     hide vince with dissolve
     
@@ -573,6 +631,7 @@ label art_route_dyalt(month, date):
 
 label art_route_neralt(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month5/Vincent_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 5/" + player_voice_prefix + "_Vince_Month5_"
     
     call screen calendar(month, date, "Neralt", 25)
     scene bg art_room_noon with fade
@@ -588,10 +647,12 @@ label art_route_neralt(month, date):
     play music hatchling15 fadein 1.0
     "...so, when Vince storms into the art room today and chucks his bag across the room, I’m taken aback."
     
+    vl alexis_vl_prefix 1
     a "Hey, is everything–?"
     
     "Before I can finish, Vince barrels over to his easel and snatches up his work-in-progress. He tries to snap the canvas in two, but it won’t yield. Instead, he grabs his palette knife."
     
+    vl alexis_vl_prefix 2
     a "Whoa!"
     
     "I rush over to Vince– an unwise move, considering he’s armed and dangerous. (The school palette knives probably aren’t that sharp, but you never know.)"
@@ -608,6 +669,7 @@ label art_route_neralt(month, date):
     "Breathless, Vince sinks down onto his stool and buries his face in his hands, still holding the palette knife."
     "I eye my friend with concern. I’ve seen Vince upset, but never like this. Tentatively, I approach him."
     
+    vl alexis_vl_prefix 3
     a "Um, you wanna give me that knife?"
 
     "Without speaking, Vince drops the palette knife onto the ground. I retrieve it and drop it into the pocket of my apron."
@@ -616,20 +678,24 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 2
     vin "It’s over."
     
+    vl alexis_vl_prefix 4
     a "What’s over? You and Gwynette?"
     
     "He nods."
     
+    vl alexis_vl_prefix 5
     a "What happened? Did you miss another date?"
     
     vl vince_vl_prefix 3
     vin "I missed her performance."
     
+    vl alexis_vl_prefix 6
     a "Shit. Were you painting?"
     
     vl vince_vl_prefix 4
     vin "No, that’s the worst part– I knew her show was in the morning, so I planned to go right back to Crowlin after dinner yesterday and go to bed. But, I woke up feeling like shit– "
     
+    vl alexis_vl_prefix 7
     a "Your parents?"
     
     vl vince_vl_prefix 5
@@ -640,35 +706,42 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 6
     vin "Anyway, I forced myself to go to class, and after, I was feeling even worse. So, I decided to stop by the art room– just for a couple hours. But, I ended up painting past curfew, and then I slept through my alarm…"
     
+    vl alexis_vl_prefix 8
     a "Oh no…"
     
     vl vince_vl_prefix 7
     vin "Yeah. So, obviously, I missed Gwynette’s performance… Fuck, I’m a piece of shit."
     
+    vl alexis_vl_prefix 9
     a "Alright, just back up. When did you talk to Gwynette?"
     
     vl vince_vl_prefix 8
     vin "Just now. She came to Crowlin after her show. I’d never seen her that upset before."
     
+    vl alexis_vl_prefix 10
     a "So, she broke up with you?"
     
     vl vince_vl_prefix 9
     vin "Not exactly… She said she was \"worried about my mental health\" and wants me to \"talk to someone.\" "
     
+    vl alexis_vl_prefix 11
     a "Okay. Did you agree?"
     
     "He shakes his head."
     
+    vl alexis_vl_prefix 12
     a "Then, what did you say?"
     
     vl vince_vl_prefix 10
     vin "That she’s too good for me and deserves someone who will show up for her."
     
+    vl alexis_vl_prefix 13
     a "Wait, you broke up with her?"
     
     vl vince_vl_prefix 11
     vin "I don’t know. I guess?"
     
+    vl alexis_vl_prefix 14
     a "Vince!"
     
     vl vince_vl_prefix 12
@@ -679,31 +752,37 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 13
     vin "I’m so fucking stupid."
     
+    vl alexis_vl_prefix 15
     a "Alright, first thing’s first, you’ve gotta stop beating yourself up. It’s not helping anything."
     
     vl vince_vl_prefix 14
     vin "I’m not asking for help."
     
+    vl alexis_vl_prefix 16
     a "Which leads me to my next point: Gwynette’s right. You should be talking to someone."
     
     vl vince_vl_prefix 15
     vin "I’ve tried. It doesn’t work on me."
     
+    vl alexis_vl_prefix 17
     a "Then, you probably haven’t found the right person. Look, when my dad died, I felt terrible. There were days where I couldn’t even muster the strength to brush my teeth or change my clothes…"
 
     vl vince_vl_prefix 16
     vin "But, that’s part of the problem– it’s not like I lost someone or something terrible happened. I’ve always been like this, even before MIA. That’s why I started painting in the first place."
     
+    vl alexis_vl_prefix 18
     a "And, it’s great that you have an outlet. But, it’s clearly not enough. You know this isn’t healthy, right?"
     
     vl vince_vl_prefix 17
     vin "Obviously."
     
+    vl alexis_vl_prefix 19
     a "Look, I’m not trying to make you feel worse. I know you didn’t ask to be depressed or to come to MIA or have your parents constantly on your ass. But, for now, you’re here, and you do have the power to make the most of it and set things right."
     
     vl vince_vl_prefix 18
     vin "No way Gwynette’s taking me back."
     
+    vl alexis_vl_prefix 20
     a "Maybe, maybe not. But, you can still work on yourself. And, like it or not, I’m not going anywhere."
     
     vl vince_vl_prefix 19
@@ -712,6 +791,7 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 20
     vin "I should go."
     
+    vl alexis_vl_prefix 21
     a "Okay. You wanna grab dinner?"
     
     "He shakes his head."
@@ -719,6 +799,7 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 21
     vin "I just need some time to process… everything."
     
+    vl alexis_vl_prefix 22
     a "Alright, well, you know where to find me."
     
     "With a small smile, Vince rises. He takes in his ruined painting with a sigh."
@@ -726,6 +807,7 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 22
     vin "Damn. I really liked that one."
     
+    vl alexis_vl_prefix 23
     a "Maybe you could fill in the slashes with something: another color, gold leaf, some glitter–"
     
     vl vince_vl_prefix 23
@@ -734,17 +816,21 @@ label art_route_neralt(month, date):
     vl vince_vl_prefix 24
     "We laugh a little, in spite of ourselves. Vince starts to gather his fallen supplies, but I stop him."
     
+    vl alexis_vl_prefix 24
     a "You go ahead. I’ll clean up."
     
     vl vince_vl_prefix 25
     vin "You sure?"
     
+    vl alexis_vl_prefix 25
     a "Yeah. Get some rest."
     
     vl vince_vl_prefix 26
     vin "Thanks. Well… have a good night, [a]."
     
+    vl alexis_vl_prefix 26
     a "You, too."
+
     hide vince with dissolve
     stop music fadeout 1.0
     "I watch Vince disappear from the classroom. There’s still no telling what the fallout will be with Gwynette, but I’m glad I could talk him down. I just hope he takes my advice to heart."
@@ -755,6 +841,7 @@ label art_route_neralt(month, date):
 label art_route_exalt(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month6/Vincent_Month6_"
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Vince_s Route/Month 6/Gwynette_Vince_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 6/" + player_voice_prefix + "_Vince_Month6_"
 
     call screen calendar(month, date, "Exalt", 22)
     scene bg dorm_common_morning with fade
@@ -773,6 +860,8 @@ label art_route_exalt(month, date):
     
     show vince neutral at center with dissolve
     pause 1.0
+
+    vl alexis_vl_prefix 1
     a "Vince!"
     
     "Confused, my friend looks around. Spotting me, he weaves through the horde of pedestrians, making his way toward me."
@@ -787,26 +876,31 @@ label art_route_exalt(month, date):
     vl vince_vl_prefix 2
     vin "Why are you staring at me like that?"
     
+    vl alexis_vl_prefix 2
     a "Nothing. Just didn’t expect to see you out and about this early."
     
     vl vince_vl_prefix 3
     vin "Thought I’d catch the morning service."
     
+    vl alexis_vl_prefix 3
     a "Aren’t you an atheist?"
     
     vl vince_vl_prefix 4
     vin "Yeah, but Gwynette’s performing. I don’t know if she’ll want to see me, but–"
     
+    vl alexis_vl_prefix 4
     a "I’m sure she’ll appreciate the effort."
     
     vl vince_vl_prefix 5
     vin "Gods, if my parents saw me now: going to church, pining over a good Nyrellan girl…"
     
+    vl alexis_vl_prefix 5
     a "Are they religious?"
     
     vl vince_vl_prefix 6
     vin "They’re Archosian elves. Of course they’re religious. Growing up, they dragged my ass to church every Zaeday."
     
+    vl alexis_vl_prefix 6
     a "I’d love to see that."
     
     vl vince_vl_prefix 7
@@ -820,11 +914,13 @@ label art_route_exalt(month, date):
     vl vince_vl_prefix 9
     vin "You can say no. Just, this shit makes me uncomfortable, and–"
     
+    vl alexis_vl_prefix 7
     a "I’ll go."
     
     vl vince_vl_prefix 10
     vin "Really?"
     
+    vl alexis_vl_prefix 8
     a "Yeah. Not like I’ve got anything better to do."
     
     stop music fadeout 2.0
@@ -841,6 +937,7 @@ label art_route_exalt(month, date):
     
     "An older lady turns to shoot Vince a dirty look. I whisper to him."
     
+    vl alexis_vl_prefix 9
     a "I don’t think you’re supposed to curse in the chapel."
     
     vl vince_vl_prefix 12
@@ -859,12 +956,14 @@ label art_route_exalt(month, date):
     scene bg chapel_day with dissolve
     "I turn to Vince."
     
+    vl alexis_vl_prefix 10
     a "Wanna sit with them?"
     
     show vince neutral at center with dissolve
     vl vince_vl_prefix 13
     vin "And deal with Gwynette’s friends’ death-glares for two hours? No thanks."
     
+    vl alexis_vl_prefix 11
     a "It’s that or standing for two hours."
     
     "I gesture to the back of the chapel. At least 20 people stand arm to arm, smushed against the back wall. Vince groans, relenting."
@@ -876,6 +975,7 @@ label art_route_exalt(month, date):
     "I lead the way to Sue and company. Taking our seats, we exchange pleasantries with our classmates– or, more accurately, I exchange pleasantries while Vince ignores glares from Ylva."
     "Eventually, the priest arrives, and a hush falls over the chapel. When the priest lifts his chin, I double-take and whisper to Vince."
     
+    vl alexis_vl_prefix 12
     a "Is that Instructor Wilson?"
     
     show vince neutral at character_pos1 with dissolve
@@ -921,6 +1021,7 @@ label art_route_exalt(month, date):
     "Beside me, Vince slips out of his seat. Before I can ask where he’s going, he’s at Gwynette’s side, offering his hand. Smiling, she accepts, and he leads her over to where we’re sitting."
     "The audience goes silent as Instructor Wilson takes the stage once more. I lean to whisper to Gwynette."
     
+    vl alexis_vl_prefix 13
     a "You were incredible."
     
     show gwynette neutral at center with dissolve
@@ -967,6 +1068,7 @@ label art_route_exalt(month, date):
     vl gwynette_vl_prefix 9
     gw "He’s looking better."
     
+    vl alexis_vl_prefix 14
     a "Yeah. He took your advice, you know."
     
     vl gwynette_vl_prefix 10
@@ -974,6 +1076,7 @@ label art_route_exalt(month, date):
     
     "I nod."
     
+    vl alexis_vl_prefix 15
     a "He’s been talking to someone once a week. And, he hasn’t missed class all month."
     
     "Gwynette beams."
@@ -986,6 +1089,7 @@ label art_route_exalt(month, date):
     vl gwynette_vl_prefix 12
     gw "Thanks for being such a good friend to VV. I know it means a lot."
     
+    vl alexis_vl_prefix 16
     a "He means a lot to me, too. You both do."
     
     "Tearing up once more, Gwynette pulls me in for a hug."
@@ -1014,6 +1118,7 @@ label art_route_exalt(month, date):
 
 label art_route_verabris(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Month8/Vincent_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 8/" + player_voice_prefix + "_Vince_Month8_"
 
     call screen calendar(month, date, "Verabris", 20)
     scene bg confession_tree_noon with fade
@@ -1040,18 +1145,22 @@ label art_route_verabris(month, date):
         vl vince_vl_prefix 2B
     vin "[a]?"
     
+    vl alexis_vl_prefix 1
     a "Godsdamn, you scared me."
     
     vl vince_vl_prefix 3
     vin "You’re the one who almost stepped on my face."
     
     stop music fadeout 1.0
+
+    vl alexis_vl_prefix 2
     a "Fair. What’re you doing here?"
     play music hatchling1 fadein 1.0
     
     vl vince_vl_prefix 4
     vin "Gwynette thinks I should spend more time outside, and my therapist wants me to be more present. So…"
     
+    vl alexis_vl_prefix 3
     a "Two birds with one stone."
     
     vl vince_vl_prefix 5
@@ -1059,6 +1168,7 @@ label art_route_verabris(month, date):
     
     "I take in my friend’s appearance. He’s dressed in his usual paint-splattered uniform and chipped black nail polish. As always, music filters from his earbuds. But, something about him seems… different. Missing. That’s when I realize–"
     
+    vl alexis_vl_prefix 4
     a "You didn’t bring your sketchbook."
     
     "He shrugs."
@@ -1066,6 +1176,7 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 6
     vin "Like I said, staying present."
     
+    vl alexis_vl_prefix 5
     a "So, were you… meditating?"
     
     vl vince_vl_prefix 7
@@ -1083,6 +1194,7 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 9
     vin "What?"
     
+    vl alexis_vl_prefix 6
     a "Nothing. Just glad to see you in high spirits."
     
     vl vince_vl_prefix 10
@@ -1093,11 +1205,13 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 11
     vin "Working on your showcase piece?"
     
+    vl alexis_vl_prefix 7
     a "I was thinking about it."
     
     vl vince_vl_prefix 12
     vin "Show me."
     
+    vl alexis_vl_prefix 8
     a "Okay, but it’s still rough, so don’t judge."
     
     vl vince_vl_prefix 13
@@ -1105,11 +1219,13 @@ label art_route_verabris(month, date):
     
     "I take a seat on the grass beside him. After discussing my piece – a charcoal portrait collage of all the friends I’ve met at MIA – Vince and I sit in silence, taking in our surroundings: the wind in the grass, the humming of bees, the warmth of the sun."
     
+    vl alexis_vl_prefix 9
     a "I know you hate this place, but you gotta admit, it’s pretty."
     
     vl vince_vl_prefix 14
     vin "Pft, you should see my garden back in Archos. In the spring, the flowers turn this shade of blue — almost, like… glowing? I’ve never seen anything else like it."
     
+    vl alexis_vl_prefix 10
     a "Do you know what they’re called?"
     
     vl vince_vl_prefix 15
@@ -1118,6 +1234,7 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 16
     "We share a laugh."
     
+    vl alexis_vl_prefix 11
     a "Bet you’re excited to go home."
     
     "Vince shrugs."
@@ -1132,6 +1249,7 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 18
     vin "Hey, there’s something I’ve been wanting to tell you. But, I’m really bad at this shit…"
     
+    vl alexis_vl_prefix 12
     a "Are you breaking up with me?"
     
     vl vince_vl_prefix 19
@@ -1142,11 +1260,13 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 20
     vin "I just wanted to say… thank you. If not for you, I don’t know where I’d be right now. I wouldn’t be dating Gwynette. I probably would’ve been kicked out of school – and not in a fun way."
     
+    vl alexis_vl_prefix 13
     a "I was gonna say…"
     
     vl vince_vl_prefix 21
     "We laugh in spite of ourselves."
     
+    vl alexis_vl_prefix 14
     a "In all seriousness, though, you would’ve done the right thing with or without me. But, I’m glad I could make your time at MIA a little less shitty."
     
     vl vince_vl_prefix 22
@@ -1154,11 +1274,13 @@ label art_route_verabris(month, date):
     
     "Now, it’s my turn to shove Vince. Suddenly, Vince’s phone buzzes with a text."
     
+    vl alexis_vl_prefix 15
     a "Gwynette?"
     
     vl vince_vl_prefix 23
     vin "Yeah, we’re doing a date night."
     
+    vl alexis_vl_prefix 16
     a "Aw, cute. Well, don’t let me keep you."
     
     "He gathers his things and stands upright."
@@ -1166,6 +1288,7 @@ label art_route_verabris(month, date):
     vl vince_vl_prefix 24
     vin "Alright. See you at Art Club."
     
+    vl alexis_vl_prefix 17
     a "See ya."
     hide vince with dissolve
     
@@ -1179,6 +1302,7 @@ label art_route_verabris(month, date):
 label art_route_overa(month, date):
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Epilogue/Vincent_Epilogue_"
     $ gwynette_vl_prefix = "audio/voices/Friends/Gwynette/Vince_s Route/Epilogue/Gwynette_Vince_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Vince/Month 9/" + player_voice_prefix + "_Vince_Month9_"
 
     call screen calendar(month, date, "Overa", 21)
     scene bg art_room_noon with fade
@@ -1211,11 +1335,13 @@ label art_route_overa(month, date):
     
     "She pulls me into a hug."
     
+    vl alexis_vl_prefix 1
     a "Hey, fancy seeing you here."
     
     vl gwynette_vl_prefix 2
     gw "I can’t wait to see your piece! VV’s been raving about it."
     
+    vl alexis_vl_prefix 2
     a "He has?"
     
     vl vince_vl_prefix 2
@@ -1288,6 +1414,7 @@ label art_route_overa(month, date):
     vl vince_vl_prefix 9
     vin "What are you smirking at?"
     
+    vl alexis_vl_prefix 3
     a "I told you to paint her something."
     
     vl vince_vl_prefix 10
@@ -1300,6 +1427,7 @@ label art_route_overa(month, date):
     
     "He walks off to grab a smaller wrapped gift from his bag and practically shoves it into my hands– much less gentle than he was with Gwynette."
     
+    vl alexis_vl_prefix 4
     a "You made me something?"
     
     vl vince_vl_prefix 12
@@ -1307,6 +1435,7 @@ label art_route_overa(month, date):
     
     "Rolling my eyes, I remove the paper. Inside is a small portrait of a woman and a wolf– his own interpretation of my piece from the first day of Art Club."
     
+    vl alexis_vl_prefix 5
     a "I thought you said the design was derivative?"
     
     vl vince_vl_prefix 13
@@ -1316,15 +1445,18 @@ label art_route_overa(month, date):
     
     "We share a smile."
     
+    vl alexis_vl_prefix 6
     a "Thanks, Vince."
     
     "We stand there in silence for a moment, taking in the bustling classroom. Then, I let out a sigh."
     
+    vl alexis_vl_prefix 7
     a "I can’t believe this is my last week here."
     
     vl vince_vl_prefix 15
     vin "I can’t believe you get to leave. Asshole."
     
+    vl alexis_vl_prefix 8
     a "Maybe we could live vicariously through each other– you complain to me about MIA, and I’ll complain to you about the real world."
     stop music fadeout 1.0
 

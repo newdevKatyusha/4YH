@@ -1,5 +1,6 @@
 label enseki_route_jinus(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 1/Said_Month1_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 1/" + player_voice_prefix + "_Said_Month1_"
 
     call screen calendar(month, date, "Jinus", 23)
     scene bg dorm_common_noon with fade
@@ -17,12 +18,14 @@ label enseki_route_jinus(month, date):
     "Pacing back and forth, sweat bleeding through their two-piece uniform and wearing a red and white belt, I recognize the person yelling commands at the white, yellow, green, blue, and brown belt students."
     "Despite this assumption, I wait until the guy wraps up with his coaching duties before approaching him while he’s sitting down, wiping himself off."
 
+    vl alexis_vl_prefix 1
     a "Hey! You’re Said, right?"
     
     show said neutral enseki at center with dissolve
     vl said_vl_prefix 1
     sa "This is true. Who are you?"
     
+    vl alexis_vl_prefix 2
     a "[a] Blakesley. Sue and I bumped into you and your friend not too long ago."
     
     vl said_vl_prefix 2
@@ -34,6 +37,7 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 3
     sa "Can I help you, Blakesley?"
     
+    vl alexis_vl_prefix 3
     a "Me? Oh, no, I just wanted to say hi because I was… Wandering around the neighborhood, y’know?"
     
     vl said_vl_prefix 4
@@ -49,6 +53,7 @@ label enseki_route_jinus(month, date):
     
     "…Gods damn, this guy’s really comfortable with silence. He’s just fucking looking at me like I’m supposed to press a button to move the conversation along."
     
+    vl alexis_vl_prefix 4
     a "So… How long have you been attending MIA."
     
     vl said_vl_prefix 5
@@ -56,6 +61,7 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 6
     sa "You like sport?"
     
+    vl alexis_vl_prefix 5
     a "Do I like sports? I mean, they’re oka-"
     
     vl said_vl_prefix 7
@@ -64,6 +70,7 @@ label enseki_route_jinus(month, date):
     "Through his nonchalant tone of voice, I can tell that the invitation is well-meaning. However, the wear and tear from many years of Enseki worn across his face and probably the rest of his body has nearly triggered my fight-or-flight response."
     "But then again, that funny feeling of coming off rude takes my tongue in a different direction."
     
+    vl alexis_vl_prefix 6
     a "Sure…"
     
     "Said rises, tightens the belt around his waist, and motions me over to a padded portion of the gym floor. As for me, I gulp down whatever reluctance I have and try to mentally prep myself for an impending ass-whooping."
@@ -86,6 +93,7 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 9
     sa "Newbie, eh?"
     
+    vl alexis_vl_prefix 7
     a "Buh… What?"
     
     vl said_vl_prefix 10
@@ -96,6 +104,7 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 11
     sa "You should come train. Come next week. Is good for… Breathing."
     
+    vl alexis_vl_prefix 8
     a "Good to know."
     
     "I take his hand, he brushes off the dust off my shoulders and makes sure that I’m standing straight."
@@ -103,26 +112,31 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 12
     sa "You want to compete? I can teach you."
     
+    vl alexis_vl_prefix 9
     a "Oh… No, I’m not much of a fighter really…"
     
     vl said_vl_prefix 13
     sa "Ah. Still. You should come train. Even if you’re not wanting to compete. You have to stay strong."
     
+    vl alexis_vl_prefix 10
     a "I appreciate the concern."
     
     vl said_vl_prefix 14
     sa "You will be okay. Is not like how my father teach me. No animals allowed."
     
+    vl alexis_vl_prefix 11
     a "…I’m sorry, what did you say?"
     
     vl said_vl_prefix 15
     sa "When I was small, my father made me train with cubs. You know, the bear cubs? And we spend weekend grappling."
     
+    vl alexis_vl_prefix 12
     a "Um…"
     
     vl said_vl_prefix 16
     sa "Their name is Avdol."
     
+    vl alexis_vl_prefix 13
     a "Your father’s name is Avdol?"
     
     vl said_vl_prefix 17
@@ -142,6 +156,7 @@ label enseki_route_jinus(month, date):
     vl said_vl_prefix 19
     sa "You okay?"
     
+    vl alexis_vl_prefix 14
     a "I’ll be fine, thanks."
     
     vl said_vl_prefix 20
@@ -157,6 +172,7 @@ label enseki_route_jinus(month, date):
 
 label enseki_route_dallinus(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 2/Said_Month2_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 2/" + player_voice_prefix + "_Said_Month2_"
 
     call screen calendar(month, date, "Dallinus", 12)
     scene bg wright_gymnasium_afternoon with fade
@@ -187,15 +203,18 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 2
     sa "You like coffee?"
     
+    vl alexis_vl_prefix 1
     a "Huh? Oh, yeah, that’d be great."
     
     "Once the drink order gets sent in, there’s nothing but the awkward silence between me and Said (again)."
     
+    vl alexis_vl_prefix 2
     a "So, uh… What’s up?"
     
     vl said_vl_prefix 3
     sa "Hmm?"
     
+    vl alexis_vl_prefix 3
     a "…Did you want to talk about something in particular?"
     
     "Keeping in mind that neither of us share any classes together—that I knew of, at least—I’m really confused as to why he wanted to meet one on one."
@@ -203,21 +222,25 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 4
     sa "Oh? I wanted to, ah… You know… The icebreaker?"
     
+    vl alexis_vl_prefix 4
     a "Icebreaker? Seriously?"
     
     vl said_vl_prefix 5
     sa "Yes, bratha. You’re only student who talk to me in Enseki."
     
+    vl alexis_vl_prefix 5
     a "Oh, I see!"
     
     vl said_vl_prefix 6
     sa "Yes, yes! I wanted to see if Amity was all hype or not, eh?"
     
+    vl alexis_vl_prefix 6
     a "Yeah? What’d you get?"
     
     vl said_vl_prefix 7
     sa "Breakfast tea, straight breakfast tea. Simple because of the training."
     
+    vl alexis_vl_prefix 7
     a "Training? Do you compete at all or do you just teach and practice?"
     
     stop music fadeout 1.0
@@ -228,6 +251,7 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 8
     sa "I compete since I was 12. From there, all my life."
     
+    vl alexis_vl_prefix 8
     a "Huh. If you don’t mind me asking then, how come you never, uh…?"
     
     vl said_vl_prefix 9
@@ -244,12 +268,14 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 13
     sa "You have to protect yourself all the time, bratha. She always say “Never come home if you lose”."
     
+    vl alexis_vl_prefix 9
     a "…So, did you ever lose a fight? Is that why you’re at MIA?"
     
     vl said_vl_prefix 14
     sa "Oh, no, no, no… I don’t remember this with Enseki. I come to MIA in Ferenicia to learn, to get the red-black belt in Enseki, and opportunity to bring money back to Yvaratan."
     stop music fadeout 1.0
     
+    vl alexis_vl_prefix 10
     a "What about that spar with Ylva about a month ago?"
     
     vl said_vl_prefix 15
@@ -259,6 +285,7 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 17
     sa "It was my father’s last wish."
     
+    vl alexis_vl_prefix 11
     a "I’m sorry, I didn-"
     
     vl said_vl_prefix 18
@@ -271,11 +298,13 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 21
     sa " Everything I do is because of him."
     
+    vl alexis_vl_prefix 12
     a "…So… You mentioned bringing money back to Yvaratan. Do you plan to go into the military or something?"
     
     vl said_vl_prefix 22
     sa "I will compete in True Strike Grand Prix. Fifteen million dominion for prize money."
     
+    vl alexis_vl_prefix 13
     a "Don’t you have to fight a lot of people with a short turnaround time?"
     
     "One person every week once the tournament starts to be exact."
@@ -283,11 +312,13 @@ label enseki_route_dallinus(month, date):
     vl said_vl_prefix 23
     sa "Yes, but this is no problem for me. I beat plenty of Enseki fighters from Gibroar and Acroton. Magiana fighters are like nothing."
     
+    vl alexis_vl_prefix 14
     a "Well, you do seem to know what you’re doing…"
     
     vl said_vl_prefix 24
     sa "That’s why they give me red-white belt, bratha!"
     
+    vl alexis_vl_prefix 15
     a "Lemme know when the tournament starts. I’d love to come by and support you during one of your matches."
     
     vl said_vl_prefix 25
@@ -301,6 +332,7 @@ label enseki_route_dallinus(month, date):
 label enseki_route_dyalt(month, date):
     $ val_vl_prefix = "audio/voices/Supporting-Extra/Val/Said/Val_Said Route_Month 4_SkySantacruz - _"
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 4/Said_Month4_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 4/" + player_voice_prefix + "_Said_Month4_"
 
     call screen calendar(month, date, "Dyalt", 5)
     scene bg wright_gymnasium_afternoon with fade
@@ -373,6 +405,7 @@ label enseki_route_dyalt(month, date):
     vl val_vl_prefix 1
     v "Damn, Blakesley! You look like shit!"
     
+    vl alexis_vl_prefix 1
     a "Good afternoon to you too, Val…"
     
     "Val looks down at me with a self-important grin, hands in their pockets, ignorant of my bubble of personal space. They look back at the doors to the gym in front of me before turning back to me."
@@ -383,6 +416,7 @@ label enseki_route_dyalt(month, date):
     vl val_vl_prefix 3
     v "What are you doing playing battle mage anyhow?"
     
+    vl alexis_vl_prefix 2
     a "Why do you care? You trying to expand your horizons this winter?"
     
     vl val_vl_prefix 4
@@ -393,6 +427,7 @@ label enseki_route_dyalt(month, date):
     vl val_vl_prefix 5
     v "He’s a bit of a brute, isn’t he?"
     
+    vl alexis_vl_prefix 3
     a "This is just another day for him. I’m just a humble tourist."
     
     vl val_vl_prefix 6
@@ -415,6 +450,7 @@ label enseki_route_dyalt(month, date):
     vl said_vl_prefix 13
     sa "Blakesley. How are you? Already leaving?"
     
+    vl alexis_vl_prefix 4
     a "Just catching my breath. You?"
     
     vl said_vl_prefix 14
@@ -435,6 +471,7 @@ label enseki_route_dyalt(month, date):
 
 label enseki_route_neralt(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 5/Said_Month5_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 5/" + player_voice_prefix + "_Said_Month5_"
 
     call screen calendar(month, date, "Neralt", 21)
     scene bg wright_gymnasium_afternoon with fade
@@ -455,11 +492,13 @@ label enseki_route_neralt(month, date):
     show said neutral at center with dissolve
     "Said stands alone, looking at the debris with a surprisingly unbothered look across his face…"
     
+    vl alexis_vl_prefix 1
     a "What happened here?"
     
     vl said_vl_prefix 1
     sa "Break-in."
     
+    vl alexis_vl_prefix 2
     a "Geez…"
     
     vl said_vl_prefix 2
@@ -471,6 +510,7 @@ label enseki_route_neralt(month, date):
     vl said_vl_prefix 3
     sa "We can clean mess and then go eat, eh?"
     
+    vl alexis_vl_prefix 3
     a "Shouldn’t we report this to someone?"
     
     vl said_vl_prefix 4
@@ -486,26 +526,31 @@ label enseki_route_neralt(month, date):
     play music hatchling12 fadein 1.0
     show said neutral at center with dissolve
     
+    vl alexis_vl_prefix 4
     a "So that’s why you were pouting at the office?"
     
     vl said_vl_prefix 5
     sa "Bratha, I don’t make face in the office. Because in Yvaratan, we don’t do this?"
     
+    vl alexis_vl_prefix 5
     a "No police out there?"
     
     vl said_vl_prefix 6
     sa "No, no police. You have problem? You either talk or you send location."
     
+    vl alexis_vl_prefix 6
     a "I see…"
     
     vl said_vl_prefix 7
     sa "See, Blakesley, I don’t know why people can do this, eh? People can talk shit and don’t get hurt in Magiana…"
     
+    vl alexis_vl_prefix 7
     a "…I think it’s like a freedom of speech thing but yeah I think I see what you’re saying."
     
     vl said_vl_prefix 8
     sa "Because it’s better, eh?"
     
+    vl alexis_vl_prefix 8
     a "Is it better? Yeah, I’d say so."
     
     vl said_vl_prefix 9
@@ -530,6 +575,7 @@ label enseki_route_neralt(month, date):
     
     "Unknown Asshole" "I hope your mother has a strong back! She’ll need it to bury you next to your useless pawn of a father and the rest of your inbred siblings!"
     
+    vl alexis_vl_prefix 9
     a "Said! Are you alright?"
     
     stop music fadeout 1.0
@@ -537,11 +583,13 @@ label enseki_route_neralt(month, date):
     "Said doesn’t say a thing and doesn’t do much other than brush off the broken glass off of his school uniform. "
     "I stop what I’m doing and try to help tend to his wound by asking whoever’s at the front of the store with the newly broken glass for some sort of towel or bandage which they do."
     
+    vl alexis_vl_prefix 10
     a "Gods, talk to me Said, I need to know how you’re doing? Are you hurt? Do we need to get to the infirmary?"
     
     vl said_vl_prefix 10
     sa "Eh, they just wanna send me message. "
     
+    vl alexis_vl_prefix 11
     a "What? What are you talking about?"
     
     vl said_vl_prefix 11
@@ -711,6 +759,7 @@ label enseki_route_exalt(month, date):
     
 label enseki_route_exalt2(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 6/Said_Month6_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 6/" + player_voice_prefix + "_Said_Month6_"
 
     call screen calendar(month, date, "Exalt", 24)
 
@@ -731,6 +780,7 @@ label enseki_route_exalt2(month, date):
     vl said_vl_prefix 8
     sa "How you feel right now, Blakesley?!"
     
+    vl alexis_vl_prefix 1
     a "I’d rather not talk about it honestly!"
     
     vl said_vl_prefix 9
@@ -824,10 +874,12 @@ label enseki_route_exalt2(month, date):
     "Said stops and rests his hands at the top of the cage wall once he gets back to our corner. The president of the Enseki Club immediately goes to coaching mode with Said’s back facing Finn. He leans on the side of the cage, trying to catch his breath."
     "I go to look over Finn and I see his cornermen press swelling steels across his newly formed welts and bottle feed him his water."
     
+    vl alexis_vl_prefix 2
     a "Said! Look!"
     
     "Said turns and looks at me, panting heavily."
     
+    vl alexis_vl_prefix 3
     a "He’s dying on his stool, Said! Look!"
     
     "His eyes widen almost with some sort of anger, gently pushing the Enseki president away so he can get a straight look at his opponent."
@@ -911,11 +963,13 @@ label enseki_route_exalt2(month, date):
     vl said_vl_prefix 22
     sa "Bratha, I’m ready for this!"
     
+    vl alexis_vl_prefix 4
     a "Said!"
     
     vl said_vl_prefix 23
     sa "What?"
     
+    vl alexis_vl_prefix 5
     a "You have to think straight here. People could get hurt."
     
     "Said takes one last look at Finn—and he’s finally quiet. He looks over to me and I see the beast inside of him disappear. A look of guilt starts to form and he uses one of his sweat towels to cover his face up."
@@ -940,6 +994,7 @@ label enseki_route_exalt2(month, date):
 
 label enseki_route_verabris(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said 8/Said_Month8_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 8/" + player_voice_prefix + "_Said_Month8_"
 
     call screen calendar(month, date, "Verabris", 16)
     scene bg dorm_common_morning with fade
@@ -960,6 +1015,7 @@ label enseki_route_verabris(month, date):
     vl said_vl_prefix 1
     sa "Blakesley! What are you doing here, eh?"
     
+    vl alexis_vl_prefix 1
     a "Sorry, I didn’t mean to intrude… I just wanted to check up on you, that’s all."
     
     "A rare look of sorrow overtakes him. He closes his eyes tight before opening them up to me."
@@ -975,6 +1031,7 @@ label enseki_route_verabris(month, date):
     vl said_vl_prefix 3
     sa "…You know, my father… This was always his dream for me…"
     
+    vl alexis_vl_prefix 2
     a "Yeah, the tournament…"
     
     vl said_vl_prefix 4
@@ -984,6 +1041,7 @@ label enseki_route_verabris(month, date):
     vl said_vl_prefix 6
     sa "You not agree with this, Blakesley?"
     
+    vl alexis_vl_prefix 3
     a "I don’t actually. I don’t. Why else would you go this far to fulfill his dream then, whatever that may be?"
     
     "Said looks down his teacup and smiles for just a moment."
@@ -996,16 +1054,19 @@ label enseki_route_verabris(month, date):
     vl said_vl_prefix 9
     sa "But in Yvaratan, you cannot talk about someone country, you cannot talk about someone family. I think even here you cannot talk about that without getting hurt."
     
+    vl alexis_vl_prefix 4
     a "Said, I completely understand. I definitely wouldn’t condone stuff like that in the future but I understand. Remember, I was caught up in the crossfire."
     
     vl said_vl_prefix 10
     sa "I get too emotional and I hurt people. Audience. My friends. I’m sorry for this, Blakesley."
     
+    vl alexis_vl_prefix 5
     a "It’s fine."
     
     vl said_vl_prefix 11
     sa "…This was not what my father wanted. I put dirt on his name so, this morning, I turn towards the Cornerstone—my father teach me when I was small—and pray. I pray for forgiveness, that’s all I want now."
     
+    vl alexis_vl_prefix 6
     a "…What’ll you do now that everything’s done?"
     
     "Said downs the rest of his tea and looks down at his cup before looking at me."
@@ -1022,6 +1083,7 @@ label enseki_route_verabris(month, date):
 
 label enseki_route_overa(month, date):
     $ said_vl_prefix = "audio/voices/Friends/Said/Said Epilogue/Said_Epilogue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Said/Month 9/" + player_voice_prefix + "_Said_Month9_"
 
     call screen calendar(month, date, "Overa", 20)
     scene bg maincastle with fade
@@ -1046,6 +1108,7 @@ label enseki_route_overa(month, date):
     vl said_vl_prefix 1
     sa "Blakesley!"
     
+    vl alexis_vl_prefix 1
     a "Said… I didn’t know… You’d be coming…"
     
     "Said puts me down and reaches for his phone to show me something."
@@ -1053,21 +1116,25 @@ label enseki_route_overa(month, date):
     vl said_vl_prefix 2
     sa "You sent text message. I don’t know when but you sent text, bratha."
     
+    vl alexis_vl_prefix 2
     a "Right! I, uh, wasn’t expecting you to show up honestly."
     
     vl said_vl_prefix 3
     sa "Eh? How come?"
     
+    vl alexis_vl_prefix 3
     a "You know after the tournament and-"
     
     vl said_vl_prefix 4
     sa "None of that matters, bratha. It’s past."
     
+    vl alexis_vl_prefix 4
     a "No, I get that. It just seemed like you wanted to be left alone…"
     
     vl said_vl_prefix 5
     sa "Okay… How you know?"
     
+    vl alexis_vl_prefix 5
     a "You were distant. I just wanted to give you space, y’know?"
     
     vl said_vl_prefix 6
@@ -1075,16 +1142,19 @@ label enseki_route_overa(month, date):
     
     "I look in his eyes to try and find the truth behind the words…"
     
+    vl alexis_vl_prefix 6
     a "You’re sure about that?"
     
     vl said_vl_prefix 7
     sa "Yes, I am sure about this, bratha."
     
+    vl alexis_vl_prefix 7
     a "…Okay. Well, what do you plan on doing once school’s out?"
     
     vl said_vl_prefix 8
     sa "Maybe I go see my mother and father. Tell them what happen."
     
+    vl alexis_vl_prefix 8
     a "What are you gonna do with the money?"
     
     vl said_vl_prefix 9
@@ -1092,15 +1162,18 @@ label enseki_route_overa(month, date):
     
     "I give him a smile and he returns in kind."
     
+    vl alexis_vl_prefix 9
     a "Best of luck then, Said. You’ve taught me a lot."
     
     vl said_vl_prefix 10
     sa "Bratha, don’t stop. Keep training, keep growing, get stronger for your family."
     
+    vl alexis_vl_prefix 10
     a "I’ll do that."
     
     "Probably more in a metaphorical or philosophical sense but I suppose a daily walk wouldn’t hurt in the long run."
     
+    vl alexis_vl_prefix 11
     a "Enjoy your break and get home safe!"
     
     vl said_vl_prefix 11
