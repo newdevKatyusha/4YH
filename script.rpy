@@ -109,10 +109,10 @@ label start:
 
     if player_gender == "female":
         $ player_voice_prefix = "Alexis_F" + str(player_voice + 1)
-        $ player_voice = "Alexis Fem " + str(player_voice + 1)
+        $ player_voice = "Fem " + str(player_voice + 1)
     else:
         $ player_voice_prefix = "Alexis_M" + str(player_voice + 1)
-        $ player_voice = "Alexis Masc " + str(player_voice + 1)
+        $ player_voice = "Masc " + str(player_voice + 1)
     
     jump prologue
 
@@ -130,7 +130,7 @@ label prologue:
     $ vince_vl_prefix = "audio/voices/Friends/Vince/Vincent_Prologue_MeetGwyn&Vince/Vincent_Prologue_MeetGwyn&Vince_"
     $ ylva_vl_prefix = "audio/voices/Friends/Ylva/Prologue/Meeting Ylva Said/Ylva_Prologue_MeetingYlvaSaid_"
     $ said_vl_prefix = "audio/voices/Friends/Said/Said Prologue MeetYlvaSaid/Said_Prologue_MeetYlvaSaid_"
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingPhilip_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetPhillip/" + player_voice_prefix + "_Prologue_MeetPhillip_"
 
     python:
         print(alexis_vl_prefix)
@@ -182,8 +182,13 @@ label prologue:
     "I've heard that accent of his before. Fancy dinners. Tailored suits and flowing dresses. Parlors when Mother and Father called on their noble friends."
     "This was a rich people accent. And I {b}had{/b} seen this boy before. Rich was an understatement with this one. How did I forget about him?"
     
-    vl alexis_vl_prefix 3
-    a "Prince Phillip? Your Highness, it is you! I'm Blakesley, [a] Blakesley. We met in Prospera a while ago when your family visited!"
+    if eval(a.name)[0] == "Alexis":
+        vl alexis_vl_prefix 3A
+        a "Prince Phillip? Your Highness, it is you! I'm Blakesley, [a] Blakesley. We met in Prospera a while ago when your family visited!"
+    else:
+        vl alexis_vl_prefix 3B
+        a "Prince Phillip? Your Highness, it is you! I'm Blakesley. We met in Prospera a while ago when your family visited!"
+    # a "Prince Phillip? Your Highness, it is you! I'm Blakesley, [a] Blakesley. We met in Prospera a while ago when your family visited!"
     
     show phillip neutral
     "The prince blinks at me a few times, but I can tell that the dots aren't connecting in his head."
@@ -215,9 +220,11 @@ label prologue:
     
     if eval(a.name)[0] == "Alexis":
         vl phillip_vl_prefix 7A
+        p "That's the school's administrative building. Someone should be able to help you there. Take care, [a]."
     else:
         vl phillip_vl_prefix 7B
-    p "That's the school's administrative building. Someone should be able to help you there. Take care, [a]."
+        p "That's the school's administrative building. Someone should be able to help you there. Take care, Blakesley."
+    # p "That's the school's administrative building. Someone should be able to help you there. Take care, [a]."
 
     #TODO: Alexis voice line Sunofes version
     a "Thanks… I nearly forgot! Happy belated sixteenth birthday, Your Highness."
@@ -259,9 +266,16 @@ label prologue:
     vl sue_vl_prefix 3.2
     "Student Council President" "My name is Sue Daeng Qan, Student Council President. It's nice to meet you."
     
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingSue_"
-    vl alexis_vl_prefix 1
-    a "[a] Blakesley. Same to you, Sue."
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingSue_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetSue/" + player_voice_prefix + "_Prologue_MeetSue_"
+    # vl alexis_vl_prefix 1
+    if eval(a.name)[0] == "Alexis":
+        vl alexis_vl_prefix 1A
+        a "[a] Blakesley. Same to you, Sue."
+    else:
+        vl alexis_vl_prefix 1B
+        a "Blakesley. Same to you, Sue."
+    # a "[a] Blakesley. Same to you, Sue."
     
     vl sue_vl_prefix 4.1
     s "So you're the Fourth Year Hatchling the headmaster's told me about. Worry not, it's my job today to help you get a lay of the land, so you're not completely lost your entire first week here at MIA."
@@ -298,7 +312,8 @@ label prologue:
     vl reina_vl_prefix 1
     "Formal Girl" "That's a demerit."
     
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingReina_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingReina_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetReina/" + player_voice_prefix + "_Prologue_MeetReina_"
 
     vl alexis_vl_prefix 1
     a "I'm sorry?"
@@ -412,12 +427,19 @@ label prologue:
     vl lucas_vl_prefix 3
     "Bespectacled Boy" "Who is this?"
     
-    s "[a] Blakesley. They just transferred in. A bit of a rare case, since they're a fourth year like us. And this is Lucas. He's the president of the literature club. And the temp librarian, if the normal librarian is ever absent."
+    if eval(a.name)[0] == "Alexis":
+        # vl alexis_vl_prefix 1A
+        s "[a] Blakesley. They just transferred in. A bit of a rare case, since they're a fourth year like us. And this is Lucas. He's the president of the literature club. And the temp librarian, if the normal librarian is ever absent."
+    else:
+        # vl alexis_vl_prefix 1B
+        s "Blakesley. They just transferred in. A bit of a rare case, since they're a fourth year like us. And this is Lucas. He's the president of the literature club. And the temp librarian, if the normal librarian is ever absent."
+    # s "[a] Blakesley. They just transferred in. A bit of a rare case, since they're a fourth year like us. And this is Lucas. He's the president of the literature club. And the temp librarian, if the normal librarian is ever absent."
     
     vl lucas_vl_prefix 4
     l "Transferring in at the start of your fourth year? Look, I get it might be overwhelming, but if you ever need help with anything in class or in the library, I'd be willing to help you out. Just ask around for Lucas."
     
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingLucas_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingLucas_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetLucas/" + player_voice_prefix + "_Prologue_MeetLucas_"
 
     vl alexis_vl_prefix 1
     a "Thanks for the offer. Definitely think I'm going to have to take you up on that sometime."
@@ -435,7 +457,8 @@ label prologue:
 
     "Seeing it up close, it isn’t quite a castle, but it’s pretty damn close. It’s definitely big, fancy, and {b}old{/b}."
     
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingKillian_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingKillian_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetKillian/" + player_voice_prefix + "_Prologue_MeetKillian_"
 
     vl alexis_vl_prefix 1
     a "Whoa..."
@@ -530,9 +553,11 @@ label prologue:
     
     if eval(a.name)[0] == "Alexis":
         vl goude_vl_prefix 1A
+        h "Ah, you're [a] Blakesley, I assume?"
     else:
         vl goude_vl_prefix 1B
-    h "Ah, you're [a] Blakesley, I assume?"
+        h "Ah, you're Blakesley, I assume?"
+    # h "Ah, you're [a] Blakesley, I assume?"
     
     vl alexis_vl_prefix 7
     a "Yes. It's nice to meet you."
@@ -689,7 +714,8 @@ label prologue:
     vl naomi_vl_prefix 1
     "Girl in apron" "Why, hello. Are you here for a rice ball, too?"
 
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingNaomi_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingNaomi_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetNaomi/" + player_voice_prefix + "_Prologue_MeetNaomi_"
     
     vl alexis_vl_prefix 1
     a "Oh, just passing the time, really..."
@@ -713,8 +739,12 @@ label prologue:
     vl naomi_vl_prefix 3
     "Girl in apron" "If you wouldn't mind. My name is Naomi. Naomi Kuzuma. I'm lucky enough to serve as the president of the school's Home Ec Club."
     
-    vl alexis_vl_prefix 4
-    a "That I figured. Name's [a] Blakesley, by the way."
+    if eval(a.name)[0] == "Alexis":
+        vl alexis_vl_prefix 4A
+        a "That I figured. Name's [a] Blakesley, by the way."
+    else:
+        vl alexis_vl_prefix 4B
+        a "That I figured. Name's Blakesley, by the way."
     
     "I roll up my sleeves."
     
@@ -929,7 +959,8 @@ label prologue:
     
     s "I'm showing a new student around. This is [a] Blakesley."
     
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingElio_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Prologue_MeetingElio_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/MeetElio/" + player_voice_prefix + "_Prologue_MeetElio_"
 
     vl alexis_vl_prefix 1
     a "Nice to meet you, Elio."
@@ -1056,7 +1087,8 @@ label prologue:
     show sue neutral at center with dissolve
     s "I hope that proved useful."
 
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     
     vl alexis_vl_prefix 1
     a "Very."
@@ -1248,7 +1280,8 @@ label swordplay_club:
     jump choose_club
 
 label no_clubs:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue neutral at center with dissolve
     s "Really? No other clubs?"
     
@@ -1261,7 +1294,8 @@ label no_clubs:
     jump prologue_end
 
 label disciplinary_committee:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue neutral at center with dissolve
     s "The Disciplinary Committee?"
     
@@ -1279,7 +1313,8 @@ label disciplinary_committee:
     jump prologue_end
 
 label literature_club:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue neutral at center with dissolve
     s "The Literature Club's a good choice. I wouldn't have thought you were much of a reader."
     
@@ -1294,7 +1329,8 @@ label literature_club:
     jump prologue_end
 
 label anime_club:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue neutral at center with dissolve
     s "A very popular choice, that one."
     
@@ -1312,7 +1348,8 @@ label anime_club:
     jump prologue_end
 
 label home_ec_club:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue happy at center with dissolve
     s "Naomi won you over, didn't she?"
     
@@ -1326,7 +1363,8 @@ label home_ec_club:
     jump prologue_end
 
 label archery_club:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
     show sue neutral at center with dissolve
     s "So Elio didn't put you off earlier?"
     
@@ -1344,7 +1382,8 @@ label archery_club:
     jump prologue_end
 
 label scouts_club:
-    $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Prologue/Prologue End/Sue_Prologue_End_2026_"
+    # $ sue_vl_prefix = "audio/voices/Love Interests/Sue/Prologue/Prologue End/Sue_Prologue_End_2026_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
 
     # TODO: Sue sprites
     vl sue_vl_prefix 1
@@ -1373,7 +1412,8 @@ label scouts_club:
     jump prologue_end
 
 label prologue_end:
-    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    # $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/" + player_voice_prefix + "_Own_Prologue_End_"
+    $ alexis_vl_prefix = "audio/voices/Alexis/" + player_voice + "/Prologue/PrologueEnd/" + player_voice_prefix + "_Prologue_End_"
 
     "I take up my bag and my suitcase again. Sitting for a little bit did me some good."
 
@@ -1499,7 +1539,7 @@ label epilogue_intermission:
     "The park, huh? That makes sense. I just hope not too many families got the same idea."
     jump epilogue_anime_route
 
-label reuinion:
+label reunion:
     $ arline_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Arline/Epilogue/Reunion/Arline_Epilogue_Reunion_"
     $ skylar_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Skylar/Reunion/Skylar_Epilogue_Reunion_"
     $ salem_vl_prefix = "audio/voices/Supporting-Extra/Extra Voices/Salem/Reunion/Salem_Epilogue_Reunion_"
@@ -1520,9 +1560,11 @@ label reuinion:
 
     if eval(a.name)[0] == "Alexis":
         vl arline_vl_prefix 1-A
+        arline "Congratulations. I’m so proud of you, [a]. My baby, graduating from MIA of all schools."
     else:
         vl arline_vl_prefix 1-N
-    arline "Congratulations. I’m so proud of you, [a]. My baby, graduating from MIA of all schools."
+        arline "Congratulations. I’m so proud of you. My baby, graduating from MIA of all schools."
+    # arline "Congratulations. I’m so proud of you, [a]. My baby, graduating from MIA of all schools."
 
     "When she releases me, Skylar and—with great reluctance on his part—Salem give me hugs of their own."
 
@@ -1571,7 +1613,7 @@ label reuinion:
 
         a "Actually, there’s someone I want you guys to meet. I need to make a call. Wait here a minute."
 
-        $ renpy.jump("reuinion_" + chosen_club + "_route")
+        $ renpy.jump("reunion_" + chosen_club + "_route")
     else:
         jump finale
     #jump route_branch_point7
@@ -1580,15 +1622,15 @@ label route_branch_point7:
     if sue_romance:
         jump reunion_no_clubs_route
     elif reina_romance:
-        jump reuinion_disciplinary_route
+        jump reunion_disciplinary_route
     elif lucas_romance:
-        jump reuinion_literature_route
+        jump reunion_literature_route
     elif killian_romance:
-        jump reuinion_anime_route
+        jump reunion_anime_route
     elif naomi_romance:
-        jump reuinion_home_ec_route
+        jump reunion_home_ec_route
     elif elio_romance:
-        jump reuinion_archery_route
+        jump reunion_archery_route
     else: 
         jump finale 
 
