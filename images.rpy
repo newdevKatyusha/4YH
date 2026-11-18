@@ -224,23 +224,42 @@ init:
     # image elio confused = "Sprites/Elio/elio_confused_crop.png"
     # image elio surprised = "Sprites/Elio/elio_surprised_crop.png"
 
-    image gwynette neutral = Transform("Sprites/Gwynette/gwynette_neutral.png", zoom=1.2)
-    image gwynette singing = Transform("Sprites/Gwynette/gwynette_sing.png", zoom=1.5)
+    image gwynette neutral = Transform("Sprites/Gwynette/gwyn_neutral_cropped.png", zoom=1.2)
+    image gwynette singing = Transform("Sprites/Gwynette/gwyn_singing_cropped.png", zoom=1.5)
+    image gwynette laughing = Transform("Sprites/Gwynette/gwyn_laughing_cropped.png", zoom=1.2)
+    image gwynette melancholic = Transform("Sprites/Gwynette/gwyn_meloncholic_cropped.png", zoom=1.2)
+    image gwynette upset = Transform("Sprites/Gwynette/gwyn_upset_cropped.png", zoom=1.2)
 
-    image vince neutral = Transform("Sprites/Vince/vince_neutral.png", zoom=1.5)
-    image vince annoyed = Transform("Sprites/Vince/vince_neutral.png", zoom=1.5)
-    image vince flustered = Transform("Sprites/Vince/vince_neutral.png", zoom=1.5)
-    image vince happy = Transform("Sprites/Vince/vince_neutral.png", zoom=1.5)
+    image vince neutral = "Sprites/Vince/vince_neutral_crop.png"
+    image vince annoyed = "Sprites/Vince/vince_annoyed_crop.png"
+    image vince flustered = "Sprites/Vince/vince_flustered_crop.png"
+    image vince happy = "Sprites/Vince/vince_happy_crop.png"
+    image vince angry = "Sprites/Vince/vince_angry_crop.png"
+    image vince distraught = "Sprites/Vince/vince_distraught_crop.png"
+    image vince surprised = "Sprites/Vince/vince_surprised_crop.png"
+    image vince neutral_prop = "Sprites/Vince/vince_neutral_crop_prop.png"
+    image vince annoyed_prop = "Sprites/Vince/vince_annoyed_crop_prop.png"
+    image vince flustered_prop = "Sprites/Vince/vince_flustered_crop_prop.png"
+    image vince happy_prop = "Sprites/Vince/vince_happy_crop_prop.png"
+    image vince angry_prop = "Sprites/Vince/vince_angry_crop_prop.png"
+    image vince distraught_prop = "Sprites/Vince/vince_distraught_crop_prop.png"
+    image vince surprised_prop = "Sprites/Vince/vince_surprised_crop_prop.png"
 
-    image ylva neutral = Transform("Sprites/Ylva/ylva_neutral.png", zoom=2.3)
-    image ylva warm = Transform("Sprites/Ylva/ylva_neutral.png", zoom=2.3)
-    image ylva adoration = Transform("Sprites/Ylva/ylva_neutral.png", zoom=2.3)
-    image ylva bashful = Transform("Sprites/Ylva/ylva_neutral.png", zoom=2.3)
-    image ylva neutral club = Transform("Sprites/Ylva/ylva_club.png", zoom=2.3)
-    image ylva warm club = Transform("Sprites/Ylva/ylva_club.png", zoom=2.3)
-    image ylva adoration club = Transform("Sprites/Ylva/ylva_club.png", zoom=2.3)
-    image ylva bashful club = Transform("Sprites/Ylva/ylva_club.png", zoom=2.3)
-    image ylva angry club = Transform("Sprites/Ylva/ylva_club.png", zoom=2.3)
+    image ylva neutral = "Sprites/Ylva/ylva_neutral_crop.png"
+    image ylva warm = "Sprites/Ylva/ylva_warm_crop.png"
+    image ylva adoration = "Sprites/Ylva/ylva_adore_crop.png"
+    image ylva bashful = "Sprites/Ylva/ylva_bashful_crop.png"
+    image ylva angry club = "Sprites/Ylva/ylva_angry_crop.png"
+    image ylva neutral club = "Sprites/Ylva/ylva_neutral_crop_gym.png"
+    image ylva warm club = "Sprites/Ylva/ylva_warm_crop_gym.png"
+    image ylva adoration club = "Sprites/Ylva/ylva_adore_crop_gym.png"
+    image ylva bashful club = "Sprites/Ylva/ylva_bashful_crop_gym.png"
+    image ylva angry club = "Sprites/Ylva/ylva_angry_crop_gym.png"
+    image ylva neutral club_prop = "Sprites/Ylva/ylva_neutral_crop_prop.png"
+    image ylva warm club_prop = "Sprites/Ylva/ylva_warm_crop_prop.png"
+    image ylva adoration club_prop = "Sprites/Ylva/ylva_adore_crop_prop.png"
+    image ylva bashful club_prop = "Sprites/Ylva/ylva_bashful_crop_prop.png"
+    image ylva angry club_prop = "Sprites/Ylva/ylva_angry_crop_prop.png"
 
     image said neutral = Transform("Sprites/Said/said_neutral.png", zoom=1.55)
     image said happy = Transform("Sprites/Said/said_neutral.png", zoom=1.55)
@@ -252,3 +271,7 @@ init:
     image charles neutral_scout = "Sprites/Charles/charles_scout_neutral.png"
     image charles excited_scout = "Sprites/Charles/charles_scout_excited.png"
     image charles contemplative_scout = "Sprites/Charles/charles_scout_contemplative.png"
+
+    image val neutral = "Sprites/Val/val_neutral_crop.png"
+    image val frown = "Sprites/Val/val_frown_crop.png"
+    image val smirk = "Sprites/Val/val_smirk_crop.png"
